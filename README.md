@@ -169,7 +169,7 @@ Las tareas se han realizado y el esfuerzo ha sido repartido entre los autores. L
 |:-:|:-:|:-:|
 | ✔ | Presentación y resolución de dudas | 07-05-2024 | 
 | :x: | Documentación final | Semana del 13-05-2024 |
-| :x: | Entrega y presentación final | | 28-05-2024 |
+| :x: | Entrega y presentación final | 28-05-2024 |
 
 <br>
 
