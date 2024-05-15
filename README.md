@@ -109,16 +109,16 @@ Además, se ha utilizado un borde para los objetos interactuables para que el us
 El movimiento del enemigo responde al siguiente diagrama:
 ```mermaid
 stateDiagram-v2
-    [*] --> Aparece_extremo
-    Aparece_extremo --> Merodeo
+    [*] --> Aparece
+    Aparece --> Merodeo
     Merodeo --> Persecucion : Detecta al jugador
     Persecucion --> Merodeo : Deja de detectar al jugador
     Persecucion --> Pierde_vida(1) : Disparado por el jugador
     Pierde_vida(1) --> Persecucion
     Merodeo --> Pierde_vida(2) : Disparado por el jugador
     Pierde_vida(2) --> Merodeo
-    Pierde_vida(1) --> [*]
-    Pierde_vida(2) --> [*]
+    Pierde_vida(1) --> [*] : Vida llega a 0
+    Pierde_vida(2) --> [*] : Vida a llega a 0
 ```
 
 <br>
