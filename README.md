@@ -197,6 +197,7 @@ Los recursos de terceros utilizados son de uso público.
 - [Shader outline](https://www.youtube.com/watch?v=d89qqVGUHtA)
 - Unity AI Navigation
 - Unity Shader Graph
+- [Day & Night Cycle](https://www.youtube.com/watch?v=m9hj9PdO328)
 
 ### Inspiraciones
 - Los Sims Medieval (2011, EA)
