@@ -16,9 +16,4 @@ public class EnemyAttack : MonoBehaviour
             playerHealth.makeDamage(damage);
         }
     }
-
-    private void Start()
-    {
-        Debug.Log("start");
-    }
 }

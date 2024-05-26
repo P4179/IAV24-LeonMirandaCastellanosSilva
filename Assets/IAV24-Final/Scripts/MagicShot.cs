@@ -13,7 +13,7 @@ namespace IAV24.Final
         private void OnCollisionEnter(Collision collision)
         {
             GameObject colObject = collision.gameObject;
-            if (colObject.GetComponent<EnemyAttack>() != null)
+            if (colObject.tag == "Enemy")
             {
                 magicPower.removeDetectedEnemy(colObject);
                 Destroy(colObject);

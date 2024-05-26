@@ -16,14 +16,25 @@ namespace IAV24.Final
         private float maxHealth = 10.0f;
         [SerializeField]
         private float gracePeriod = 2.0f;
+        [SerializeField]
+        private UnityEngine.UI.Image healthBar;
+
+        private void updateHealthBar()
+        {
+            if(healthBar != null)
+            {
+                healthBar.fillAmount = currentHealth / maxHealth;
+            }
+        }
 
         // Start is called before the first frame update
         void Start()
         {
-            if (currentHealth <= 0.0f)
+            if (currentHealth <= 0.0f || currentHealth > maxHealth)
             {
                 currentHealth = maxHealth;
             }
+            updateHealthBar();
         }
 
         public void makeDamage(float damageAmount)
@@ -31,6 +42,7 @@ namespace IAV24.Final
             if (!gracePeriodEnabled)
             {
                 currentHealth -= damageAmount;
+                updateHealthBar();
                 Debug.Log(currentHealth);
                 gracePeriodEnabled = true;
                 if (currentHealth <= 0.0f)

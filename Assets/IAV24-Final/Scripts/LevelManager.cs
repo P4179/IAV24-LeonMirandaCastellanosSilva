@@ -60,7 +60,43 @@ namespace IAV24.Final
         [SerializeField]
         private float spawnOffset = 1.0f;
 
+        // Calcular FPS
+        private TextMeshProUGUI fpsInfoText;
+        // numero de frames que han pasado
+        private int frameCounter = 0;
+        // tiempo que ha tardado en pasar el numero de frames anterior
+        private float timeCounter = 0.0f;
+        // ultimo framerate calculado
+        private float lastFrameRate = 0.0f;
+        // cada cuanto se calcula un nuevo framerate
+        private float refreshTime = 0.5f;
+
         public static LevelManager Instance { get; private set; }
+
+        private void calculateFPS()
+        {
+            if (timeCounter < refreshTime)
+            {
+                // aumenta el contador de tiempo
+                timeCounter += Time.deltaTime;
+                // aumenta el contador de frames transcurridos
+                // como se ejecuta en el update, cada vuelta es un frame
+                frameCounter++;
+            }
+            else
+            {
+                // frames por segundo
+                lastFrameRate = (float)(frameCounter) / timeCounter;
+                // se reinician
+                frameCounter = 0;
+                timeCounter = 0.0f;
+            }
+            if (fpsInfoText != null)
+            {
+                // se muestra con dos decimales
+                fpsInfoText.text = (((int)(lastFrameRate * 100 + .5) / 100.0)).ToString();
+            }
+        }
 
         private void Awake()
         {
@@ -97,10 +133,11 @@ namespace IAV24.Final
                 spawnpoints[i] = sp.transform.GetChild(i);
             }
             spawnCooldown = Random.Range(minSpawnDelay, maxSpawnDelay);
+
+            fpsInfoText = GameObject.Find("FPSInfo").GetComponent<TextMeshProUGUI>();
         }
 
-        // Update is called once per frame
-        void Update()
+        private void updateDayTime()
         {
             // Actualiza la hora y las horas que han
             // pasado desde el inicio de la simulacion
@@ -140,6 +177,13 @@ namespace IAV24.Final
                     spawnTimer = 0;
                 }
             }
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+            calculateFPS();
+            updateDayTime();
         }
 
         // Cambia el color de la luz dependiendo de la hora del dia.

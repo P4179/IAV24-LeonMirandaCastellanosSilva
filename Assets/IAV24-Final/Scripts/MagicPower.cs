@@ -2,6 +2,7 @@ using BehaviorDesigner.Runtime.Tactical;
 using System.Collections;
 using System.Collections.Generic;
 using System.Net.NetworkInformation;
+using TMPro;
 using UnityEngine;
 
 namespace IAV24.Final
@@ -13,7 +14,7 @@ namespace IAV24.Final
         private bool cantShoot = true;
         private List<GameObject> enemiesInRange = new List<GameObject>();
         private Transform shootPointTransform;
-        private LayerMask playerLayer;
+        private LayerMask avoidLayers;
 
         [SerializeField]
         private int maxPowerAmount = 5;
@@ -25,10 +26,12 @@ namespace IAV24.Final
         private float cooldown = 3.0f;
         [SerializeField]
         private float bulletVelocity = 3.0f;
+        [SerializeField]
+        private TextMeshProUGUI magicPowerInfo;
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject.GetComponent<EnemyAttack>() != null && !enemiesInRange.Contains(other.gameObject))
+            if (other.gameObject.tag == "Enemy" && !enemiesInRange.Contains(other.gameObject))
             {
                 enemiesInRange.Add(other.gameObject);
             }
@@ -42,15 +45,24 @@ namespace IAV24.Final
             removeDetectedEnemy(other.gameObject);
         }
 
+        private void updateMagicPowerInfo()
+        {
+            if(magicPowerInfo != null)
+            {
+                magicPowerInfo.text = powerAmount.ToString();
+            }
+        }
+
         // Start is called before the first frame update
         void Start()
         {
             shootPointTransform = shootPoint.GetComponent<Transform>();
-            playerLayer = LayerMask.GetMask("Player");
-            if (powerAmount == 0)
+            avoidLayers = LayerMask.GetMask("Player") | LayerMask.GetMask("EnemyDamageZone");
+            if (powerAmount <= 0 || powerAmount > maxPowerAmount)
             {
                 powerAmount = maxPowerAmount;
             }
+            updateMagicPowerInfo();
         }
 
         private GameObject findFirstEnemyNonHidden()
@@ -65,7 +77,7 @@ namespace IAV24.Final
                     RaycastHit hitInfo;
                     Vector3 direction = enemiesInRange[i].transform.position - shootPointTransform.position;
                     Debug.DrawLine(shootPointTransform.position, enemiesInRange[i].transform.position, Color.red);
-                    if (Physics.Raycast(shootPointTransform.position, direction, out hitInfo, direction.magnitude, ~playerLayer))
+                    if (Physics.Raycast(shootPointTransform.position, direction, out hitInfo, direction.magnitude, ~avoidLayers))
                     {
                         if(hitInfo.collider.gameObject == enemiesInRange[i])
                         {
@@ -96,7 +108,7 @@ namespace IAV24.Final
 
         public void removeDetectedEnemy(GameObject enemy)
         {
-            if (enemy.GetComponent<EnemyAttack>() != null && enemiesInRange.Contains(enemy))
+            if (enemy.tag == "Enemy" && enemiesInRange.Contains(enemy))
             {
                 enemiesInRange.Remove(enemy);
             }
@@ -111,6 +123,7 @@ namespace IAV24.Final
                 {
                     cantShoot = false;
                     --powerAmount;
+                    updateMagicPowerInfo();
                     GameObject bulletInstance = Instantiate(bullet, shootPointTransform.position, Quaternion.identity);
                     Rigidbody bulletRigidBody = bulletInstance.GetComponent<Rigidbody>();
                     MagicShot magicShot = bulletInstance.GetComponent<MagicShot>();
