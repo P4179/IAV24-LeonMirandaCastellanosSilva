@@ -40,7 +40,13 @@ namespace IAV24.Final
         private Transform enemiesGroup;
 
         private float spawnTimer;
-        
+
+        [SerializeField]
+        private float spawnStartHour = 20.0f;
+        [SerializeField]
+        private float spawnEndHour = 5.0f;
+
+
         [SerializeField]
         private float minSpawnDelay = 2.0f;
         [SerializeField]
@@ -48,7 +54,7 @@ namespace IAV24.Final
         [SerializeField]
         private int maxEnemies = 10;
 
-        private float spawnDelay;
+        private float spawnCooldown;
 
         [SerializeField]
         private float spawnOffset = 1.0f;
@@ -75,7 +81,7 @@ namespace IAV24.Final
             {
                 spawnpoints[i] = sp.transform.GetChild(i);
             }
-            spawnDelay = Random.RandomRange(minSpawnDelay, maxSpawnDelay);
+            spawnCooldown = Random.Range(minSpawnDelay, maxSpawnDelay);
         }
 
         // Update is called once per frame
@@ -101,15 +107,21 @@ namespace IAV24.Final
             changeLight(hour / (24.0f / speedFactor));
             //Debug.Log(hour * speedFactor);
 
-            // Si s
-            if (hour * speedFactor < 5 || hour * speedFactor > 20)
+            // Si la hora se encuentra entre las horas en las que pueden spawnear enemigos
+            if (hour * speedFactor > spawnStartHour || hour * speedFactor < spawnEndHour)
             {
-                Debug.Log("Spawneable");
+                //Debug.Log("Spawneable");
+
+                // Se va actualizando el contador para spawnear enemigos
                 spawnTimer += Time.deltaTime;
-                if (spawnTimer > spawnDelay && enemiesGroup.childCount < maxEnemies)
+
+                // Si se ha pasado el cooldown de spawneo y no se supera el maximo
+                // numero de enemigos, spawnea un enemigo, cambia el cooldown de 
+                // spawneo, y reinicia el contador
+                if (spawnTimer > spawnCooldown && enemiesGroup.childCount < maxEnemies)
                 {
                     spawnEnemy();
-                    spawnDelay = Random.RandomRange(minSpawnDelay, maxSpawnDelay);
+                    spawnCooldown = Random.Range(minSpawnDelay, maxSpawnDelay);
                     spawnTimer = 0;
                 }
             }
@@ -126,14 +138,15 @@ namespace IAV24.Final
             lightTr.rotation = Quaternion.Euler(new Vector3((timePercent * 360.0f) - 90.0f, -90.0f, 0.0f));
         }
 
-        // Instancia un enemigo aleatorio en un punto aleatorio y lo mete al grupo de enemigos
+        // Instancia un enemigo aleatorio en un punto aleatorio de los
+        // colocados en el mapa y lo mete al grupo de enemigos
         private void spawnEnemy()
         {
-            Transform tr = spawnpoints[Random.RandomRange(0, spawnpoints.Length)];
-            GameObject prefab = enemies[Random.RandomRange(0, enemies.Length)];
+            Transform tr = spawnpoints[Random.Range(0, spawnpoints.Length)];
+            GameObject prefab = enemies[Random.Range(0, enemies.Length)];
 
             GameObject enemy = Instantiate(prefab, tr);
-            enemy.transform.position += new Vector3(Random.RandomRange(-spawnOffset, spawnOffset), 0, Random.RandomRange(-spawnOffset, spawnOffset));
+            enemy.transform.position += new Vector3(Random.Range(-spawnOffset, spawnOffset), 0, Random.Range(-spawnOffset, spawnOffset));
             enemy.transform.parent = enemiesGroup;
         }
 
