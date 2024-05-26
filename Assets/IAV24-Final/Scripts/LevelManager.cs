@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEditor.Timeline;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 namespace IAV24.Final
@@ -59,6 +60,20 @@ namespace IAV24.Final
         [SerializeField]
         private float spawnOffset = 1.0f;
 
+        public static LevelManager Instance { get; private set; }
+
+        private void Awake()
+        {
+            if(Instance == null)
+            {
+                Instance = this;
+            }
+            else
+            {
+                Destroy(this);
+            }
+        }
+
         // Start is called before the first frame update
         void Start()
         {
@@ -94,7 +109,7 @@ namespace IAV24.Final
 
             // El tiempo que ha pasado desde el ultimo guardado
             // supera las 24 horas, ha pasado un dia completo
-            if ((hoursPassed - prevTime) * speedFactor >= 24)
+            if ((hoursPassed - prevTime) * speedFactor >= 24)   // (hoursPassed - prevTime) * >= 24/speedFactor
             {
                 // Se actualiza el dia y el texto
                 days++;
@@ -152,7 +167,10 @@ namespace IAV24.Final
 
         public int getDays() { return days; }
 
-
+        public void resetLevel()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 
 }
