@@ -665,7 +665,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -903,7 +907,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1281,7 +1289,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1463,7 +1475,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     - target: {fileID: 3180694121074082411, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_LocalScale.x
@@ -1835,7 +1851,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1861,7 +1881,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     - target: {fileID: 3180694121074082411, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_LocalScale.x
@@ -1999,7 +2023,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2081,7 +2109,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2163,7 +2195,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2245,7 +2281,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2972,7 +3012,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     - target: {fileID: 3180694121074082411, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_LocalScale.x
@@ -3110,7 +3154,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3341,7 +3389,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     - target: {fileID: 3180694121074082411, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_LocalScale.x
@@ -3713,7 +3765,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3878,7 +3934,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3901,6 +3961,10 @@ PrefabInstance:
     - target: {fileID: 8580994052765218057, guid: bd43c79e2b5d2f94c9dbb716780b1a3b, type: 3}
       propertyPath: m_Name
       value: drink
+      objectReference: {fileID: 0}
+    - target: {fileID: 8580994052765218057, guid: bd43c79e2b5d2f94c9dbb716780b1a3b, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8961600363887013811, guid: bd43c79e2b5d2f94c9dbb716780b1a3b, type: 3}
       propertyPath: m_LocalScale.x
@@ -4004,7 +4068,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     - target: {fileID: 3180694121074082411, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_LocalScale.x
@@ -4142,7 +4210,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4224,7 +4296,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4306,7 +4382,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4336,7 +4416,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6658967477209364026, guid: 0f3cd68b5929a1a4781b3d177e766b84, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -31
+      value: -30.7
       objectReference: {fileID: 0}
     - target: {fileID: 6658967477209364026, guid: 0f3cd68b5929a1a4781b3d177e766b84, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4344,7 +4424,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6658967477209364026, guid: 0f3cd68b5929a1a4781b3d177e766b84, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -25.099998
+      value: -19.3
       objectReference: {fileID: 0}
     - target: {fileID: 6658967477209364026, guid: 0f3cd68b5929a1a4781b3d177e766b84, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4456,7 +4536,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4600,7 +4684,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4838,7 +4926,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4928,7 +5020,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7c6e69e36c5212c42b915faed0b66a96, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5062,7 +5154,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5300,7 +5396,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5538,7 +5638,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5620,7 +5724,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5936,7 +6044,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6018,7 +6130,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6354,6 +6470,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: drink (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8580994052765218057, guid: bd43c79e2b5d2f94c9dbb716780b1a3b, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8961600363887013811, guid: bd43c79e2b5d2f94c9dbb716780b1a3b, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4999999
@@ -6493,7 +6613,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6597,7 +6721,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     - target: {fileID: 3180694121074082411, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_LocalScale.x
@@ -6735,7 +6863,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6817,7 +6949,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7094,7 +7230,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7176,7 +7316,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7197,9 +7341,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 592188731}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Buildings
-  m_TagString: Untagged
+  m_TagString: BigObstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7247,7 +7391,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     - target: {fileID: 3180694121074082411, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_LocalScale.x
@@ -7407,7 +7555,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     - target: {fileID: 3180694121074082411, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_LocalScale.x
@@ -7701,7 +7853,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7727,7 +7883,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     - target: {fileID: 3180694121074082411, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_LocalScale.x
@@ -8099,7 +8259,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8423,7 +8587,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2d2a84ce295288d4b8eb404d1107a6e4, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8721,7 +8885,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8803,7 +8971,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8963,7 +9135,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9741,7 +9917,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     - target: {fileID: 3180694121074082411, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_LocalScale.x
@@ -9863,7 +10043,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9967,7 +10151,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     - target: {fileID: 3180694121074082411, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_LocalScale.x
@@ -10361,7 +10549,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     - target: {fileID: 3180694121074082411, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_LocalScale.x
@@ -10499,7 +10691,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10594,7 +10790,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7c6e69e36c5212c42b915faed0b66a96, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10874,7 +11070,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10998,7 +11198,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11267,7 +11471,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6658967477209364026, guid: 0f3cd68b5929a1a4781b3d177e766b84, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -45
+      value: -40.5
       objectReference: {fileID: 0}
     - target: {fileID: 6658967477209364026, guid: 0f3cd68b5929a1a4781b3d177e766b84, type: 3}
       propertyPath: m_LocalPosition.y
@@ -11275,7 +11479,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6658967477209364026, guid: 0f3cd68b5929a1a4781b3d177e766b84, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 35
+      value: 30.7
       objectReference: {fileID: 0}
     - target: {fileID: 6658967477209364026, guid: 0f3cd68b5929a1a4781b3d177e766b84, type: 3}
       propertyPath: m_LocalRotation.w
@@ -11384,6 +11588,10 @@ PrefabInstance:
     - target: {fileID: 5551482704150887383, guid: 713c06253a52f5341907b8677ba74734, type: 3}
       propertyPath: m_Name
       value: food
+      objectReference: {fileID: 0}
+    - target: {fileID: 5551482704150887383, guid: 713c06253a52f5341907b8677ba74734, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11565,7 +11773,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11725,7 +11937,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11815,7 +12031,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ae56e7bc4b28ce5418c58b24c389274b, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11971,7 +12187,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     - target: {fileID: 3180694121074082411, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_LocalScale.x
@@ -12265,7 +12485,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12369,7 +12593,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     - target: {fileID: 3180694121074082411, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_LocalScale.x
@@ -12507,7 +12735,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12589,7 +12821,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12905,7 +13141,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12987,7 +13227,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13091,7 +13335,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     - target: {fileID: 3180694121074082411, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_LocalScale.x
@@ -13234,7 +13482,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13316,7 +13568,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13484,7 +13740,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7c6e69e36c5212c42b915faed0b66a96, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13860,7 +14116,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bb674bc7e8d18344fabfed021bd66c78, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14150,7 +14406,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14544,7 +14804,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15094,7 +15358,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15332,7 +15600,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15422,7 +15694,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d5c96066014f4f54688d743708f5fdf8, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15642,7 +15914,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: dc52b52df0ed1cd49bc6b97bf342d9f3, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15760,7 +16032,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15850,7 +16126,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ae56e7bc4b28ce5418c58b24c389274b, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16062,7 +16338,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16244,7 +16524,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     - target: {fileID: 3180694121074082411, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_LocalScale.x
@@ -16382,7 +16666,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16464,7 +16752,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16494,7 +16786,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6658967477209364026, guid: 0f3cd68b5929a1a4781b3d177e766b84, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.6
+      value: 13.3
       objectReference: {fileID: 0}
     - target: {fileID: 6658967477209364026, guid: 0f3cd68b5929a1a4781b3d177e766b84, type: 3}
       propertyPath: m_LocalPosition.y
@@ -16502,7 +16794,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6658967477209364026, guid: 0f3cd68b5929a1a4781b3d177e766b84, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 42.100006
+      value: 42.8
       objectReference: {fileID: 0}
     - target: {fileID: 6658967477209364026, guid: 0f3cd68b5929a1a4781b3d177e766b84, type: 3}
       propertyPath: m_LocalRotation.w
@@ -16614,7 +16906,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16696,7 +16992,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16778,7 +17078,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16938,7 +17242,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17184,7 +17492,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 94671a1b81262e74089a296e694ac824, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17318,7 +17626,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17400,7 +17712,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17482,7 +17798,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17642,7 +17962,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17724,7 +18048,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17868,7 +18196,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18262,7 +18594,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18530,7 +18866,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18617,7 +18957,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18699,7 +19043,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18881,7 +19229,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     - target: {fileID: 3180694121074082411, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_LocalScale.x
@@ -18963,7 +19315,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     - target: {fileID: 3180694121074082411, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_LocalScale.x
@@ -19203,7 +19559,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19385,7 +19745,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     - target: {fileID: 3180694121074082411, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_LocalScale.x
@@ -19453,144 +19817,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3180694121074082411, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
   m_PrefabInstance: {fileID: 1406831841}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1410641376
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 580059041}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 69a8919b1f0aa1544bb7607cce65b337, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 69a8919b1f0aa1544bb7607cce65b337, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 69a8919b1f0aa1544bb7607cce65b337, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 69a8919b1f0aa1544bb7607cce65b337, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 6.699999
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 69a8919b1f0aa1544bb7607cce65b337, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.1299963
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 69a8919b1f0aa1544bb7607cce65b337, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -29.199999
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 69a8919b1f0aa1544bb7607cce65b337, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.955793
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 69a8919b1f0aa1544bb7607cce65b337, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 69a8919b1f0aa1544bb7607cce65b337, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.2940404
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 69a8919b1f0aa1544bb7607cce65b337, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 69a8919b1f0aa1544bb7607cce65b337, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 69a8919b1f0aa1544bb7607cce65b337, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -34.2
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 69a8919b1f0aa1544bb7607cce65b337, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 69a8919b1f0aa1544bb7607cce65b337, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -7511558181221131132, guid: 69a8919b1f0aa1544bb7607cce65b337, type: 3}
-      propertyPath: m_Materials.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -7511558181221131132, guid: 69a8919b1f0aa1544bb7607cce65b337, type: 3}
-      propertyPath: m_Materials.Array.data[1]
-      value: 
-      objectReference: {fileID: 2100000, guid: 85560b3064ee52645b5b9bec11acec75, type: 2}
-    - target: {fileID: 919132149155446097, guid: 69a8919b1f0aa1544bb7607cce65b337, type: 3}
-      propertyPath: m_Name
-      value: building_tower_B_blue
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 69a8919b1f0aa1544bb7607cce65b337, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1410641379}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 69a8919b1f0aa1544bb7607cce65b337, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1410641380}
-  m_SourcePrefab: {fileID: 100100000, guid: 69a8919b1f0aa1544bb7607cce65b337, type: 3}
 --- !u!4 &1410641377 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 69a8919b1f0aa1544bb7607cce65b337, type: 3}
-  m_PrefabInstance: {fileID: 1410641376}
+  m_CorrespondingSourceObject: {fileID: 6152579030125515212, guid: 8749a9ec6219ac7458352e12bfb20304, type: 3}
+  m_PrefabInstance: {fileID: 9165556449440326054}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1410641378 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 69a8919b1f0aa1544bb7607cce65b337, type: 3}
-  m_PrefabInstance: {fileID: 1410641376}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &1410641379
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1410641378}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -1867165846391908481, guid: 69a8919b1f0aa1544bb7607cce65b337, type: 3}
---- !u!114 &1410641380
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1410641378}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_OverrideArea: 1
-  m_Area: 1
-  m_OverrideGenerateLinks: 0
-  m_GenerateLinks: 0
-  m_IgnoreFromBuild: 0
-  m_ApplyToChildren: 1
-  m_AffectedAgents: ffffffff
 --- !u!1001 &1412539468
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19605,7 +19836,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     - target: {fileID: 3180694121074082411, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_LocalScale.x
@@ -19743,7 +19978,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19833,7 +20072,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ae56e7bc4b28ce5418c58b24c389274b, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19964,6 +20203,10 @@ PrefabInstance:
     - target: {fileID: 5551482704150887383, guid: 713c06253a52f5341907b8677ba74734, type: 3}
       propertyPath: m_Name
       value: food (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5551482704150887383, guid: 713c06253a52f5341907b8677ba74734, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20145,7 +20388,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20227,7 +20474,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20465,7 +20716,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20571,7 +20826,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20653,7 +20912,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20665,6 +20928,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 466922404340541561, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
   m_PrefabInstance: {fileID: 1479563758}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1487071709
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4354225127711171514, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8981229775305250804, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.9706573
+      objectReference: {fileID: 0}
+    - target: {fileID: 8981229775305250804, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.829998
+      objectReference: {fileID: 0}
+    - target: {fileID: 8981229775305250804, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -15.893784
+      objectReference: {fileID: 0}
+    - target: {fileID: 8981229775305250804, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8981229775305250804, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8981229775305250804, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8981229775305250804, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8981229775305250804, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8981229775305250804, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8981229775305250804, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
 --- !u!1001 &1496826442
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20891,7 +21211,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20995,7 +21319,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     - target: {fileID: 3180694121074082411, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_LocalScale.x
@@ -21141,7 +21469,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b6f4a16653db75b4ea560575c1e59b99, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21361,7 +21689,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1db6b1cf80537a043bede0ea09cd9a2f, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21722,7 +22050,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22194,7 +22526,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22224,7 +22560,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6658967477209364026, guid: 0f3cd68b5929a1a4781b3d177e766b84, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -52.9
+      value: -46.7
       objectReference: {fileID: 0}
     - target: {fileID: 6658967477209364026, guid: 0f3cd68b5929a1a4781b3d177e766b84, type: 3}
       propertyPath: m_LocalPosition.y
@@ -22232,7 +22568,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6658967477209364026, guid: 0f3cd68b5929a1a4781b3d177e766b84, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.800001
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 6658967477209364026, guid: 0f3cd68b5929a1a4781b3d177e766b84, type: 3}
       propertyPath: m_LocalRotation.w
@@ -22508,7 +22844,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ae56e7bc4b28ce5418c58b24c389274b, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22626,7 +22962,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22716,7 +23056,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: eafb9a2a448bf3445897a231ee0e5c2b, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22872,7 +23212,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     - target: {fileID: 3180694121074082411, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_LocalScale.x
@@ -23306,7 +23650,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23544,7 +23892,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23704,7 +24056,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23786,7 +24142,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23946,7 +24306,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24128,7 +24492,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     - target: {fileID: 3180694121074082411, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_LocalScale.x
@@ -24210,7 +24578,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     - target: {fileID: 3180694121074082411, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_LocalScale.x
@@ -24511,7 +24883,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24905,7 +25281,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24987,7 +25367,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25077,7 +25461,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 260ef22cb5fa0654c92f5bce388c50bf, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25211,7 +25595,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25301,11 +25689,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9ad720afa11163f49a27c24a488388b5, type: 3}
   m_PrefabInstance: {fileID: 1874686490}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1875535962 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4354225127711171514, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-  m_PrefabInstance: {fileID: 55857141764628011}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1898077771
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25376,7 +25759,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25480,7 +25867,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     - target: {fileID: 3180694121074082411, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_LocalScale.x
@@ -25562,7 +25953,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     - target: {fileID: 3180694121074082411, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_LocalScale.x
@@ -25778,7 +26173,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25860,7 +26259,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -26176,7 +26579,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -26336,7 +26743,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -26357,9 +26768,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1947310704}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Tables
-  m_TagString: Untagged
+  m_TagString: SmallObstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26457,7 +26868,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -26539,7 +26954,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -26621,7 +27040,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -26807,7 +27230,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6658967477209364026, guid: 0f3cd68b5929a1a4781b3d177e766b84, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 54.8
+      value: 50.5
       objectReference: {fileID: 0}
     - target: {fileID: 6658967477209364026, guid: 0f3cd68b5929a1a4781b3d177e766b84, type: 3}
       propertyPath: m_LocalPosition.y
@@ -26815,7 +27238,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6658967477209364026, guid: 0f3cd68b5929a1a4781b3d177e766b84, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10.4
+      value: 8.1
       objectReference: {fileID: 0}
     - target: {fileID: 6658967477209364026, guid: 0f3cd68b5929a1a4781b3d177e766b84, type: 3}
       propertyPath: m_LocalRotation.w
@@ -27005,7 +27428,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -27321,7 +27748,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -27347,7 +27778,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     - target: {fileID: 3180694121074082411, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_LocalScale.x
@@ -27727,7 +28162,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ae56e7bc4b28ce5418c58b24c389274b, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -27805,7 +28240,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     - target: {fileID: 3180694121074082411, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_LocalScale.x
@@ -27943,7 +28382,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -28025,7 +28468,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -28497,7 +28944,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -28969,7 +29420,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -28981,346 +29436,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8427833999282098230, guid: 7cf845da0425f674784210f05bd33946, type: 3}
   m_PrefabInstance: {fileID: 2146857775}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &55857141764628011
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -4335223939264783989, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: mBehaviorSource.mTaskData.JSONSerialization
-      value: '{"EntryTask":{"Type":"BehaviorDesigner.Runtime.Tasks.EntryTask","NodeData":{"Offset":"(375,50)"},"ID":0,"Name":"Entry","Instant":true},"RootTask":{"Type":"BehaviorDesigner.Runtime.Tasks.Repeater","NodeData":{"Offset":"(-5,120)"},"ID":1,"Name":"Repeater","Instant":true,"SharedIntcount":{"Type":"BehaviorDesigner.Runtime.SharedInt","Name":null,"Int32mValue":0},"SharedBoolrepeatForever":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"SharedBoolendOnFailure":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Selector","NodeData":{"Offset":"(-2.49999428,119.999969)"},"ID":2,"Name":"Selector","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-170,130)"},"ID":3,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Movement.WithinDistance","NodeData":{"Offset":"(-85,121.363632)"},"ID":4,"Name":"Within
-        Distance","Instant":true,"Booleanm_UsePhysics2D":false,"SharedDetectionModem_DetectionMode":{"Type":"BehaviorDesigner.Runtime.Tasks.Movement.SharedDetectionMode","Name":null,"DetectionModemValue":"4294967292"},"SharedGameObjectm_TargetObject":{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":null},"SharedGameObjectListm_TargetObjects":{"Type":"BehaviorDesigner.Runtime.SharedGameObjectList","Name":null,"List`1mValue":[]},"SharedStringm_TargetTag":{"Type":"BehaviorDesigner.Runtime.SharedString","Name":null,"StringmValue":"Enemy"},"SharedLayerMaskm_TargetLayerMask":{"Type":"BehaviorDesigner.Runtime.SharedLayerMask","Name":null,"LayerMaskmValue":256},"Int32m_MaxCollisionCount":200,"SharedFloatm_Magnitude":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":10},"SharedBoolm_LineOfSight":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"LayerMaskm_IgnoreLayerMask":4,"SharedVector3m_Offset":{"Type":"BehaviorDesigner.Runtime.SharedVector3","Name":null,"Vector3mValue":"(0,0,0)"},"SharedVector3m_TargetOffset":{"Type":"BehaviorDesigner.Runtime.SharedVector3","Name":null,"Vector3mValue":"(0,0,0)"},"SharedBoolm_DrawDebugRay":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false},"SharedGameObjectm_ReturnedObject":{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":null}},{"Type":"BehaviorDesigner.Runtime.Tasks.Movement.Evade","NodeData":{"Offset":"(78.29706,115.657715)"},"ID":5,"Name":"Evade","Instant":true,"SharedFloatm_EvadeDistance":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":10},"SharedFloatm_LookAheadDistance":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":5},"SharedFloatm_TargetDistPrediction":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":20},"SharedFloatm_TargetDistPredictionMult":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":20},"SharedGameObjectm_Target":{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":null},"Int32m_MaxInterations":1,"SharedFloatm_Speed":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":8},"SharedFloatm_AngularSpeed":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":100},"SharedFloatm_ArriveDistance":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1},"SharedBoolm_StopOnTaskEnd":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"SharedBoolm_UpdateRotation":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true}}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Idle","NodeData":{"Offset":"(133.599365,138.075928)"},"ID":6,"Name":"Idle","Instant":true}]}]},"DetachedTasks":[{"Type":"BehaviorDesigner.Runtime.Tasks.Movement.Flee","NodeData":{"Offset":"(355.7895,437.8947)"},"ID":7,"Name":"Flee","Instant":true,"SharedFloatm_FleedDistance":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":20},"SharedFloatm_LookAheadDistance":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":5},"SharedGameObjectm_Target":{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":null},"SharedFloatm_Speed":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":10},"SharedFloatm_AngularSpeed":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":120},"SharedFloatm_ArriveDistance":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1},"SharedBoolm_StopOnTaskEnd":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"SharedBoolm_UpdateRotation":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true}}],"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedString","Name":"Walking:A","IsShared":true,"IsDynamic":true}]}'
-      objectReference: {fileID: 0}
-    - target: {fileID: -4335223939264783989, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4335223939264783989, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[1]
-      value: 
-      objectReference: {fileID: 1875535962}
-    - target: {fileID: -4335223939264783989, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[2]
-      value: 
-      objectReference: {fileID: 1875535962}
-    - target: {fileID: 54598875862862532, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 609031908202539863, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1166077747008814433, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1346601008540150635, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1381329073209392078, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1391269856368845496, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1598856668006131808, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1629193797246385885, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1773233786266534635, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1780167325810687738, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1914010098797490342, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1934358089897999529, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2059411038486434234, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2088135792670559901, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2157794441252001701, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2181324558084240395, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2225028732100009348, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2704923560825668982, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2737103700399571661, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2853539108105775859, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2914513307544723594, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2993662096181370370, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3296086153020873945, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3406092090043868850, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3502926295513694145, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3576697713229063029, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3601444964687961223, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3666826844094229458, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Radius
-      value: 12.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4176695309886671022, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4217458223383158607, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4226376023096292917, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4328162213375555277, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4354225127711171514, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 4354225127711171514, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4420752101935264536, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4816066947655581327, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4928488751543007870, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4987318811782850433, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 5115434229995786418, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 5259088229122967755, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6058805523142804825, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6233024327737046093, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6284667770890697380, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6373073728156739247, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6518687724306824999, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6554970771970079131, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6621147877646795579, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6730454218005647978, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6768847803445868966, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6862689844551814181, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7075918423479609234, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7212852978282123360, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7246087936731204118, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7321778976023513512, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7581012457434504104, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7676447204738362743, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 8413810700248628688, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 8586827806940868628, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 8873756665277828206, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 8981229775305250804, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8981229775305250804, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 5.829998
-      objectReference: {fileID: 0}
-    - target: {fileID: 8981229775305250804, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -16.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8981229775305250804, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8981229775305250804, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8981229775305250804, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8981229775305250804, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8981229775305250804, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8981229775305250804, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8981229775305250804, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9144884945025195871, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 8586827806940868628, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1598856668006131808, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 55857141764628013}
-  m_SourcePrefab: {fileID: 100100000, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
---- !u!1 &55857141764628012 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1598856668006131808, guid: 7df2727cb6a0b0c4b8be8497b312c149, type: 3}
-  m_PrefabInstance: {fileID: 55857141764628011}
-  m_PrefabAsset: {fileID: 0}
---- !u!135 &55857141764628013
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 55857141764628012}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 5.3
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &267834237114031615
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29339,7 +29454,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6658967477209364026, guid: 0f3cd68b5929a1a4781b3d177e766b84, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 20.7
+      value: 17.5
       objectReference: {fileID: 0}
     - target: {fileID: 6658967477209364026, guid: 0f3cd68b5929a1a4781b3d177e766b84, type: 3}
       propertyPath: m_LocalPosition.y
@@ -29347,7 +29462,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6658967477209364026, guid: 0f3cd68b5929a1a4781b3d177e766b84, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -28.4
+      value: -24.7
       objectReference: {fileID: 0}
     - target: {fileID: 6658967477209364026, guid: 0f3cd68b5929a1a4781b3d177e766b84, type: 3}
       propertyPath: m_LocalRotation.w
@@ -29441,6 +29556,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: food (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5551482704150887383, guid: 713c06253a52f5341907b8677ba74734, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -29481,6 +29600,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 580059041}
     m_Modifications:
+    - target: {fileID: 4431135873036624021, guid: af159aadb3da52a408f6019c765fb553, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8630371777037314453, guid: af159aadb3da52a408f6019c765fb553, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.5000001
@@ -29533,6 +29656,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: book
       objectReference: {fileID: 0}
+    - target: {fileID: 8975372564795618095, guid: af159aadb3da52a408f6019c765fb553, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -29579,7 +29706,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841710753813829841, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     - target: {fileID: 3180694121074082411, guid: 14aaf85b38b158f488a122ee90793c96, type: 3}
       propertyPath: m_LocalPosition.x
@@ -29637,6 +29768,10 @@ PrefabInstance:
     - target: {fileID: 8580994052765218057, guid: bd43c79e2b5d2f94c9dbb716780b1a3b, type: 3}
       propertyPath: m_Name
       value: drink (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8580994052765218057, guid: bd43c79e2b5d2f94c9dbb716780b1a3b, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8961600363887013811, guid: bd43c79e2b5d2f94c9dbb716780b1a3b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -29764,7 +29899,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204934267104856716, guid: 7cf845da0425f674784210f05bd33946, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -29825,13 +29964,74 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 950549652503261891, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
+      propertyPath: m_TagString
+      value: BigObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f21a86855e6d054eb862a46d782bed3, type: 3}
+--- !u!1001 &9165556449440326054
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 580059041}
+    m_Modifications:
+    - target: {fileID: 6152579030125515212, guid: 8749a9ec6219ac7458352e12bfb20304, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.699999
+      objectReference: {fileID: 0}
+    - target: {fileID: 6152579030125515212, guid: 8749a9ec6219ac7458352e12bfb20304, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.1299963
+      objectReference: {fileID: 0}
+    - target: {fileID: 6152579030125515212, guid: 8749a9ec6219ac7458352e12bfb20304, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -29.199999
+      objectReference: {fileID: 0}
+    - target: {fileID: 6152579030125515212, guid: 8749a9ec6219ac7458352e12bfb20304, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.955793
+      objectReference: {fileID: 0}
+    - target: {fileID: 6152579030125515212, guid: 8749a9ec6219ac7458352e12bfb20304, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6152579030125515212, guid: 8749a9ec6219ac7458352e12bfb20304, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.2940404
+      objectReference: {fileID: 0}
+    - target: {fileID: 6152579030125515212, guid: 8749a9ec6219ac7458352e12bfb20304, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6152579030125515212, guid: 8749a9ec6219ac7458352e12bfb20304, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6152579030125515212, guid: 8749a9ec6219ac7458352e12bfb20304, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -34.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6152579030125515212, guid: 8749a9ec6219ac7458352e12bfb20304, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6785106781419228022, guid: 8749a9ec6219ac7458352e12bfb20304, type: 3}
+      propertyPath: m_Name
+      value: tower
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8749a9ec6219ac7458352e12bfb20304, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -29842,5 +30042,5 @@ SceneRoots:
   - {fileID: 770570533}
   - {fileID: 217730183}
   - {fileID: 1566248762}
-  - {fileID: 55857141764628011}
   - {fileID: 762043383}
+  - {fileID: 1487071709}

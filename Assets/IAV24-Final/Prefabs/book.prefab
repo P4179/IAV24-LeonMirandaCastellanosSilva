@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: spellbook_open
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d3307b43f7d0cd44e9b5870bf8594379, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -148,7 +152,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 85560b3064ee52645b5b9bec11acec75, type: 2}
     - target: {fileID: 919132149155446097, guid: 86bfc858525b0654eab34890acefcdbd, type: 3}
       propertyPath: m_Name
-      value: table_medium_tablecloth Variant
+      value: book
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 86bfc858525b0654eab34890acefcdbd, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 86bfc858525b0654eab34890acefcdbd, type: 3}
+      propertyPath: m_TagString
+      value: SmallObstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

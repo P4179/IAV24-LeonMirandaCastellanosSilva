@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - SmallObstacle
+  - BigObstacle
   layers:
   - Default
   - TransparentFX
@@ -15,8 +17,8 @@ TagManager:
   - FloorDecoration
   - Player
   - Enemy
-  - 
-  - 
+  - SmallObstacle
+  - BigObstacle
   - 
   - 
   - 
