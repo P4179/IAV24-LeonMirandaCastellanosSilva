@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2205955874178694402}
   - component: {fileID: 761249506222848616}
   - component: {fileID: 990680643340389051}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: MagicBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
