@@ -8,7 +8,8 @@ public class EnemyAttack : MonoBehaviour
     [SerializeField]
     private float damage = 1.0f;
 
-    private void OnCollisionStay(Collision collision)
+
+    void OnTriggerStay(Collider collision)
     {
         PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
         if(playerHealth != null)
