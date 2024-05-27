@@ -134,8 +134,9 @@ Además, se ha utilizado un borde para los objetos interactuables para que el us
 ![](mapOverview.png)
 
 ### Solución B
-// Esquema árbol del personaje
-
+El `LevelManager` es el gestor encargado tanto del:
+- Ciclo de día-noche &rarr; para hacer un cambio visual, se hace que la luz cambie de color según un grandiente y que gire alrededor del mundo como si de un sol se tratase, de modo que las sombras cambian de posición dependiendo de la hora del día.
+- Spawn de los enemigos &rarr; existen varios puntos en los que que a partir de una horas establecidas en el día aparecen los tipos de enemigos asignados. Todo ello, desde el editor. Además, se lleva un conteo de los enemigos que hay en el mapa para que no se generen más si ya hay demasiados.
 ### Solución C
 
 ### Solución D
@@ -153,6 +154,8 @@ stateDiagram-v2
     Pierde_vida --> [*] : Vida llega a 0
 ```
 
+// Esquema árbol del personaje
+
 ### Solución E
 
 <br>
@@ -163,70 +166,74 @@ Se ha creado un plan de pruebas para comprobar el correcto funcionamiento del pr
 A la hora de la medición se especifica el número de FPS a los que se ejecutaba el programa, para comprobar que el prototipo creado no se ha basado en ninguna práctica de programación errónea que empeora el rendimiento, y cuales han sido los resultados esperados.
 
 ### Prueba A
-<u>Especificaciones de la máquina</u>
+Este apartado está enfocado en probar el correcto funcionamiento del mundo, sobre todo que la malla de navegación está bien creada y se pueden llegar todos los lugares.
+
+<ins>Especificaciones de la máquina</ins>
 - Sistema operativo:
 - Procesador:
 - RAM:
 - Tarjeta gráfica:
 - VRAM:
 
-| Prueba | Descripción | Atributos | Resultados esperados | Resultados | FPS |
-|:-:|:-:|:-:|:-:|:-:|:-:|
-| 1 |  |  |  |  |
+| Prueba | Descripción | Resultados esperados | Resultados | FPS |
+|:-:|:-:|:-:|:-:|:-:|
+| A1 | Aprovechando el movimiento manual del jugador (de modo que también se prueba), hacer que el jugador se dirija a cada uno de los extremos del mapa desde el centro del pueblo. Se desactiva el spawn de enemigos para evitar que molesten en esta prueba.  | Se espera que el jugador pueda llegar a cada uno de los extremos y no se quede atascado en ningún sitio usando el movimiento manual. |  |
 
 ### Prueba B
-<u>Especificaciones de la máquina</u>
+El objetivo de esta prueba es testear los cambios en el mundo y como afectan al spawn de enemigos, de modo que se puedan generar enemigos a lo largo de todos los días sin que afecte en ningún momento al flujo del juego.
+
+<ins>Especificaciones de la máquina</ins>
 - Sistema operativo:
 - Procesador:
 - RAM:
 - Tarjeta gráfica:
 - VRAM:
 
-| Prueba | Descripción | Atributos | Resultados esperados | Resultados | FPS |
-|:-:|:-:|:-:|:-:|:-:|:-:|
-| 1 |  |  |  |  |
+| Prueba | Descripción | Resultados esperados | Resultados | FPS |
+|:-:|:-:|:-:|:-:|:-:|
+| B1 | El spawn de los enemigos se produce durante las horas nocturas. Por lo tanto, para probar que el ciclo de día-noche funciona y que se pueden spawnear enemigos durante varios días se va a aumentar la velocidad de las horas, haciendo de esta manera que los días pasen más rápidos. Se prueba hasta llegar al día 10. <br> Respecto al jugador, como no entra dentro de esta prueba y no es necesario usarlo en ningún momento, se va colocar fuera del mapa para que no exista la opción de que muera y el juego termine.  | Se espera que los 10 días sucedan con normalidad, alternándose el ciclo día-noche perfectamente. Además, como los enemigos merodean, terminarán llegando al pueblo y no se llenarán los puntos de spawn, impidiendo el avance de los nuevos enemigos que surjan. |  |
 
 ### Prueba C
-<u>Especificaciones de la máquina</u>
+<ins>Especificaciones de la máquina</ins>
 - Sistema operativo:
 - Procesador:
 - RAM:
 - Tarjeta gráfica:
 - VRAM:
 
-| Prueba | Descripción | Atributos | Resultados esperados | Resultados | FPS |
-|:-:|:-:|:-:|:-:|:-:|:-:|
-| 1 |  |  |  |  |
+| Prueba | Descripción | Resultados esperados | Resultados | FPS |
+|:-:|:-:|:-:|:-:|:-:|
+| 1 |  |  |  |
 
 ### Prueba D
-<u>Especificaciones de la máquina</u>
+<ins>Especificaciones de la máquina</ins>
 - Sistema operativo:
 - Procesador:
 - RAM:
 - Tarjeta gráfica:
 - VRAM:
 
-| Prueba | Descripción | Atributos | Resultados esperados | Resultados | FPS |
-|:-:|:-:|:-:|:-:|:-:|:-:|
-| 1 |  |  |  |  |
+| Prueba | Descripción | Resultados esperados | Resultados | FPS |
+|:-:|:-:|:-:|:-:|:-:|
+| 1 |  |  |  |
 
 ### Prueba E
-<u>Especificaciones de la máquina</u>
+<ins>Especificaciones de la máquina</ins>
 - Sistema operativo:
 - Procesador:
 - RAM:
 - Tarjeta gráfica:
 - VRAM:
 
-| Prueba | Descripción | Atributos | Resultados esperados | Resultados | FPS |
-|:-:|:-:|:-:|:-:|:-:|:-:|
+| Prueba | Descripción | Resultados esperados | Resultados | FPS |
+|:-:|:-:|:-:|:-:|:-:|
 | 1 |  |  |  |  |
 
 <br>
 
 ## Ampliaciones
 Se han realizado las siguientes ampliaciones:
-- 
+- Movimiento manual del jugador con clic derecho usando la malla de navegación. Se ha lanzado un raycast con la posición del mouse para saber a que punto tiene que dirigirse.
 
 ## Producción
 Las tareas se han realizado y el esfuerzo ha sido repartido entre los autores. La cronología de los objetivos del grupo está documentada en la tabla situada más abajo. Para obtener más información sobre la organización y distribución de tareas, puede consultarse el desglose exhaustivo de estas en la sección de Proyectos en GitHub.
