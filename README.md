@@ -85,6 +85,23 @@ Los enemigos mueren de una bola de poder y realizan cierto daño al jugador al e
 - Existen grupos de enemigos que realizan su movimiento correspondiente, pero en vez de ir en solitario, van en grupo, en bandada.
 - *Smart object* que el jugador puede utilizar para esconderse de los enemigos durante cierto tiempo.
 
+<br>
+
+Una vez explicados todos los elementos del proyecto, el enunciado se estructuraría de la siguiente manera:
+ - A. Hay un **mundo virtual** (el pubelo) con un esquema de división por **malla de navegación** generado con la herramienta ***AI Navigation*** de Unity, en el que se encuentran todos los elementos descritos anteriormente. La cámara es fija, y enfocará en todo momento a todo el escenario, desde un ángulo en el que se puede ver prácticamente todo lo que hace el personaje en todo momento. 
+ 
+ - B. Hay un **ciclo de día y noche** con el que se van contando los días que lleva vivo el personaje. El sol irá saliendo y poniéndose según la hora del día, y por la noche aparecerán **enemigos** cada cierto tiempo a las afueras del pueblo.
+
+ - C. El personaje cuenta con una **barra de vida**, que disminuirá si los enemigos entran en contacto con él. Por otro lado, también cuenta con **poder mágico**, que le permitirá **dispararle** a los enemigos que se acerquen a él a cierta distancia. El **poder mágico** restante estará indicado por el número restante de proyectiles que puede disparar.
+ 
+ - D. El personaje cuenta con unas **necesidades**, indicando qué tan satisfechas están mediante unas barras. Estas barras se van vaciando con el tiempo, por lo que tendrá que usar los ***smart objects*** correspondientes para satisfacerlas. Si es de noche, la barra de energía se vaciará más rápidamente, y el personaje no podrá dormir si hay demasiados enemigos cerca de él. Si la barra de vida no está al completo, esta se irá rellenando poco a poco si sus necesidades están satisfechas.
+
+ - E. Tanto los enemigos como los personajes están controlados por **árboles de comportamiento** complejos, programados mediante **Behavior Designer**. El personaje se acercará a los distintos ***smart objects*** según sus necesidades para posteriormente usarlos, y tratará de huir de los enemigos que se acerquen a él, evadiéndolos tanto a ellos como a los obstáculos del mapa. Por otro lado, los enemigos merodearán por el mapa hasta que encuentren con la vista al personaje, comenzando a perseguirlo una vez lo detecten.
+
+De esta manera, Matt se encargará de los apartados A, B y E, mientras que Pedro realizará los apartados C y D.
+
+<br>
+
 ## Punto de partida
 Se parte de un proyecto de Unity 2022.3.5.f1 proporcionado por el profesor que contiene la herramienta Behavior Designer, que sirve para crear árboles de comportamiento.
 Los árboles de comportamiento surgen como una mejora de las máquinas finitas de estados. Representan la ejecución de un plan (secuencia de acciones) y consiste en un árbol binario dirigido con un nodo raíz, nodos de control de flujo y nodos de ejecución (tareas). Los nodos principales de flujo son:
@@ -100,6 +117,8 @@ La creación del mundo se ha hecho en dos partes. Mientras que el terreno se ha 
 
 Además, se ha utilizado un borde para los objetos interactuables para que el usuario pueda reconocerlos fácilmente y conozca perfectamente lo que está haciendo el jugador.
 
+![](mapOverview.png)
+
 ### Personaje <a name="solPersonaje"></a>
 // Esquema árbol del personaje
 
@@ -113,12 +132,11 @@ stateDiagram-v2
     Aparece --> Merodeo
     Merodeo --> Persecucion : Detecta al jugador
     Persecucion --> Merodeo : Deja de detectar al jugador
-    Persecucion --> Pierde_vida(1) : Disparado por el jugador
-    Pierde_vida(1) --> Persecucion
-    Merodeo --> Pierde_vida(2) : Disparado por el jugador
-    Pierde_vida(2) --> Merodeo
-    Pierde_vida(1) --> [*] : Vida llega a 0
-    Pierde_vida(2) --> [*] : Vida a llega a 0
+    Persecucion --> Pierde_vida : Disparado por el jugador
+    Pierde_vida --> Persecucion
+    Merodeo --> Pierde_vida : Disparado por el jugador
+    Pierde_vida --> Merodeo
+    Pierde_vida --> [*] : Vida llega a 0
 ```
 
 <br>
@@ -136,6 +154,10 @@ A la hora de la medición se especifica el número de FPS a los que se ejecutaba
 - Tarjeta gráfica:
 - VRAM:
 
+| Prueba | Descripción | Atributos | Resultados esperados | Resultados | FPS |
+|:-:|:-:|:-:|:-:|:-:|:-:|
+| 1 |  |  |  |  |
+
 ### Personaje <a name="pruebasPersonaje"></a>
 <u>Especificaciones de la máquina</u>
 - Sistema operativo:
@@ -143,6 +165,11 @@ A la hora de la medición se especifica el número de FPS a los que se ejecutaba
 - RAM:
 - Tarjeta gráfica:
 - VRAM:
+
+| Prueba | Descripción | Atributos | Resultados esperados | Resultados | FPS |
+|:-:|:-:|:-:|:-:|:-:|:-:|
+| 1 |  |  |  |  |
+
 
 ### Objetos <a name="pruebasObjetos"></a>
 <u>Especificaciones de la máquina</u>
@@ -152,6 +179,11 @@ A la hora de la medición se especifica el número de FPS a los que se ejecutaba
 - Tarjeta gráfica:
 - VRAM:
 
+| Prueba | Descripción | Atributos | Resultados esperados | Resultados | FPS |
+|:-:|:-:|:-:|:-:|:-:|:-:|
+| 1 |  |  |  |  |
+
+
 ### Enemigos <a name="pruebasEnemigos"></a>
 <u>Especificaciones de la máquina</u>
 - Sistema operativo:
@@ -159,6 +191,11 @@ A la hora de la medición se especifica el número de FPS a los que se ejecutaba
 - RAM:
 - Tarjeta gráfica:
 - VRAM:
+
+| Prueba | Descripción | Atributos | Resultados esperados | Resultados | FPS |
+|:-:|:-:|:-:|:-:|:-:|:-:|
+| 1 |  |  |  |  |
+
 
 <br>
 
