@@ -48,6 +48,9 @@ namespace IAV24.Final
                 updateHealthBar();
                 //Debug.Log(currentHealth);
                 gracePeriodEnabled = true;
+                // Reproduce la animacion de ataque, reiniciandola cada vez que la reproduce
+                anim.Play("GetHit", 0, 0.0f);
+
                 if (currentHealth <= 0.0f)
                 {
                     // Reproduce la animacion de muerte y llama a
@@ -64,7 +67,7 @@ namespace IAV24.Final
             LevelManager.Instance.resetLevel();
         }
 
-        public float getHealth() { return currentHealth; }
+        public bool inGracePeriod() { return gracePeriodEnabled; }
 
         private void Update()
         {

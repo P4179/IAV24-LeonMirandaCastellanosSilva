@@ -22,11 +22,14 @@ namespace IAV24.Final
             PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
             if (playerHealth != null)
             {
-                // Reproduce la animacion de ataque y aplica el dano una vez ha
-                // terminado (en este caso, a la mitad de la animacion, ya que
-                // coincide con el momento en el que el enemigo ataca)
-                anim.Play("Attack");
-                StartCoroutine(makeDamage(anim.GetCurrentAnimatorClipInfo(0)[0].clip.length / 2, playerHealth, damage));
+                // Reproduce la animacion de ataque, reiniciandola cada vez que la reproduce,
+                // y aplica el dano una vez ha terminado (en este caso, a la mitad de la
+                // animacion, ya que coincide con el momento en el que el enemigo ataca)
+                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !playerHealth.inGracePeriod())
+                {
+                    anim.Play("Attack", 0, 0.0f);
+                    StartCoroutine(makeDamage(anim.GetCurrentAnimatorClipInfo(0)[0].clip.length / 2, playerHealth, damage));
+                }
             }
         }
 

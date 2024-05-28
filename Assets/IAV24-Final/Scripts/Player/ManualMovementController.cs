@@ -42,6 +42,8 @@ namespace IAV24.Final
                     RaycastHit hit;
                     if (Physics.Raycast(ray, out hit, float.MaxValue, walkableFloor))
                     {
+                        navMeshAgent.velocity = new Vector3(0, 0, 0);
+                        navMeshAgent.ResetPath();
                         if (navMeshAgent.destination != hit.point)
                         {
                             navMeshAgent.SetDestination(hit.point);
