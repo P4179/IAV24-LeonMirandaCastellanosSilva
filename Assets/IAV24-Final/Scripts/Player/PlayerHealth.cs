@@ -10,9 +10,10 @@ namespace IAV24.Final
     {
         private bool gracePeriodEnabled = false;
         private float elapsedTime = 0.0f;
+        private float currentHealth = 0.0f;
 
         [SerializeField]
-        private float currentHealth;
+        private float initialhealth = 5.0f;
         [SerializeField]
         private float maxHealth = 10.0f;
         [SerializeField]
@@ -35,10 +36,7 @@ namespace IAV24.Final
         {
             anim = GetComponent<Animator>();
 
-            if (currentHealth <= 0.0f || currentHealth > maxHealth)
-            {
-                currentHealth = maxHealth;
-            }
+            currentHealth = initialhealth;
             updateHealthBar();
         }
 

@@ -7,19 +7,21 @@ using UnityEngine;
 
 namespace IAV24.Final
 {
-    public class MagicPower : MonoBehaviour
+    public class MagicPower : Stat
     {
-        private int powerAmount;
         private float elapsedTime = 0.0f;
         private bool cantShoot = true;
         private List<GameObject> enemiesInRange = new List<GameObject>();
-        private Transform shootPointTransform;
         private LayerMask avoidLayers;
 
+        private int currentValueInt { get => (int)currentValue; set => currentValue = (int)value; }
+
+        [SerializeField]
+        private int initalPowerAmount = 0;
         [SerializeField]
         private int maxPowerAmount = 5;
         [SerializeField]
-        private GameObject shootPoint;
+        private Transform shootPointTransform;
         [SerializeField]
         private GameObject bullet;
         [SerializeField]
@@ -49,9 +51,9 @@ namespace IAV24.Final
 
         private void updateMagicPowerInfo()
         {
-            if(magicPowerInfo != null)
+            if (magicPowerInfo != null)
             {
-                magicPowerInfo.text = powerAmount.ToString();
+                magicPowerInfo.text = (currentValueInt).ToString();
             }
         }
 
@@ -59,20 +61,17 @@ namespace IAV24.Final
         void Start()
         {
             anim = transform.parent.gameObject.GetComponent<Animator>();
-
-            shootPointTransform = shootPoint.GetComponent<Transform>();
+            
             avoidLayers = LayerMask.GetMask("Player") | LayerMask.GetMask("EnemyDamageZone");
-            if (powerAmount <= 0 || powerAmount > maxPowerAmount)
-            {
-                powerAmount = maxPowerAmount;
-            }
+            type = StatType.MagicPower;
+            currentValueInt = initalPowerAmount;
             updateMagicPowerInfo();
         }
 
         private GameObject findFirstEnemyNonHidden()
         {
             GameObject target = null;
-            if(enemiesInRange.Count > 0)
+            if (enemiesInRange.Count > 0)
             {
                 bool found = false;
                 int i = 0;
@@ -83,7 +82,7 @@ namespace IAV24.Final
                     Debug.DrawLine(shootPointTransform.position, enemiesInRange[i].transform.position, Color.red);
                     if (Physics.Raycast(shootPointTransform.position, direction, out hitInfo, direction.magnitude, ~avoidLayers))
                     {
-                        if(hitInfo.collider.gameObject == enemiesInRange[i])
+                        if (hitInfo.collider.gameObject == enemiesInRange[i])
                         {
                             target = enemiesInRange[i];
                             found = true;
@@ -94,7 +93,7 @@ namespace IAV24.Final
             }
             return target;
         }
-        
+
 
         // Update is called once per frame
         void Update()
@@ -102,7 +101,7 @@ namespace IAV24.Final
             if (!cantShoot)
             {
                 elapsedTime += Time.deltaTime;
-                if(elapsedTime > cooldown)
+                if (elapsedTime > cooldown)
                 {
                     elapsedTime = 0.0f;
                     cantShoot = true;
@@ -120,7 +119,7 @@ namespace IAV24.Final
 
         public void shoot()
         {
-            if (cantShoot && powerAmount > 0)
+            if (cantShoot && currentValueInt > 0)
             {
                 // Reproduce la animacion de ataque, reiniciandola cada vez que la reproduce
                 anim.Play("Attack", 0, 0.0f);
@@ -129,11 +128,11 @@ namespace IAV24.Final
                 if (enemyTarget != null)
                 {
                     cantShoot = false;
-                    --powerAmount;
+                    currentValueInt = currentValueInt - 1;
                     updateMagicPowerInfo();
                     GameObject bulletInstance = Instantiate(bullet, shootPointTransform.position, Quaternion.identity);
                     Rigidbody bulletRigidBody = bulletInstance.GetComponent<Rigidbody>();
-                    MagicShot magicShot = bulletInstance.GetComponent<MagicShot>();
+                    MagicBullet magicShot = bulletInstance.GetComponent<MagicBullet>();
                     if (bulletRigidBody != null && magicShot != null)
                     {
                         Collider enemyCollider = enemyTarget.GetComponent<Collider>();
@@ -151,5 +150,25 @@ namespace IAV24.Final
             }
         }
 
+        public override void updateIndividualStat(float amount)
+        {
+            currentValueInt = currentValueInt + (int)amount;
+            if(currentValueInt > maxPowerAmount)
+            {
+                currentValueInt = maxPowerAmount;
+            }
+            updateMagicPowerInfo();
+
+        }
+
+        public override float getCurrentValue01()
+        {
+            return currentValue / maxPowerAmount;
+        }
+
+        public override float getChange01(float amount)
+        {
+            return amount / maxPowerAmount;
+        }
     }
 }

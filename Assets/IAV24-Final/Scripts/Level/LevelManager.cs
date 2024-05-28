@@ -71,7 +71,9 @@ namespace IAV24.Final
         // cada cuanto se calcula un nuevo framerate
         private float refreshTime = 0.5f;
 
-        public static LevelManager Instance { get; private set; }
+        public bool night { get; private set; } = false;
+
+        public static LevelManager Instance { get; private set; } = null;
 
         private void calculateFPS()
         {
@@ -162,6 +164,7 @@ namespace IAV24.Final
             // Si la hora se encuentra entre las horas en las que pueden spawnear enemigos
             if (hour * speedFactor > spawnStartHour || hour * speedFactor < spawnEndHour)
             {
+                night = true;
                 //Debug.Log("Spawneable");
 
                 // Se va actualizando el contador para spawnear enemigos
@@ -176,6 +179,10 @@ namespace IAV24.Final
                     spawnCooldown = Random.Range(minSpawnDelay, maxSpawnDelay);
                     spawnTimer = 0;
                 }
+            }
+            else
+            {
+                night = false;
             }
         }
 

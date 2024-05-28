@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace IAV24.Final
 {
-    public class MagicShot : MonoBehaviour
+    public class MagicBullet : MonoBehaviour
     {
         private MagicPower magicPower;
         private float lifeTime;
