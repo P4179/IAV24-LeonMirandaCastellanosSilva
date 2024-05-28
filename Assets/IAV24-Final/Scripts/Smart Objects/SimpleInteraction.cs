@@ -72,6 +72,32 @@ namespace IAV24.Final
             }
         }
 
+        protected virtual void onInteractionCompleted(Performer performer, UnityAction<BaseInteraction> onCompleted)
+        {
+            onCompleted.Invoke(this);
+
+            // no tendria porque hacer falta si se gestiona todo bien
+            if (!performersToCleanup.Contains(performer))
+            {
+                performersToCleanup.Add(performer);
+                Debug.Log(performer.name + " no desbloque la interaccion " + displayName + " en su onCompleted");
+            }
+        }
+
+        protected virtual void onInteractionStopped(Performer performer, UnityAction<BaseInteraction> onStopped)
+        {
+            onStopped.Invoke(this);
+
+            // no tendria porque hacer falta si se gestiona todo bien
+            if (!performersToCleanup.Contains(performer))
+            {
+                performersToCleanup.Add(performer);
+                Debug.Log(performer.name + " no desbloque la interaccion " + displayName + " en su onStopped");
+            }
+        }
+
+        protected virtual void onInteractionInProgress(Performer performer, float elapsedTime) { }
+
         // para las acciones que se realizan en el tiempo
         private void Update()
         {
@@ -101,14 +127,16 @@ namespace IAV24.Final
                             applyStats(performer, (performerInfo.elapsedTime - previousElapsedTime) / duration);
                         }
 
+                        onInteractionInProgress(performer, performerInfo.elapsedTime);
+
                         if (isFinalTick)
                         {
-                            performerInfo.onCompleted(this);
+                            onInteractionCompleted(performer, performerInfo.onCompleted);
                         }
                     }
                     else
                     {
-                        performerInfo.onStopped(this);
+                        onInteractionStopped(performer, performerInfo.onStopped);
                     }
                 }
             }

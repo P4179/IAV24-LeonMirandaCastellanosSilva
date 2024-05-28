@@ -13,7 +13,7 @@ namespace IAV24.Final
     }
 
     [System.Serializable]
-    public class AppliedStat
+    public class ChangedStat
     {
         public StatType targetStat; // estadistica a la que va a afectar
         public float value;     // cantidad que aumenta la estadistica
@@ -24,6 +24,10 @@ namespace IAV24.Final
     // en realizar la interaccion, que es lo que se hace...
     public abstract class BaseInteraction : MonoBehaviour
     {
+        [SerializeField]
+        protected float _noStatsInteractionScore = 0f;
+        public float noStatsInteractionScore => _noStatsInteractionScore;
+
         [SerializeField]
         private string _displayName;
         public string displayName => _displayName;
@@ -36,8 +40,8 @@ namespace IAV24.Final
 
         [SerializeField]
         // la interaccion puede afectar a mas de una estadistica
-        private AppliedStat[] _appliedStats;
-        public AppliedStat[] appliedStats => _appliedStats;
+        private ChangedStat[] _changedStats;
+        public ChangedStat[] changedStats => _changedStats;
 
         // comprobar si se puede realizar la interaccion
         public abstract bool canPerform();
@@ -58,7 +62,7 @@ namespace IAV24.Final
         // (por si la accion tarda un tiempo en realizarse)
         public void applyStats(Performer performer, float proportion)
         {
-            foreach (AppliedStat appliedStat in appliedStats)
+            foreach (ChangedStat appliedStat in changedStats)
             {
                 performer.updateIndividualStat(appliedStat.targetStat, appliedStat.value * proportion);
             }

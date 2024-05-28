@@ -9,8 +9,7 @@ namespace IAV24.Final
 {
     public class MagicPower : Stat
     {
-        private float elapsedTime = 0.0f;
-        private bool cantShoot = true;
+        private float cdDecrement = 0.0f;
         private List<GameObject> enemiesInRange = new List<GameObject>();
         private LayerMask avoidLayers;
 
@@ -39,9 +38,6 @@ namespace IAV24.Final
             {
                 enemiesInRange.Add(other.gameObject);
             }
-
-            // tambien cuando se recargue y si hay algun enemigo en la zona
-            shoot();
         }
 
         private void OnTriggerExit(Collider other)
@@ -98,14 +94,11 @@ namespace IAV24.Final
         // Update is called once per frame
         void Update()
         {
-            if (!cantShoot)
+            cdDecrement -= Time.deltaTime;
+            cdDecrement = Mathf.Max(cdDecrement, 0.0f);
+            if(cdDecrement <= 0.0f)
             {
-                elapsedTime += Time.deltaTime;
-                if (elapsedTime > cooldown)
-                {
-                    elapsedTime = 0.0f;
-                    cantShoot = true;
-                }
+                shoot();
             }
         }
 
@@ -119,17 +112,19 @@ namespace IAV24.Final
 
         public void shoot()
         {
-            if (cantShoot && currentValueInt > 0)
+            if (currentValueInt > 0)
             {
-                // Reproduce la animacion de ataque, reiniciandola cada vez que la reproduce
-                anim.Play("Attack", 0, 0.0f);
-
                 GameObject enemyTarget = findFirstEnemyNonHidden();
                 if (enemyTarget != null)
                 {
-                    cantShoot = false;
+                    // Reproduce la animacion de ataque, reiniciandola cada vez que la reproduce
+                    anim.Play("Attack", 0, 0.0f);
+
+                    cdDecrement = cooldown;
+
                     currentValueInt = currentValueInt - 1;
                     updateMagicPowerInfo();
+
                     GameObject bulletInstance = Instantiate(bullet, shootPointTransform.position, Quaternion.identity);
                     Rigidbody bulletRigidBody = bulletInstance.GetComponent<Rigidbody>();
                     MagicBullet magicShot = bulletInstance.GetComponent<MagicBullet>();

@@ -361,6 +361,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9ad720afa11163f49a27c24a488388b5, type: 3}
   m_PrefabInstance: {fileID: 13604416}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &21563568 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1464849874835336792, guid: 8749a9ec6219ac7458352e12bfb20304, type: 3}
+  m_PrefabInstance: {fileID: 9165556449440326054}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &23596116
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9673,7 +9678,7 @@ GameObject:
   - component: {fileID: 770570531}
   m_Layer: 0
   m_Name: Main Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12568,7 +12573,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _displayName: Energy
   _type: 1
-  initialValue: 0.5
+  initialValue: 0.118
   decayRate: 0.005
   necessityBar: {fileID: 767359330}
   nightMultiplier: 2
@@ -12603,7 +12608,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _displayName: Hunger
   _type: 2
-  initialValue: 0.102
+  initialValue: 0.772
   decayRate: 0.005
   necessityBar: {fileID: 1877443039}
 --- !u!114 &993959921
@@ -12618,7 +12623,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f001693305a55e44dba2e3776cf1c2aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultInteractionScore: 0
   maxInteractionPickSize: 1
 --- !u!1 &996368810
 GameObject:
@@ -22675,6 +22679,46 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8427833999282098230, guid: 7cf845da0425f674784210f05bd33946, type: 3}
   m_PrefabInstance: {fileID: 1613982031}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1622655005 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6785106781419228022, guid: 8749a9ec6219ac7458352e12bfb20304, type: 3}
+  m_PrefabInstance: {fileID: 9165556449440326054}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1622655009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622655005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72af83bb46087b4468b5b05df1a35a9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayName: Tower
+  _interPointTransform: {fileID: 21563568}
+--- !u!114 &1622655010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622655005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3171e6540886eee42a04f7e1f129b3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _noStatsInteractionScore: 0
+  _displayName: Sleep
+  interactionType: 1
+  _duration: 6
+  _changedStats:
+  - targetStat: 1
+    value: 0.3
+  maxSimultaneousUsers: 1
+  maxNearbyEnemies: 3
 --- !u!1001 &1642025312
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29505,10 +29549,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e786470e19048408a8091bcb5db408, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _noStatsInteractionScore: 0
   _displayName: Eat
   interactionType: 1
   _duration: 4
-  _appliedStats:
+  _changedStats:
   - targetStat: 2
     value: 0.4
   maxSimultaneousUsers: 1
@@ -29534,6 +29579,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 580059041}
     m_Modifications:
+    - target: {fileID: 4346207822126610316, guid: af159aadb3da52a408f6019c765fb553, type: 3}
+      propertyPath: _changedStats.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346207822126610316, guid: af159aadb3da52a408f6019c765fb553, type: 3}
+      propertyPath: _changedStats.Array.data[0].value
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4431135873036624021, guid: af159aadb3da52a408f6019c765fb553, type: 3}
       propertyPath: m_Layer
       value: 0
@@ -30219,7 +30272,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6785106781419228022, guid: 8749a9ec6219ac7458352e12bfb20304, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1622655010}
+    - targetCorrespondingSourceObject: {fileID: 6785106781419228022, guid: 8749a9ec6219ac7458352e12bfb20304, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1622655009}
   m_SourcePrefab: {fileID: 100100000, guid: 8749a9ec6219ac7458352e12bfb20304, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
