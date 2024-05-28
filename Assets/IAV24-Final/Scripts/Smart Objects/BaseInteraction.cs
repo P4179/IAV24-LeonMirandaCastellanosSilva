@@ -8,7 +8,8 @@ namespace IAV24.Final
     public enum InteractionType
     {
         Instantaneous = 0,   // se realiza de inmediato
-        OverTime = 1    // tarda un tiempo
+        OverTime = 1,       // tarda un tiempo
+        AfterTime = 2,      // se realiza despues de un tiempo
     }
 
     [System.Serializable]
@@ -41,14 +42,16 @@ namespace IAV24.Final
         // comprobar si se puede realizar la interaccion
         public abstract bool canPerform();
 
+        public virtual bool canStillPerform() { return true; }
+
         // indicar que hay un usuario realizando la interaccion
-        public abstract void lockInteraction();
+        public abstract void lockInteraction(Performer performer);
 
         // realizar la accion
-        public abstract void perform(Performer performer, UnityAction<BaseInteraction> onCompleted);
+        public abstract void perform(Performer performer, UnityAction<BaseInteraction> onCompleted, UnityAction<BaseInteraction> onStopped);
 
         // indicar que hay un usuario que ha dejado de realizar la interaccion 
-        public abstract void unlockInteraction();
+        public abstract void unlockInteraction(Performer performer);
 
         // se va a utilizar cuando el usuario ejecute esta interaccion
         // entonces se aplica cada una de las estadisticas en la proporcion adecuada

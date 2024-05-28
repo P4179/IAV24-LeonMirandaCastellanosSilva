@@ -24,9 +24,16 @@ namespace IAV24.Final
 
         private void onInteractionFinished(BaseInteraction interaction)
         {
-            interaction.unlockInteraction();
+            interaction.unlockInteraction(this);
             currentInteraction = null;
             Debug.Log("Interaccion " + interaction.displayName + " terminada");
+        }
+
+        private void onInteractionStopped(BaseInteraction interaction)
+        {
+            interaction.unlockInteraction(this);
+            currentInteraction = null;
+            Debug.Log("Interaccion " + interaction.displayName + " parada abruptamente");
         }
 
         // Start is called before the first frame update
@@ -48,7 +55,7 @@ namespace IAV24.Final
             if (currentInteraction != null && !startedPerforming)
             {
                 startedPerforming = true;
-                currentInteraction.perform(this, onInteractionFinished);
+                currentInteraction.perform(this, onInteractionFinished, onInteractionStopped);
             }
         }
 
@@ -142,7 +149,7 @@ namespace IAV24.Final
             BaseInteraction selectedInteraction = sortedInteractions[selectedIndex].interaction;
 
             currentInteraction = selectedInteraction;
-            currentInteraction.lockInteraction();
+            currentInteraction.lockInteraction(this);
             startedPerforming = false;
 
             duration = selectedInteraction.duration;
