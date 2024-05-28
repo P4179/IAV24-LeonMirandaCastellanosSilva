@@ -16,8 +16,21 @@ namespace IAV24.Final
             if (colObject.tag == "Enemy")
             {
                 magicPower.removeDetectedEnemy(colObject);
-                Destroy(colObject);
+
+                Animator anim = colObject.GetComponent<Animator>();
+                // Reproduce la animacion de muerte y destruye tanto
+                // al enemigo como la bala una vez termina la animacion
+                anim.Play("Death");
+                StartCoroutine(destroyEnemy(anim.GetCurrentAnimatorClipInfo(0)[0].clip.length, colObject));
             }
+            
+        }
+        private IEnumerator destroyEnemy(float delay, GameObject colObject)
+        {
+            this.gameObject.GetComponent<MeshRenderer>().enabled = false;
+            this.gameObject.GetComponent<Rigidbody>().detectCollisions = false;
+            yield return new WaitForSecondsRealtime(delay);
+            Destroy(colObject);
             Destroy(this.gameObject);
         }
 

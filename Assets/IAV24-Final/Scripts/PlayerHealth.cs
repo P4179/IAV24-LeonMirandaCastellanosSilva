@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace IAV24.Final
@@ -19,6 +20,8 @@ namespace IAV24.Final
         [SerializeField]
         private UnityEngine.UI.Image healthBar;
 
+        private Animator anim;
+
         private void updateHealthBar()
         {
             if(healthBar != null)
@@ -30,6 +33,8 @@ namespace IAV24.Final
         // Start is called before the first frame update
         void Start()
         {
+            anim = GetComponent<Animator>();
+
             if (currentHealth <= 0.0f || currentHealth > maxHealth)
             {
                 currentHealth = maxHealth;
@@ -43,14 +48,25 @@ namespace IAV24.Final
             {
                 currentHealth -= damageAmount;
                 updateHealthBar();
-                Debug.Log(currentHealth);
+                //Debug.Log(currentHealth);
                 gracePeriodEnabled = true;
                 if (currentHealth <= 0.0f)
                 {
-                    LevelManager.Instance.resetLevel();
+                    // Reproduce la animacion de muerte y llama a
+                    // reiniciar el nivel una vez termina la animacion
+                    anim.Play("Death");
+                    StartCoroutine(resetLevel(anim.GetCurrentAnimatorClipInfo(0)[0].clip.length));
                 }
             }
         }
+
+        private IEnumerator resetLevel(float delay)
+        {
+            yield return new WaitForSecondsRealtime(delay);
+            LevelManager.Instance.resetLevel();
+        }
+
+        public float getHealth() { return currentHealth; }
 
         private void Update()
         {

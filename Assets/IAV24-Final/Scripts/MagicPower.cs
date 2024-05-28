@@ -29,6 +29,8 @@ namespace IAV24.Final
         [SerializeField]
         private TextMeshProUGUI magicPowerInfo;
 
+        private Animator anim;
+
         private void OnTriggerEnter(Collider other)
         {
             if (other.gameObject.tag == "Enemy" && !enemiesInRange.Contains(other.gameObject))
@@ -56,6 +58,8 @@ namespace IAV24.Final
         // Start is called before the first frame update
         void Start()
         {
+            anim = transform.parent.gameObject.GetComponent<Animator>();
+
             shootPointTransform = shootPoint.GetComponent<Transform>();
             avoidLayers = LayerMask.GetMask("Player") | LayerMask.GetMask("EnemyDamageZone");
             if (powerAmount <= 0 || powerAmount > maxPowerAmount)
@@ -118,6 +122,9 @@ namespace IAV24.Final
         {
             if (cantShoot && powerAmount > 0)
             {
+                // Reproduce la animacion de ataque, reiniciandola cada vez que la reproduce
+                anim.Play("Attack", 0, 0.0f);
+
                 GameObject enemyTarget = findFirstEnemyNonHidden();
                 if (enemyTarget != null)
                 {
@@ -143,5 +150,6 @@ namespace IAV24.Final
                 }
             }
         }
+
     }
 }
