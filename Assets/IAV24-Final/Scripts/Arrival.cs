@@ -9,7 +9,6 @@ namespace IAV24.Final
 {
     public class Arrival : BehaviorDesigner.Runtime.Tasks.Action
     {
-        
         [UnityEngine.Serialization.FormerlySerializedAs("target")]
         public SharedGameObject m_Target;
 
@@ -18,7 +17,6 @@ namespace IAV24.Final
 
         [UnityEngine.Serialization.FormerlySerializedAs("stop distance")]
         public SharedFloat stopDist;
-
 
         private Transform tr = null;
         private NavMeshAgent navMeshAg = null;

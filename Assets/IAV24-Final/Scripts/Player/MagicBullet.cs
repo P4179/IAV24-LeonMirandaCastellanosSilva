@@ -29,6 +29,7 @@ namespace IAV24.Final
         {
             this.gameObject.GetComponent<MeshRenderer>().enabled = false;
             this.gameObject.GetComponent<Rigidbody>().detectCollisions = false;
+            colObject.GetComponentInChildren<SphereCollider>().enabled = false;
             yield return new WaitForSecondsRealtime(delay);
             Destroy(colObject);
             Destroy(this.gameObject);

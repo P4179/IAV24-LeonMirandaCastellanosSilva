@@ -72,27 +72,27 @@ Las necesidades que tiene son las siguientes:
 - Energía: baja de forma pasiva. Durante la noche esta bajada es mucho mayor.
 
 #### Objetos
-Existen diferentes objetos interactuables del entorno, que le permiten al jugador aumentar alguno de sus parámetros. Están programados como *smart objects* y ninguno de ellos es consumibles. Además, para utilizar se requiere de un tiempo. Los elementos disponibles son los siguientes:
-- Víveres: reducen el hambre del jugador. A pesar de que todos los objetos de este tipo tienen la misma apariencia visual, cada uno ofrece un número diferentes de puntos.
-- Barriles: reducen la sed del jugador. A pesar de que todos objetos de este tipo tienen la misma apariencia visual, cada uno ofrece un número diferente de puntos.
-- Torre del jugador: aumenta la energía del jugador completamente. El jugador se mete dentro de la torre a descansar y no puede sufrir daño. Sin embargo, si hay muchos enemigos alrededor del edificio, no puede seguir durmiendo por el ruido y sale de la torre.
-- Libro del mago: aumenta el poder mágico del jugador completamente.
+Existen diferentes objetos interactuables del entorno, que le permiten al personaje aumentar alguno de sus parámetros. Están programados como *smart objects* y ninguno de ellos es consumibles. Además, para utilizar se requiere de un tiempo. Los elementos disponibles son los siguientes:
+- Víveres: reducen el hambre del personaje. A pesar de que todos los objetos de este tipo tienen la misma apariencia visual, cada uno ofrece un número diferentes de puntos.
+- Barriles: reducen la sed del personaje. A pesar de que todos objetos de este tipo tienen la misma apariencia visual, cada uno ofrece un número diferente de puntos.
+- Torre del personaje: aumenta la energía del personaje completamente. El personaje se mete dentro de la torre a descansar y no puede sufrir daño. Sin embargo, si hay muchos enemigos alrededor del edificio, no puede seguir durmiendo por el ruido y sale de la torre.
+- Libro del mago: aumenta el poder mágico del personaje completamente.
 
 #### Enemigos
-Los enemigos aparecen en los límites del poblado durante la noche. Su movimiento sencillo está programa a través de un árbol de comportamiento. Consiste en merodear por todo el mapa hasta encontrarse con el jugador. Entonces, lo persiguen. Sin embargo, si este sale de su área de detección, dejan de perseguirlo y vuelven a merodear.
+Los enemigos aparecen en los límites del poblado durante la noche. Su movimiento sencillo está programa a través de un árbol de comportamiento. Consiste en merodear por todo el mapa hasta encontrarse con el personaje. Entonces, lo persiguen. Sin embargo, si este sale de su área de detección, dejan de perseguirlo y vuelven a merodear.
 
-Los enemigos mueren de una bola de poder y realizan cierto daño al jugador al entrar en contacto con él.
+Los enemigos mueren de una bola de poder y realizan cierto daño al personaje al entrar en contacto con él.
 
 #### Interfaz de usuario
 - FPS: arriba a la derecha. Se usa para testear el juego más adelante.
 - Día actual: arriba en el centro.
 - Vida del personaje: arriba a la izquierda. Está representado con una barra.
-- Poder mágico: arriba a la izquierda debajo de la vida. Está representado con un número, que indica el número de bolas de poder que todavía puede lanzar el jugador.
+- Poder mágico: arriba a la izquierda debajo de la vida. Está representado con un número, que indica el número de bolas de poder que todavía puede lanzar el personaje.
 - Necesidades: se muestran abajo a la derecha en forma de barras: hambre, sed y energía.
 
 #### Opcionales
 - Existen grupos de enemigos que realizan su movimiento correspondiente, pero en vez de ir en solitario, van en grupo, en bandada.
-- *Smart object* que el jugador puede utilizar para esconderse de los enemigos durante cierto tiempo.
+- *Smart object* que el personaje puede utilizar para esconderse de los enemigos durante cierto tiempo.
 - Movimiento manual con el clic derecho usando la malla de navegación.
 
 ### Apartados
@@ -112,7 +112,7 @@ El personaje cuenta con una **barra de vida**, que disminuirá si los enemigos e
 El personaje cuenta con unas **necesidades**, indicando qué tan satisfechas están mediante unas barras. Estas barras se van vaciando con el tiempo, por lo que tendrá que usar los ***smart objects*** correspondientes para satisfacerlas. Si es de noche, la barra de energía se vaciará más rápidamente, y el personaje no podrá dormir si hay demasiados enemigos cerca de él. Si la barra de vida no está al completo, esta se irá rellenando poco a poco si sus necesidades están satisfechas.
 
 #### Apartado E (Matt)
-Tanto los enemigos como los personajes están controlados por **árboles de comportamiento** complejos, programados mediante **Behavior Designer**. El personaje se acercará a los distintos ***smart objects*** según sus necesidades para posteriormente usarlos, y tratará de huir de los enemigos que se acerquen a él, evadiéndolos tanto a ellos como a los obstáculos del mapa. Por otro lado, los enemigos merodearán por el mapa hasta que encuentren con la vista al personaje, comenzando a perseguirlo una vez lo detecten.
+Tanto los enemigos como los personajes están controlados por **árboles de comportamiento** complejos, programados mediante **Behavior Designer**. El personaje se acercará a los distintos ***smart objects*** según sus necesidades para posteriormente usarlos, y tratará de huir de los enemigos que se acerquen a él, evadiéndolos tanto a ellos como a los obstáculos del mapa. Por otro lado, los enemigos merodearán por el mapa hasta que encuentren con la vista al personaje, comenzando a perseguirlo una vez lo detecten y volviendo a merodear si lo pierde.
 
 <br>
 
@@ -127,36 +127,86 @@ Los árboles de comportamiento surgen como una mejora de las máquinas finitas d
 ## Diseño de la solución
 
 ### Solución A
-La creación del mundo se ha hecho en dos partes. Mientras que el terreno se ha creado con la herramienta Tiles de Unity, los objetos del pueblo, tanto los que funcionan como obstáculos como los interactuables, se han dispuesto de forma estratégica para que el jugador no realiza sus tareas en un intervalo de tiempo ni muy corto ni muy largo. Luego, se ha configurado la malla de navegación, que representa el terreno real por el que pueden caminar los enemigos y el jugador.
+La creación del mundo se ha hecho en dos partes. Mientras que el terreno se ha creado con la herramienta Tiles de Unity, los objetos del pueblo, tanto los que funcionan como obstáculos como los interactuables, se han dispuesto de forma estratégica para que el personaje no realiza sus tareas en un intervalo de tiempo ni muy corto ni muy largo. Luego, se ha configurado la malla de navegación, que representa el terreno real por el que pueden caminar los enemigos y el personaje.
 
-Además, se ha utilizado un borde para los objetos interactuables para que el usuario pueda reconocerlos fácilmente y conozca perfectamente lo que está haciendo el jugador.
+Además, se ha utilizado un borde para los objetos interactuables para que el usuario pueda reconocerlos fácilmente y conozca perfectamente lo que está haciendo el personaje.
 
 ![](mapOverview.png)
 
 ### Solución B
-El `LevelManager` es el gestor encargado tanto del:
-- Ciclo de día-noche &rarr; para hacer un cambio visual, se hace que la luz cambie de color según un grandiente y que gire alrededor del mundo como si de un sol se tratase, de modo que las sombras cambian de posición dependiendo de la hora del día.
-- Spawn de los enemigos &rarr; existen varios puntos en los que que a partir de una horas establecidas en el día aparecen los tipos de enemigos asignados. Todo ello, desde el editor. Además, se lleva un conteo de los enemigos que hay en el mapa para que no se generen más si ya hay demasiados.
+El `LevelManager` es el gestor encargado de:
+- Ciclo de día y noche &rarr; para hacer un cambio visual, se hace que la luz cambie de color según un grandiente y que gire alrededor del mundo como si de un sol se tratase, de modo que las sombras cambian de posición dependiendo de la hora del día.
+- Spawn de los enemigos &rarr; existen varios puntos en los que que a partir de una horas establecidas en el día aparecen los tipos de enemigos asignados. Además, se lleva un conteo de los enemigos que hay en el mapa para que no se generen más si ya hay demasiados.
+
 ### Solución C
 
 ### Solución D
+
+### Solución E
 El movimiento del enemigo responde al siguiente diagrama:
+
 ```mermaid
 stateDiagram-v2
     [*] --> Aparece
     Aparece --> Merodeo
-    Merodeo --> Persecucion : Detecta al jugador
-    Persecucion --> Merodeo : Deja de detectar al jugador
-    Persecucion --> Pierde_vida : Disparado por el jugador
+    Merodeo --> Persecucion : Detecta al personaje
+    Persecucion --> Merodeo : Deja de detectar al personaje
+    Persecucion --> Pierde_vida : Disparado por el personaje
     Pierde_vida --> Persecucion
-    Merodeo --> Pierde_vida : Disparado por el jugador
+    Merodeo --> Pierde_vida : Disparado por el personaje
     Pierde_vida --> Merodeo
+    Persecucion --> Ataque : El personaje entra en su area de ataque
+    Ataque --> Persecuciona : El personaje sale de su area de ataque
     Pierde_vida --> [*] : Vida llega a 0
 ```
 
-// Esquema árbol del personaje
+Además, durante la persecución también se realiza un control de llegada, implementado de manera que funcione como un nodo de **Behavior Designer**. El pseudocódigo del algoritmo es el siguiente:
+```
+class Arrival:
+    # Target object to arrive at
+    target : GameObject
+    # Distance at which to start slowing down.
+    slowDist: float
+    # Distance at which the object is considered to have reached the target
+    stopDist : float
 
-### Solución E
+    # Components that belong to the object
+    transform: Transform
+    agent: NavMeshAgent
+    lastVel: Vector3
+    latVel = Vector3(0, 0, 0)
+
+    function update() -> TaskStatus:
+        # Calculate distance to target
+        dist : float 
+        dist = Distance(target.position, transform.position)
+
+        # If the distance is enough to start slowing down
+        if dist <= slowDist:
+            # If the distance is enough to stop, the node returns success
+            if dist <= stopDist:
+                agent.ResetPath()
+                return Success
+            # Slows down the agent depending on the distance to the target. Returns running because the node isn't finished yet
+            else:
+                ratio : float
+                ratio = dist / slowDist
+                agent.velocity = lastVel * ratio
+                agent.velocity.Normalize()
+                return Running
+            
+        # If the distance is not enough, the agent's last velocity keeps updating and the node returns failure
+        lastVel = navMesh
+        return Failure
+
+```
+<br>
+
+
+El movimiento del personaje responde al siguiente diagrama:
+
+```
+```
 
 <br>
 
@@ -175,12 +225,12 @@ Este apartado está enfocado en probar el correcto funcionamiento del mundo, sob
 - Tarjeta gráfica:
 - VRAM:
 
-| Prueba | Descripción | Resultados esperados | Resultados | FPS |
-|:-:|:-:|:-:|:-:|:-:|
-| A1 | Aprovechando el movimiento manual del jugador (de modo que también se prueba), hacer que el jugador se dirija a cada uno de los extremos del mapa desde el centro del pueblo. Se desactiva el spawn de enemigos para evitar que molesten en esta prueba.  | Se espera que el jugador pueda llegar a cada uno de los extremos y no se quede atascado en ningún sitio usando el movimiento manual. |  |
+| Prueba | Descripción | Atributos | Resultados esperados | Resultados | FPS |
+|:-:|:-:|:-:|:-:|:-:|:-:|
+| A1 | Hacer que el personaje se dirija a cada uno de los extremos del mapa desde el centro del pueblo. | Spawn de enemigos desactivado | Se espera que el personaje pueda llegar a cada uno de los extremos y no se quede atascado en ningún sitio usando el movimiento manual. |  |
 
 ### Prueba B
-El objetivo de esta prueba es testear los cambios en el mundo y como afectan al spawn de enemigos, de modo que se puedan generar enemigos a lo largo de todos los días sin que afecte en ningún momento al flujo del juego.
+El objetivo de esta prueba es testear los cambios en el mundo y cómo estos afectan al spawn de enemigos, de modo que se puedan generar enemigos a lo largo de todos los días sin que afecte en ningún momento al flujo del juego.
 
 <ins>Especificaciones de la máquina</ins>
 - Sistema operativo:
@@ -189,9 +239,9 @@ El objetivo de esta prueba es testear los cambios en el mundo y como afectan al 
 - Tarjeta gráfica:
 - VRAM:
 
-| Prueba | Descripción | Resultados esperados | Resultados | FPS |
-|:-:|:-:|:-:|:-:|:-:|
-| B1 | El spawn de los enemigos se produce durante las horas nocturas. Por lo tanto, para probar que el ciclo de día-noche funciona y que se pueden spawnear enemigos durante varios días se va a aumentar la velocidad de las horas, haciendo de esta manera que los días pasen más rápidos. Se prueba hasta llegar al día 10. <br> Respecto al jugador, como no entra dentro de esta prueba y no es necesario usarlo en ningún momento, se va colocar fuera del mapa para que no exista la opción de que muera y el juego termine.  | Se espera que los 10 días sucedan con normalidad, alternándose el ciclo día-noche perfectamente. Además, como los enemigos merodean, terminarán llegando al pueblo y no se llenarán los puntos de spawn, impidiendo el avance de los nuevos enemigos que surjan. |  |
+| Prueba | Descripción | Atributos | Resultados esperados | Resultados | FPS |
+|:-:|:-:|:-:|:-:|:-:|:-:|
+| B1 | Comprobar que el ciclo de día y noche funciona correctamente y que los enemigos spawnean durante la noche | Velocidad x2 <br> Personaje desactivado <br> Esperar a que pasen 10 días | Se espera que los 10 días sucedan con normalidad, alternándose el ciclo día-noche perfectamente. Además, como los enemigos merodean, terminarán llegando al pueblo y no se impedirá el avance de los nuevos enemigos que spawneeen por llenar los puntos de spawn |  |  |
 
 ### Prueba C
 <ins>Especificaciones de la máquina</ins>
@@ -201,9 +251,9 @@ El objetivo de esta prueba es testear los cambios en el mundo y como afectan al 
 - Tarjeta gráfica:
 - VRAM:
 
-| Prueba | Descripción | Resultados esperados | Resultados | FPS |
-|:-:|:-:|:-:|:-:|:-:|
-| 1 |  |  |  |
+| Prueba | Descripción | Atributos | Resultados esperados | Resultados | FPS |
+|:-:|:-:|:-:|:-:|:-:|:-:|
+| C1 |  |  |  |  |  |
 
 ### Prueba D
 <ins>Especificaciones de la máquina</ins>
@@ -213,9 +263,9 @@ El objetivo de esta prueba es testear los cambios en el mundo y como afectan al 
 - Tarjeta gráfica:
 - VRAM:
 
-| Prueba | Descripción | Resultados esperados | Resultados | FPS |
-|:-:|:-:|:-:|:-:|:-:|
-| 1 |  |  |  |
+| Prueba | Descripción | Atributos | Resultados esperados | Resultados | FPS |
+|:-:|:-:|:-:|:-:|:-:|:-:|
+| D1 |  |  |  |  |  |
 
 ### Prueba E
 <ins>Especificaciones de la máquina</ins>
@@ -225,15 +275,15 @@ El objetivo de esta prueba es testear los cambios en el mundo y como afectan al 
 - Tarjeta gráfica:
 - VRAM:
 
-| Prueba | Descripción | Resultados esperados | Resultados | FPS |
-|:-:|:-:|:-:|:-:|:-:|
-| 1 |  |  |  |  |
+| Prueba | Descripción | Atributos | Resultados esperados | Resultados | FPS |
+|:-:|:-:|:-:|:-:|:-:|:-:|
+| E1 |  |  |  |  |  |
 
 <br>
 
 ## Ampliaciones
 Se han realizado las siguientes ampliaciones:
-- Movimiento manual del jugador con clic derecho usando la malla de navegación. Se ha lanzado un raycast con la posición del mouse para saber a que punto tiene que dirigirse.
+- Movimiento manual del personaje con clic derecho usando la malla de navegación. Se ha lanzado un raycast con la posición del mouse para saber a que punto tiene que dirigirse.
 
 ## Producción
 Las tareas se han realizado y el esfuerzo ha sido repartido entre los autores. La cronología de los objetivos del grupo está documentada en la tabla situada más abajo. Para obtener más información sobre la organización y distribución de tareas, puede consultarse el desglose exhaustivo de estas en la sección de Proyectos en GitHub.
@@ -241,8 +291,8 @@ Las tareas se han realizado y el esfuerzo ha sido repartido entre los autores. L
 | Estado  |  Objetivo  |  Fecha  |  
 |:-:|:-:|:-:|
 | ✔ | Presentación y resolución de dudas | 07-05-2024 | 
-| :x: | Documentación final | Semana del 13-05-2024 |
-| :x: | Presentación | 28-05-2024 |
+| ✔ | Documentación final | Semana del 13-05-2024 |
+| ✔ | Presentación | 28-05-2024 |
 | :x: | Entrega final | 31-05-2024 |
 
 <br>
