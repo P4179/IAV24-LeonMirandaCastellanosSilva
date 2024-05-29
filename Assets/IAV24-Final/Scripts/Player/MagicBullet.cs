@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace IAV24.Final
 {
@@ -30,6 +31,7 @@ namespace IAV24.Final
             this.gameObject.GetComponent<MeshRenderer>().enabled = false;
             this.gameObject.GetComponent<Rigidbody>().detectCollisions = false;
             colObject.GetComponentInChildren<SphereCollider>().enabled = false;
+            colObject.GetComponent<NavMeshAgent>().velocity = new Vector3(0, 0, 0);
             yield return new WaitForSecondsRealtime(delay);
             Destroy(colObject);
             Destroy(this.gameObject);
