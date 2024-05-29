@@ -876,7 +876,7 @@ MonoBehaviour:
       parentIndex: 
       startIndex: 
       variableStartIndex: 
-      JSONSerialization: '{"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"EvadeTarget","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"EvadeEnemy","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"EvadeForest","IsShared":true}]}'
+      JSONSerialization: '{"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"EvadeTarget","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"EvadeEnemy","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"EvadeForest","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"EvadeObstacle","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"EvadeBigObstacle","IsShared":true}]}'
       fieldSerializationData:
         typeName: []
         fieldNameHash: 
@@ -916,7 +916,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8ee8a9ef105d884fb3a33a5b18d7d94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 1
+  initialhealth: 5
   maxHealth: 2
   gracePeriod: 2
   healthBar: {fileID: 0}
@@ -1737,8 +1737,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e5020a92b3886d4fbbc25f329381793, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _displayName: 
+  _type: 0
+  initalPowerAmount: 0
   maxPowerAmount: 5
-  shootPoint: {fileID: 2090075606862181523}
+  shootPointTransform: {fileID: 0}
   bullet: {fileID: 7827386486547431850, guid: e36b9c96af729ba469c92fc7413d853a, type: 3}
   cooldown: 3
   bulletVelocity: 3
