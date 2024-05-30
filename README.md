@@ -331,3 +331,12 @@ Los recursos de terceros utilizados son de uso público.
 - *AI for Games*, Ian Millington. Capitulo 5, apartados 5.1, 5.3, 5.4 y 5.9.
 - [Shader outline](https://www.youtube.com/watch?v=d89qqVGUHtA)
 - [Day & Night Cycle](https://www.youtube.com/watch?v=m9hj9PdO328)
+- Unity AI Tutorial: Sims-Style Videos (Iain McManus)
+    - [Part 1 - Smart Objects](https://www.youtube.com/watch?v=gh5PNt6sD_M&list=PLkBiJgxNbuOXBAN5aJnMVkQ9yRSB1UYrG&index=15)
+    - [Part 2 - Satisfying Needs](https://www.youtube.com/watch?v=zGCe8vOHRqg&list=PLkBiJgxNbuOXBAN5aJnMVkQ9yRSB1UYrG&index=16)
+    - [Part 3 - AI Blackboard](https://www.youtube.com/watch?v=4HWH1QsvwOs&list=PLkBiJgxNbuOXBAN5aJnMVkQ9yRSB1UYrG&index=17)
+    - [Part 4 - Traits and Polish](https://www.youtube.com/watch?v=rDYGRseVdt4&list=PLkBiJgxNbuOXBAN5aJnMVkQ9yRSB1UYrG&index=20)
+    - [Part 5 - Modular Stats](https://www.youtube.com/watch?v=N6W1T92gS-8&list=PLkBiJgxNbuOXBAN5aJnMVkQ9yRSB1UYrG&index=21)
+    - [Part 6 - Memories](https://www.youtube.com/watch?v=_4RTyc9vows&list=PLkBiJgxNbuOXBAN5aJnMVkQ9yRSB1UYrG&index=22)
+- [How the Sims make Decisions (Kyle Martin)](https://www.youtube.com/watch?v=Jm1F6UaMtY4)
+- [The Genious AI Behind The Sims (Game Maker's Toolkit)](https://www.youtube.com/watch?v=9gf2MT-IOsg)
