@@ -314,6 +314,7 @@ Los recursos de terceros utilizados son de uso público.
 - [Objetos](https://kaylousberg.itch.io/kaykit-dungeon-remastered)
 - [Entorno y objetos](https://kaylousberg.itch.io/kaykit-medieval-hexagon)
 - [Fuente](https://fonts.google.com/specimen/Montserrat)
+- [Meters and Levels](https://gamedeveloperstudio.itch.io/meters-and-levels)
 
 ### Herramientas
 - [Behavior Designer](https://assetstore.unity.com/packages/tools/visual-scripting/behavior-designer-behavior-trees-for-everyone-15277)
