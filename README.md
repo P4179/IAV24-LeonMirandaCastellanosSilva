@@ -112,12 +112,12 @@ El personaje cuenta con una **barra de vida**, que disminuirá si los enemigos e
 El personaje cuenta con unas **necesidades**, indicando qué tan satisfechas están mediante unas barras. Estas barras se van vaciando con el tiempo, por lo que tendrá que usar los ***smart objects*** correspondientes para satisfacerlas. Si es de noche, la barra de energía se vaciará más rápidamente, y el personaje no podrá dormir si hay demasiados enemigos cerca de él. Si la barra de vida no está al completo, esta se irá rellenando poco a poco si sus necesidades están satisfechas.
 
 #### Apartado E (Matt)
-Tanto los enemigos como los personajes están controlados por **árboles de comportamiento** complejos, programados mediante **Behavior Designer**. El personaje se acercará a los distintos ***smart objects*** según sus necesidades para posteriormente usarlos, y tratará de huir de los enemigos que se acerquen a él, evadiéndolos tanto a ellos como a los obstáculos del mapa. Por otro lado, los enemigos merodearán por el mapa hasta que encuentren con la vista al personaje, comenzando a perseguirlo una vez lo detecten y volviendo a merodear si lo pierde.
+Tanto los enemigos como los personajes están controlados por **árboles de comportamiento** complejos, programados mediante ***Behavior Designer***. El personaje se acercará a los distintos ***smart objects*** según sus necesidades para posteriormente usarlos, y tratará de huir de los enemigos que se acerquen a él, evadiéndolos tanto a ellos como a los obstáculos del mapa. Por otro lado, los enemigos merodearán por el mapa hasta que encuentren con la vista al personaje, comenzando a perseguirlo una vez lo detecten y volviendo a merodear si lo pierde.
 
 <br>
 
 ## Punto de partida
-Se parte de un proyecto de Unity 2022.3.5.f1 proporcionado por el profesor que contiene la herramienta Behavior Designer, que sirve para crear árboles de comportamiento.
+Se parte de un proyecto de Unity 2022.3.5.f1 proporcionado por el profesor que contiene la herramienta ***Behavior Designer***, que sirve para crear árboles de comportamiento.
 Los árboles de comportamiento surgen como una mejora de las máquinas finitas de estados. Representan la ejecución de un plan (secuencia de acciones) y consiste en un árbol binario dirigido con un nodo raíz, nodos de control de flujo y nodos de ejecución (tareas). Los nodos principales de flujo son:
 - Nodo selector: tiene éxito cuando uno de los hijos tiene éxito. Prueba de izquierda derecha.
 - Nodo secuencia: tiene éxito cuando todos los hijos tienen éxito. Se ejecutan de izquierda a derecha.
@@ -319,7 +319,7 @@ Los recursos de terceros utilizados son de uso público.
 - [Behavior Designer](https://assetstore.unity.com/packages/tools/visual-scripting/behavior-designer-behavior-trees-for-everyone-15277)
 - Unity AI Navigation
 - Unity Shader Graph
-- [Shader outline](https://www.youtube.com/watch?v=d89qqVGUHtA)
+
 
 ### Inspiraciones
 - Los Sims Medieval (2011, EA)
@@ -329,4 +329,5 @@ Los recursos de terceros utilizados son de uso público.
 
 ### Programación
 - *AI for Games*, Ian Millington. Capitulo 5, apartados 5.1, 5.3, 5.4 y 5.9.
+- [Shader outline](https://www.youtube.com/watch?v=d89qqVGUHtA)
 - [Day & Night Cycle](https://www.youtube.com/watch?v=m9hj9PdO328)

@@ -877,7 +877,7 @@ MonoBehaviour:
       parentIndex: 
       startIndex: 
       variableStartIndex: 
-      JSONSerialization: '{"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"EvadeTarget","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"EvadeEnemy","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"EvadeForest","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"EvadeObstacle","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"EvadeBigObstacle","IsShared":true}]}'
+      JSONSerialization: '{"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"EvadeTarget","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"EvadeEnemy","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"EvadeForest","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"EvadeObstacle","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"EvadeBigObstacle","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"SmartObject","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"EvadeSmallObstacle","IsShared":true}]}'
       fieldSerializationData:
         typeName: []
         fieldNameHash: 

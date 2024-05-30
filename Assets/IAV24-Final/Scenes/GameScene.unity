@@ -3822,6 +3822,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8580994052765218057, guid: bd43c79e2b5d2f94c9dbb716780b1a3b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8961600363887013811, guid: bd43c79e2b5d2f94c9dbb716780b1a3b, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4999999
@@ -6393,6 +6397,10 @@ PrefabInstance:
     - target: {fileID: 8580994052765218057, guid: bd43c79e2b5d2f94c9dbb716780b1a3b, type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8580994052765218057, guid: bd43c79e2b5d2f94c9dbb716780b1a3b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8961600363887013811, guid: bd43c79e2b5d2f94c9dbb716780b1a3b, type: 3}
       propertyPath: m_LocalScale.x
@@ -11384,6 +11392,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5551482704150887383, guid: 713c06253a52f5341907b8677ba74734, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12231,7 +12243,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _displayName: Energy
   _type: 1
-  initialValue: 1
+  initialValue: 0.568
   decayRate: 0.005
   necessityBar: {fileID: 767359330}
   nightMultiplier: 2
@@ -12249,7 +12261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _displayName: Thirsty
   _type: 3
-  initialValue: 0.5
+  initialValue: 0.526
   decayRate: 0.005
   necessityBar: {fileID: 929916166}
 --- !u!114 &993959920
@@ -12266,7 +12278,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _displayName: Hunger
   _type: 2
-  initialValue: 0.772
+  initialValue: 0.654
   decayRate: 0.005
   necessityBar: {fileID: 1877443039}
 --- !u!114 &993959921
@@ -12281,6 +12293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f001693305a55e44dba2e3776cf1c2aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startFilling: 0.7
   maxInteractionPickSize: 1
 --- !u!1 &996368810
 GameObject:
@@ -19586,6 +19599,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5551482704150887383, guid: 713c06253a52f5341907b8677ba74734, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20391,7 +20408,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2190922068842708985, guid: de26d4aa38f5b724487e77b41d1ee1ce, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2820026499125300668, guid: de26d4aa38f5b724487e77b41d1ee1ce, type: 3}
       propertyPath: m_Name
@@ -20399,7 +20416,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3200211624883197702, guid: de26d4aa38f5b724487e77b41d1ee1ce, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.699997
+      value: 19.8
       objectReference: {fileID: 0}
     - target: {fileID: 3200211624883197702, guid: de26d4aa38f5b724487e77b41d1ee1ce, type: 3}
       propertyPath: m_LocalPosition.y
@@ -20407,7 +20424,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3200211624883197702, guid: de26d4aa38f5b724487e77b41d1ee1ce, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -22.699999
+      value: -9.2
       objectReference: {fileID: 0}
     - target: {fileID: 3200211624883197702, guid: de26d4aa38f5b724487e77b41d1ee1ce, type: 3}
       propertyPath: m_LocalRotation.w
@@ -23644,8 +23661,8 @@ MonoBehaviour:
   - {fileID: 2820026499125300668, guid: de26d4aa38f5b724487e77b41d1ee1ce, type: 3}
   spawnStartHour: 20
   spawnEndHour: 5
-  minSpawnDelay: 2
-  maxSpawnDelay: 5
+  minSpawnDelay: 0.5
+  maxSpawnDelay: 3
   maxEnemies: 20
   spawnOffset: 1
 --- !u!4 &1780645819
@@ -27989,6 +28006,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5551482704150887383, guid: 713c06253a52f5341907b8677ba74734, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -28140,6 +28161,10 @@ PrefabInstance:
     - target: {fileID: 8975372564795618095, guid: af159aadb3da52a408f6019c765fb553, type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8975372564795618095, guid: af159aadb3da52a408f6019c765fb553, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -28305,7 +28330,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4804433247723181133, guid: d2ba8bdd2e0529e4b8d508b965a418ec, type: 3}
       propertyPath: mBehaviorSource.mTaskData.JSONSerialization
-      value: '{"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"EvadeTarget","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"EvadeEnemy","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"EvadeForest","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"EvadeObstacle","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"EvadeBigObstacle","IsShared":true}]}'
+      value: '{"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"EvadeTarget","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"EvadeEnemy","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"EvadeForest","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"EvadeObstacle","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"EvadeBigObstacle","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"SmartObject","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"EvadeSmallObstacle","IsShared":true}]}'
       objectReference: {fileID: 0}
     - target: {fileID: 4865607714759045251, guid: d2ba8bdd2e0529e4b8d508b965a418ec, type: 3}
       propertyPath: m_Enabled
@@ -28329,7 +28354,7 @@ PrefabInstance:
       objectReference: {fileID: 1941477581}
     - target: {fileID: 7891176086183695050, guid: d2ba8bdd2e0529e4b8d508b965a418ec, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.5
+      value: 6.6
       objectReference: {fileID: 0}
     - target: {fileID: 7891176086183695050, guid: d2ba8bdd2e0529e4b8d508b965a418ec, type: 3}
       propertyPath: m_LocalPosition.y
@@ -28337,7 +28362,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7891176086183695050, guid: d2ba8bdd2e0529e4b8d508b965a418ec, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -14.1
+      value: -2.3
       objectReference: {fileID: 0}
     - target: {fileID: 7891176086183695050, guid: d2ba8bdd2e0529e4b8d508b965a418ec, type: 3}
       propertyPath: m_LocalRotation.w
@@ -28574,6 +28599,10 @@ PrefabInstance:
     - target: {fileID: 8580994052765218057, guid: bd43c79e2b5d2f94c9dbb716780b1a3b, type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8580994052765218057, guid: bd43c79e2b5d2f94c9dbb716780b1a3b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8961600363887013811, guid: bd43c79e2b5d2f94c9dbb716780b1a3b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -28991,6 +29020,10 @@ PrefabInstance:
     - target: {fileID: 6785106781419228022, guid: 8749a9ec6219ac7458352e12bfb20304, type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6785106781419228022, guid: 8749a9ec6219ac7458352e12bfb20304, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7637310332729262369, guid: 8749a9ec6219ac7458352e12bfb20304, type: 3}
       propertyPath: m_Layer

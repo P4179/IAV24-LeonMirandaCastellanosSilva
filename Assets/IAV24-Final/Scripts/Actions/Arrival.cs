@@ -22,10 +22,16 @@ namespace IAV24.Final
         private NavMeshAgent navMeshAg = null;
         private Vector3 lastVel;
 
-        public override void OnStart()
+        public override void OnAwake()
         {
+            base.OnAwake();
             tr = GetComponent<Transform>();
             navMeshAg = GetComponent<NavMeshAgent>();
+        }
+
+        public override void OnStart()
+        {
+            
             lastVel = navMeshAg.velocity;
         }
 

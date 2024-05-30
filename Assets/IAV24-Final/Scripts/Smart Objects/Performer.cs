@@ -3,18 +3,35 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEditor.ShaderKeywordFilter;
 using UnityEngine;
+using UnityEngine.Timeline;
 
 namespace IAV24.Final
 {
     public class Performer : MonoBehaviour
     {
-        private BaseInteraction currentInteraction = null;
+        [SerializeField]
+        float startFilling = 0.7f;
+
+        public class CurrentInteraction
+        {
+            public GameObject target = null;
+            public BaseInteraction interaction = null;
+
+            public void reset()
+            {
+                target = null;
+                interaction = null; 
+            }
+
+        }
+        CurrentInteraction currInteraction = new CurrentInteraction();
+
         // asegurar que cada interaccion solo se ejecuta una vez
         private bool startedPerforming = false;
 
         private Dictionary<StatType, Stat> statsInfo = new Dictionary<StatType, Stat>();
 
-        [SerializeField] 
+        [SerializeField]
         // numero maximo de interacciones entre las que elegir en la lista de
         // interacciones ordenadas por puntuacion
         protected int maxInteractionPickSize = 3;
@@ -22,14 +39,14 @@ namespace IAV24.Final
         private void onInteractionFinished(BaseInteraction interaction)
         {
             interaction.unlockInteraction(this);
-            currentInteraction = null;
+            currInteraction.reset();
             Debug.Log("Interaccion " + interaction.displayName + " terminada");
         }
 
         private void onInteractionStopped(BaseInteraction interaction)
         {
             interaction.unlockInteraction(this);
-            currentInteraction = null;
+            currInteraction.reset();
             Debug.Log("Interaccion " + interaction.displayName + " parada abruptamente");
         }
 
@@ -49,11 +66,11 @@ namespace IAV24.Final
         // al smart object en el que realizar la accion
         public void executeCurrentInteractionOnce()
         {
-            if (currentInteraction != null && !startedPerforming)
+            if (currInteraction.interaction != null && !startedPerforming)
             {
                 startedPerforming = true;
-                Debug.Log("Interaccion " + currentInteraction.displayName + " comenzada");
-                currentInteraction.perform(this, onInteractionFinished, onInteractionStopped);
+                Debug.Log("Interaccion " + currInteraction.interaction.displayName + " comenzada");
+                currInteraction.interaction.perform(this, onInteractionFinished, onInteractionStopped);
             }
         }
 
@@ -62,10 +79,10 @@ namespace IAV24.Final
         // enemigo y decide cambiar de rumbo y dejar de ir a ese smart object
         public bool abortCurrentInteraction()
         {
-            if (currentInteraction != null)
+            if (currInteraction.interaction != null)
             {
-                currentInteraction.unlockInteraction(this);
-                currentInteraction = null;
+                currInteraction.interaction.unlockInteraction(this);
+                currInteraction.reset();
                 return true;    // abortada con exito
             }
             return false;   // abortada sin exito (porque no habia interaccion actual)
@@ -76,7 +93,7 @@ namespace IAV24.Final
         // se puede usar para determinar cuando ha terminado una interaccion y pasar a la siguiente
         public bool finishedCurrentInteraction()
         {
-            return currentInteraction == null;
+            return currInteraction.interaction == null;
         }
 
         // actualizar las estadisticas del usuario que consigue al realizar
@@ -109,7 +126,7 @@ namespace IAV24.Final
             float score = 0.0f;
             // para calcular la puntuaccion de la interaccion se tiene en cuenta
             // todos los stats que puede aportar
-            foreach(ChangedStat stat in interaction.changedStats)
+            foreach (ChangedStat stat in interaction.changedStats)
             {
                 // targetStat es el stat que cambia y value el valor de cambio
                 score += scoreInteractionStat(stat.targetStat, stat.value);
@@ -128,7 +145,7 @@ namespace IAV24.Final
         }
 
         // te devuelve el smartobject al que ir y el tiempo que dura la interaccion
-        Transform PickBestInteraction()
+        public void pickBestInteraction()
         {
             List<ScoredInteraction> unsortedInteractions = new List<ScoredInteraction>();
             // se recorren todos los smartobjects
@@ -150,12 +167,6 @@ namespace IAV24.Final
                     }
                 }
             }
-
-            if (unsortedInteractions.Count <= 0)
-            {
-                return null;
-            }
-
             // se ordena la lista por orden de puntuacion de mayor a menor
             List<ScoredInteraction> sortedInteractions = unsortedInteractions.OrderByDescending(scoredInteraction => scoredInteraction.score).ToList();
 
@@ -168,20 +179,25 @@ namespace IAV24.Final
 
             // se usa por precacuion
             abortCurrentInteraction();
-            currentInteraction = selectedInteraction;
-            currentInteraction.lockInteraction(this);
+            currInteraction.interaction = selectedInteraction;
+            currInteraction.interaction.lockInteraction(this);
+            currInteraction.target = selectedObject.gameObject;
             startedPerforming = false;
-
-            return selectedObject.interPointTransform;
         }
 
-        private void Update()
+        public GameObject getTargetObject()
         {
-            if (!startedPerforming)
+            return currInteraction.target;
+        }
+
+        public bool checkNecessities()
+        {
+            foreach (var statInfo in statsInfo)
             {
-                PickBestInteraction();
-                executeCurrentInteractionOnce();
+                if (statInfo.Value.getCurrentValue01() < startFilling) return true;
             }
+
+            return false;
         }
     }
 }
