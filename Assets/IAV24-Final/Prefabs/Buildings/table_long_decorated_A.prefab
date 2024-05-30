@@ -58,41 +58,13 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1db6b1cf80537a043bede0ea09cd9a2f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 16026272480180508}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1db6b1cf80537a043bede0ea09cd9a2f, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 4464588075581567675}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1db6b1cf80537a043bede0ea09cd9a2f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: -3308022993440994339}
   m_SourcePrefab: {fileID: 100100000, guid: 1db6b1cf80537a043bede0ea09cd9a2f, type: 3}
 --- !u!1 &6422731466945786523 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1db6b1cf80537a043bede0ea09cd9a2f, type: 3}
   m_PrefabInstance: {fileID: 6188871593365327818}
   m_PrefabAsset: {fileID: 0}
---- !u!64 &16026272480180508
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6422731466945786523}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 6326101713348312054, guid: 1db6b1cf80537a043bede0ea09cd9a2f, type: 3}
 --- !u!114 &4464588075581567675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,19 +84,3 @@ MonoBehaviour:
   m_IgnoreFromBuild: 0
   m_ApplyToChildren: 1
   m_AffectedAgents: ffffffff
---- !u!208 &-3308022993440994339
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6422731466945786523}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 1.029, y: 0.943, z: 2}
-  m_MoveThreshold: 0.1
-  m_Carve: 1
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0.001, y: 0.943, z: 0}
-  m_TimeToStationary: 0.5
