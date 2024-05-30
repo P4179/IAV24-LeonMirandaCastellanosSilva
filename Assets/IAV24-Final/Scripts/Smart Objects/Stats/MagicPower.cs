@@ -45,7 +45,7 @@ namespace IAV24.Final
             removeDetectedEnemy(other.gameObject);
         }
 
-        private void updateMagicPowerInfo()
+        protected override void updateUI()
         {
             if (magicPowerInfo != null)
             {
@@ -61,7 +61,7 @@ namespace IAV24.Final
             avoidLayers = LayerMask.GetMask("Player") | LayerMask.GetMask("EnemyDamageZone");
             type = StatType.MagicPower;
             currentValueInt = initalPowerAmount;
-            updateMagicPowerInfo();
+            updateUI();
         }
 
         private GameObject findFirstEnemyNonHidden()
@@ -92,7 +92,7 @@ namespace IAV24.Final
 
 
         // Update is called once per frame
-        void Update()
+        protected override void Update()
         {
             cdDecrement -= Time.deltaTime;
             cdDecrement = Mathf.Max(cdDecrement, 0.0f);
@@ -123,7 +123,7 @@ namespace IAV24.Final
                     cdDecrement = cooldown;
 
                     currentValueInt = currentValueInt - 1;
-                    updateMagicPowerInfo();
+                    updateUI();
 
                     GameObject bulletInstance = Instantiate(bullet, shootPointTransform.position, Quaternion.identity);
                     Rigidbody bulletRigidBody = bulletInstance.GetComponent<Rigidbody>();
@@ -152,7 +152,7 @@ namespace IAV24.Final
             {
                 currentValueInt = maxPowerAmount;
             }
-            updateMagicPowerInfo();
+            updateUI();
 
         }
 
@@ -161,7 +161,7 @@ namespace IAV24.Final
             return currentValue / maxPowerAmount;
         }
 
-        public override float getChange01(float amount)
+        public override float getValue01(float amount)
         {
             return amount / maxPowerAmount;
         }

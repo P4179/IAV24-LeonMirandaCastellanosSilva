@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
-namespace IAV24.Final {
+namespace IAV24.Final
+{
     public enum StatType { MagicPower, Energy, Hunger, Thirsty }
 
     public abstract class Stat : MonoBehaviour
@@ -17,10 +19,20 @@ namespace IAV24.Final {
         public StatType type { get => _type; set => _type = value; }
         public float currentValue { get; set; }
 
+        protected virtual void Update()
+        {
+            decreaseStat();
+            updateUI();
+        }
+
+        protected virtual void decreaseStat() { }
+
+        protected abstract void updateUI();
+
         public abstract void updateIndividualStat(float amount);
 
         public abstract float getCurrentValue01();
 
-        public abstract float getChange01(float amount);
+        public abstract float getValue01(float amount);
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -24,6 +25,8 @@ namespace IAV24.Final
     // en realizar la interaccion, que es lo que se hace...
     public abstract class BaseInteraction : MonoBehaviour
     {
+        protected SmartObject smartObject;
+
         [SerializeField]
         protected float _noStatsInteractionScore = 0f;
         public float noStatsInteractionScore => _noStatsInteractionScore;
@@ -42,6 +45,13 @@ namespace IAV24.Final
         // la interaccion puede afectar a mas de una estadistica
         private ChangedStat[] _changedStats;
         public ChangedStat[] changedStats => _changedStats;
+
+        protected virtual void Start()
+        {
+            smartObject = GetComponent<SmartObject>();
+        }
+
+        public abstract bool isSomeonePerforming();
 
         // comprobar si se puede realizar la interaccion
         public abstract bool canPerform();

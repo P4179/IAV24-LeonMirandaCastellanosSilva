@@ -19,12 +19,10 @@ namespace IAV24.Final
             levelManager = LevelManager.Instance;
         }
 
-        // Update is called once per frame
-        protected override void Update()
+        protected override void decreaseStat()
         {
             float multiplier = levelManager.night ? nightMultiplier : 1.0f;
             currentValue = Mathf.Clamp01((float)currentValue - decayRate * multiplier * Time.deltaTime);
-            updateNecessityBar();
         }
     }
 }

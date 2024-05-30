@@ -110,7 +110,7 @@ namespace IAV24.Final
             // usando esta formula se consigue que si el valor del stat del usuario
             // es muy peque, el score sea mayor y si es muy grande, sea menor
             // tambien funciona para numero negativos
-            float aux = statsInfo[targetStat].getChange01(amount);
+            float aux = statsInfo[targetStat].getValue01(amount);
             return (1.0f - currentValue) * aux;
         }
 

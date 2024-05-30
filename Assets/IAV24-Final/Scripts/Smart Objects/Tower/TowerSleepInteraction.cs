@@ -12,13 +12,10 @@ namespace IAV24.Final
         [SerializeField]
         private int maxNearbyEnemies = 3;
 
-        public void Start()
+        protected override void Start()
         {
+            base.Start();
             towerObject = GetComponent<TowerSmartObject>();
-            if(towerObject == null )
-            {
-                Debug.LogError("No existe el smartObject Tower");
-            }
         }
 
         protected override void onInteractionCompleted(Performer performer, UnityAction<BaseInteraction> onCompleted)

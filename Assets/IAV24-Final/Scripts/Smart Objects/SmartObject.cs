@@ -9,6 +9,11 @@ namespace IAV24.Final
     public class SmartObject : MonoBehaviour
     {
         [SerializeField]
+        private Color feedbackColor = Color.red;
+        private Color normalColor;
+        private MeshRenderer meshRenderer;
+
+        [SerializeField]
         private string displayName;
 
         [SerializeField]
@@ -24,11 +29,37 @@ namespace IAV24.Final
             interactions = new List<BaseInteraction>(GetComponents<BaseInteraction>());
 
             SmartObjectManager.Instance.registerSmartObject(this);
+
+            meshRenderer = GetComponent<MeshRenderer>();
+            normalColor = meshRenderer.materials[1].color;
         }
 
         private void OnDestroy()
         {
             SmartObjectManager.Instance.deregisterSmartObject(this);
+        }
+
+        public void enableFeedback()
+        {
+            meshRenderer.materials[1].color = feedbackColor;
+        }
+
+        public void disableFeedback()
+        {
+            bool interactionExecuting = false;
+            int i = 0;
+            while (i < interactions.Count && !interactionExecuting)
+            {
+                if (interactions[i].isSomeonePerforming())
+                {
+                    interactionExecuting = true;
+                }
+                ++i;
+            }
+            if (!interactionExecuting)
+            {
+                meshRenderer.materials[1].color = normalColor;
+            }
         }
     }
 }

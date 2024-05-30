@@ -1,6 +1,7 @@
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -25,6 +26,18 @@ namespace IAV24.Final
         // maximo numero de personas que pueden realizar a la vez la interaccion
         protected int maxSimultaneousUsers = 1;
 
+        public override bool isSomeonePerforming()
+        {
+            foreach (var performer in currentPerformers)
+            {
+                if (performer.Value.isPerforming)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         public override bool canPerform()
         {
             return numCurrentUsers < maxSimultaneousUsers;
@@ -42,6 +55,11 @@ namespace IAV24.Final
 
         public override void perform(Performer performer, UnityAction<BaseInteraction> onCompleted, UnityAction<BaseInteraction> onStopped)
         {
+            PerformerInfo performerInfo = currentPerformers[performer];
+            performerInfo.isPerforming = true;
+
+            smartObject.enableFeedback();
+
             if (currentPerformers.ContainsKey(performer))
             {
                 switch (interactionType)
@@ -50,12 +68,10 @@ namespace IAV24.Final
                         // la proporcion va dese 0-1
                         // como se realiza de inmediato, la proporcion es la maxima
                         applyStats(performer, 1.0f);
-                        onCompleted.Invoke(this);
+                        onInteractionCompleted(performer, onCompleted);
                         break;
 
                     case InteractionType.OverTime:
-                        PerformerInfo performerInfo = currentPerformers[performer];
-                        performerInfo.isPerforming = true;
                         performerInfo.elapsedTime = 0.0f;
                         performerInfo.onCompleted = onCompleted;
                         performerInfo.onStopped = onStopped;
@@ -74,6 +90,9 @@ namespace IAV24.Final
 
         protected virtual void onInteractionCompleted(Performer performer, UnityAction<BaseInteraction> onCompleted)
         {
+            currentPerformers[performer].isPerforming = false;
+
+            smartObject.disableFeedback();
             onCompleted.Invoke(this);
 
             // no tendria porque hacer falta si se gestiona todo bien
@@ -86,6 +105,9 @@ namespace IAV24.Final
 
         protected virtual void onInteractionStopped(Performer performer, UnityAction<BaseInteraction> onStopped)
         {
+            currentPerformers[performer].isPerforming = false;
+
+            smartObject.disableFeedback();
             onStopped.Invoke(this);
 
             // no tendria porque hacer falta si se gestiona todo bien

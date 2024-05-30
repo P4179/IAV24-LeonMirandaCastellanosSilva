@@ -17,7 +17,7 @@ namespace IAV24.Final
         [SerializeField]
         private UnityEngine.UI.Image necessityBar;
 
-        protected void updateNecessityBar()
+        protected override void updateUI()
         {
             if (necessityBar != null)
             {
@@ -29,20 +29,18 @@ namespace IAV24.Final
         protected virtual void Start()
         {
             currentValue = initialValue;
-            updateNecessityBar();
+            updateUI();
         }
 
-        // Update is called once per frame
-        protected virtual void Update()
+        protected override void decreaseStat()
         {
             currentValue = Mathf.Clamp01(currentValue - decayRate * Time.deltaTime);
-            updateNecessityBar();
         }
 
         public override void updateIndividualStat(float amount)
         {
             currentValue = Mathf.Clamp01(currentValue + amount);
-            updateNecessityBar();
+            updateUI();
         }
 
         public override float getCurrentValue01()
@@ -51,10 +49,10 @@ namespace IAV24.Final
             return Mathf.Clamp01(currentValue);
         }
 
-        public override float getChange01(float amount)
+        public override float getValue01(float value)
         {
             // por si acaso, aunque no hace falta
-            return Mathf.Clamp01(amount);
+            return Mathf.Clamp01(value);
         }
     }
 }
