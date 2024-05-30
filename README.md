@@ -330,6 +330,7 @@ Los recursos de terceros utilizados son de uso público.
 ### Programación
 - *AI for Games*, Ian Millington. Capitulo 5, apartados 5.1, 5.3, 5.4 y 5.9.
 - [Shader outline](https://www.youtube.com/watch?v=d89qqVGUHtA)
+- [Shader always on top](https://forum.unity.com/threads/shader-drawing-over-everything.1041850/)
 - [Day & Night Cycle](https://www.youtube.com/watch?v=m9hj9PdO328)
 - Unity AI Tutorial: Sims-Style Videos (Iain McManus)
     - [Part 1 - Smart Objects](https://www.youtube.com/watch?v=gh5PNt6sD_M&list=PLkBiJgxNbuOXBAN5aJnMVkQ9yRSB1UYrG&index=15)
