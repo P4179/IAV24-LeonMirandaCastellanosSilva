@@ -340,3 +340,4 @@ Los recursos de terceros utilizados son de uso público.
     - [Part 6 - Memories](https://www.youtube.com/watch?v=_4RTyc9vows&list=PLkBiJgxNbuOXBAN5aJnMVkQ9yRSB1UYrG&index=22)
 - [How the Sims make Decisions (Kyle Martin)](https://www.youtube.com/watch?v=Jm1F6UaMtY4)
 - [The Genious AI Behind The Sims (Game Maker's Toolkit)](https://www.youtube.com/watch?v=9gf2MT-IOsg)
+- [Smart Objects - GameDev Pensieve] (https://www.gamedevpensieve.com/ai/ai_knowledge/ai_knowledge_smart-objects)
