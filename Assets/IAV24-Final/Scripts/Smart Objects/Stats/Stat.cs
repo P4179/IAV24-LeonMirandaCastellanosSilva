@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace IAV24.Final
 {
-    public enum StatType { MagicPower, Energy, Hunger, Thirsty }
+    public enum StatType { MagicPower, Energy, Hunger, Thirst }
 
     public abstract class Stat : MonoBehaviour
     {
@@ -17,7 +17,7 @@ namespace IAV24.Final
         [SerializeField]
         private StatType _type;
         public StatType type { get => _type; set => _type = value; }
-        public float currentValue { get; set; }
+        public float currentValue { get; set; } = 0.0f;
 
         protected virtual void Update()
         {

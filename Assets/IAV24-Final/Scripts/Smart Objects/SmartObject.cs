@@ -23,7 +23,7 @@ namespace IAV24.Final
         public List<BaseInteraction> interactions { get; private set; }
 
         // Start is called before the first frame update
-        void Start()
+        protected virtual void Start()
         {
             // se guardan todas las interacciones del objeto
             interactions = new List<BaseInteraction>(GetComponents<BaseInteraction>());

@@ -13,9 +13,8 @@ namespace IAV24.Final
         private float currentHealth = 0.0f;
 
         [SerializeField]
-        private float initialhealth = 5.0f;
-        [SerializeField]
-        private float maxHealth = 10.0f;
+        [Range(0.0f, 1.0f)]
+        private float initialhealth = 0.5f;
         [SerializeField]
         private float gracePeriod = 2.0f;
         [SerializeField]
@@ -27,7 +26,7 @@ namespace IAV24.Final
         {
             if(healthBar != null)
             {
-                healthBar.fillAmount = currentHealth / maxHealth;
+                healthBar.fillAmount = currentHealth;
             }
         }
 
@@ -44,7 +43,7 @@ namespace IAV24.Final
         {
             if (!gracePeriodEnabled)
             {
-                currentHealth -= damageAmount;
+                currentHealth = Mathf.Clamp01(currentHealth - damageAmount);
                 updateHealthBar();
                 //Debug.Log(currentHealth);
                 gracePeriodEnabled = true;

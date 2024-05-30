@@ -19,7 +19,6 @@ namespace IAV24.Final
 
         public override void OnStart()
         {
-            Debug.Log("AAAA");
             performer.executeCurrentInteractionOnce();
         }
 

@@ -1195,6 +1195,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyDamageZone
       objectReference: {fileID: 0}
+    - target: {fileID: 6454042163380046340, guid: 0a551d9c7d8eeb84c9233dee66b47187, type: 3}
+      propertyPath: damage
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 8824886096238410298, guid: 0a551d9c7d8eeb84c9233dee66b47187, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

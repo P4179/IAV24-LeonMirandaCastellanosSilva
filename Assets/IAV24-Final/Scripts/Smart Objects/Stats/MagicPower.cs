@@ -16,8 +16,6 @@ namespace IAV24.Final
         private int currentValueInt { get => (int)currentValue; set => currentValue = (int)value; }
 
         [SerializeField]
-        private int initalPowerAmount = 0;
-        [SerializeField]
         private int maxPowerAmount = 5;
         [SerializeField]
         private Transform shootPointTransform;
@@ -60,7 +58,6 @@ namespace IAV24.Final
             
             avoidLayers = LayerMask.GetMask("Player") | LayerMask.GetMask("EnemyDamageZone");
             type = StatType.MagicPower;
-            currentValueInt = initalPowerAmount;
             updateUI();
         }
 
@@ -153,7 +150,6 @@ namespace IAV24.Final
                 currentValueInt = maxPowerAmount;
             }
             updateUI();
-
         }
 
         public override float getCurrentValue01()

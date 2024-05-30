@@ -121,8 +121,54 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0baf4d8fef0767548955ce91e8ae6912, type: 3}
       insertIndex: -1
       addedObject: {fileID: 917611106952300451}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0baf4d8fef0767548955ce91e8ae6912, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3331931959175683465}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0baf4d8fef0767548955ce91e8ae6912, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6460539864435297709}
   m_SourcePrefab: {fileID: 100100000, guid: 0baf4d8fef0767548955ce91e8ae6912, type: 3}
+--- !u!1 &8580994052765218057 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0baf4d8fef0767548955ce91e8ae6912, type: 3}
+  m_PrefabInstance: {fileID: 8922960659306661976}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3331931959175683465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8580994052765218057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4c49114fa6b42d4e87847546513354b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  feedbackColor: {r: 1, g: 0, b: 0, a: 0}
+  displayName: Beverage
+  _interPointTransform: {fileID: 917611106952300451}
+--- !u!114 &6460539864435297709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8580994052765218057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e786470e19048408a8091bcb5db408, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _noStatsInteractionScore: 0
+  _displayName: Drink
+  interactionType: 1
+  _duration: 4
+  _changedStats:
+  - targetStat: 3
+    value: 0.4
+  maxSimultaneousUsers: 1
 --- !u!4 &8961600363887013811 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0baf4d8fef0767548955ce91e8ae6912, type: 3}

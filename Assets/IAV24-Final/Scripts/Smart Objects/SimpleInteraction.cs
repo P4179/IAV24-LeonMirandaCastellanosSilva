@@ -72,6 +72,7 @@ namespace IAV24.Final
                         break;
 
                     case InteractionType.OverTime:
+                    case InteractionType.AfterTime:
                         performerInfo.elapsedTime = 0.0f;
                         performerInfo.onCompleted = onCompleted;
                         performerInfo.onStopped = onStopped;
@@ -143,16 +144,19 @@ namespace IAV24.Final
                         // y se va a sumar de mas porque la duracion es como maximo 2.0. La diferencia real tendria que ser 0.1
                         performerInfo.elapsedTime = Mathf.Min(performerInfo.elapsedTime + Time.deltaTime, duration);
 
-                        bool isFinalTick = performerInfo.elapsedTime >= duration;
-                        if (interactionType == InteractionType.OverTime || (interactionType == InteractionType.AfterTime && isFinalTick))
+                        if (interactionType == InteractionType.OverTime)
                         {
                             applyStats(performer, (performerInfo.elapsedTime - previousElapsedTime) / duration);
                         }
 
                         onInteractionInProgress(performer, performerInfo.elapsedTime);
 
-                        if (isFinalTick)
+                        if (performerInfo.elapsedTime >= duration)
                         {
+                            if (interactionType == InteractionType.AfterTime)
+                            {
+                                applyStats(performer, 1.0f);
+                            }
                             onInteractionCompleted(performer, performerInfo.onCompleted);
                         }
                     }

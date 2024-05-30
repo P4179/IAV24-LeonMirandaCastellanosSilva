@@ -8,7 +8,8 @@ namespace IAV24.Final
     public class EnemyAttack : MonoBehaviour
     {
         [SerializeField]
-        private float damage = 1.0f;
+        [Range(0f, 1f)]
+        private float damage = 0.01f;
 
         private Animator anim;
 

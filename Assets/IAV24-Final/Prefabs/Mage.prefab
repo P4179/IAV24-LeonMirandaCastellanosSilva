@@ -1003,6 +1003,10 @@ GameObject:
   - component: {fileID: 5630271689651331301}
   - component: {fileID: 5505576722444034716}
   - component: {fileID: 5658901709485080803}
+  - component: {fileID: 3738502508334048542}
+  - component: {fileID: 8926639861591653299}
+  - component: {fileID: 1873061033559254434}
+  - component: {fileID: 9089904505478619432}
   m_Layer: 7
   m_Name: Mage
   m_TagString: Untagged
@@ -1018,8 +1022,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2987970234515182720}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.97, y: 5.859, z: -15.515}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -1175,8 +1179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8ee8a9ef105d884fb3a33a5b18d7d94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialhealth: 3
-  maxHealth: 5
+  initialhealth: 1
   gracePeriod: 2
   healthBar: {fileID: 0}
 --- !u!95 &5658901709485080803
@@ -1200,6 +1203,72 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3738502508334048542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2987970234515182720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f001693305a55e44dba2e3776cf1c2aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startFilling: 0.7
+  maxInteractionPickSize: 3
+--- !u!114 &8926639861591653299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2987970234515182720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92f190b33db1b334ab17f6b0fd98434b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _displayName: Hunger
+  _type: 2
+  initialValue: 1
+  decayRate: 0.005
+  necessityBar: {fileID: 0}
+--- !u!114 &1873061033559254434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2987970234515182720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92f190b33db1b334ab17f6b0fd98434b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _displayName: Thirsty
+  _type: 3
+  initialValue: 1
+  decayRate: 0.008
+  necessityBar: {fileID: 0}
+--- !u!114 &9089904505478619432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2987970234515182720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccdc8048f5a67a74a87a8748250227ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _displayName: Energy
+  _type: 1
+  initialValue: 1
+  decayRate: 0.005
+  necessityBar: {fileID: 0}
+  nightMultiplier: 2
 --- !u!1 &3013597855032689855
 GameObject:
   m_ObjectHideFlags: 0
@@ -2628,19 +2697,18 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5852806451138554770}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e5020a92b3886d4fbbc25f329381793, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _displayName: 
+  _displayName: Power
   _type: 0
-  initalPowerAmount: 0
   maxPowerAmount: 5
-  shootPointTransform: {fileID: 0}
+  shootPointTransform: {fileID: 7370894735408400202}
   bullet: {fileID: 7827386486547431850, guid: e36b9c96af729ba469c92fc7413d853a, type: 3}
   cooldown: 3
-  bulletVelocity: 3
+  bulletVelocity: 4.5
   magicPowerInfo: {fileID: 0}
 --- !u!1 &5889196650355501597
 GameObject:

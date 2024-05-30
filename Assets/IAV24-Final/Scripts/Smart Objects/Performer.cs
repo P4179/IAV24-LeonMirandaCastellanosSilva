@@ -57,7 +57,6 @@ namespace IAV24.Final
             Stat[] stats = GetComponentsInChildren<Stat>();
             foreach (Stat stat in stats)
             {
-                //Debug.Log("Estadistica: " + stat.displayName);
                 statsInfo[stat.type] = stat;
             }
         }
@@ -167,22 +166,26 @@ namespace IAV24.Final
                     }
                 }
             }
-            // se ordena la lista por orden de puntuacion de mayor a menor
-            List<ScoredInteraction> sortedInteractions = unsortedInteractions.OrderByDescending(scoredInteraction => scoredInteraction.score).ToList();
 
-            // se selecciona una interaccion
-            int maxIndex = Mathf.Min(maxInteractionPickSize, sortedInteractions.Count());
-            int selectedIndex = Random.Range(0, maxIndex);
+            if (unsortedInteractions.Count > 0)
+            {
+                // se ordena la lista por orden de puntuacion de mayor a menor
+                List<ScoredInteraction> sortedInteractions = unsortedInteractions.OrderByDescending(scoredInteraction => scoredInteraction.score).ToList();
 
-            SmartObject selectedObject = sortedInteractions[selectedIndex].targetObject;
-            BaseInteraction selectedInteraction = sortedInteractions[selectedIndex].interaction;
+                // se selecciona una interaccion
+                int maxIndex = Mathf.Min(maxInteractionPickSize, sortedInteractions.Count());
+                int selectedIndex = Random.Range(0, maxIndex);
 
-            // se usa por precacuion
-            abortCurrentInteraction();
-            currInteraction.interaction = selectedInteraction;
-            currInteraction.interaction.lockInteraction(this);
-            currInteraction.target = selectedObject.gameObject;
-            startedPerforming = false;
+                SmartObject selectedObject = sortedInteractions[selectedIndex].targetObject;
+                BaseInteraction selectedInteraction = sortedInteractions[selectedIndex].interaction;
+
+                // se usa por precacuion
+                abortCurrentInteraction();
+                currInteraction.interaction = selectedInteraction;
+                currInteraction.interaction.lockInteraction(this);
+                currInteraction.target = selectedObject.gameObject;
+                startedPerforming = false;
+            }
         }
 
         public GameObject getTargetObject()
@@ -194,7 +197,15 @@ namespace IAV24.Final
         {
             foreach (var statInfo in statsInfo)
             {
-                if (statInfo.Value.getCurrentValue01() < startFilling) return true;
+                Stat stat = statInfo.Value;
+                if (!stat.enabled)
+                {
+                    return true;
+                }
+                else
+                {
+                    if (stat.getCurrentValue01() < startFilling) return true;
+                }
             }
 
             return false;

@@ -53,7 +53,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 69a8919b1f0aa1544bb7607cce65b337, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.699999
+      value: 5.0385504
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 69a8919b1f0aa1544bb7607cce65b337, type: 3}
       propertyPath: m_LocalPosition.y
@@ -61,7 +61,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 69a8919b1f0aa1544bb7607cce65b337, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -29.199999
+      value: -27.644842
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 69a8919b1f0aa1544bb7607cce65b337, type: 3}
       propertyPath: m_LocalRotation.w
@@ -129,6 +129,18 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 69a8919b1f0aa1544bb7607cce65b337, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6616728157412798555}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 69a8919b1f0aa1544bb7607cce65b337, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8719727467205751637}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 69a8919b1f0aa1544bb7607cce65b337, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5544522618836617121}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 69a8919b1f0aa1544bb7607cce65b337, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2766245687711302125}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 69a8919b1f0aa1544bb7607cce65b337, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2452773668792016973}
   m_SourcePrefab: {fileID: 100100000, guid: 69a8919b1f0aa1544bb7607cce65b337, type: 3}
 --- !u!4 &6152579030125515212 stripped
 Transform:
@@ -159,3 +171,87 @@ MonoBehaviour:
   m_IgnoreFromBuild: 0
   m_ApplyToChildren: 1
   m_AffectedAgents: ffffffff
+--- !u!135 &8719727467205751637
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6785106781419228022}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 2
+  m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!54 &5544522618836617121
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6785106781419228022}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &2766245687711302125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6785106781419228022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72af83bb46087b4468b5b05df1a35a9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  feedbackColor: {r: 1, g: 0, b: 0, a: 0}
+  displayName: Tower
+  _interPointTransform: {fileID: 1464849874835336792}
+--- !u!114 &2452773668792016973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6785106781419228022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3171e6540886eee42a04f7e1f129b3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _noStatsInteractionScore: 0
+  _displayName: Sleep
+  interactionType: 1
+  _duration: 20
+  _changedStats:
+  - targetStat: 1
+    value: 0.6
+  maxSimultaneousUsers: 1
+  maxNearbyEnemies: 3

@@ -28,6 +28,7 @@ namespace IAV24.Final
         protected SmartObject smartObject;
 
         [SerializeField]
+        [Range(0f, 1f)]
         protected float _noStatsInteractionScore = 0f;
         public float noStatsInteractionScore => _noStatsInteractionScore;
 
