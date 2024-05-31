@@ -96,8 +96,8 @@ Los enemigos mueren de una bola de poder y realizan cierto daño al personaje al
 #### Opcionales
 - Existen grupos de enemigos que realizan su movimiento correspondiente, pero en vez de ir en solitario, van en grupo, en bandada.
 - Movimiento manual con el clic derecho usando la malla de navegación.
-- Se puede asignar “objetos” a los *smart objects*, de modo que cuando el jugador los utiliza, selecciona uno y sirven como multiplicadores para la estadística base del *smart object*.
-- A partir de los objetos cogidos (descritos en el punto anterior), el jugador crea una memoria de corto plazo y una permanente.
+- Se puede asignar “objetos” a los *smart objects*, de modo que cuando el personaje los utiliza, selecciona uno y sirven como multiplicadores para la estadística base del *smart object*.
+- A partir de los objetos cogidos (descritos en el punto anterior), el personaje crea una memoria de corto plazo y una permanente.
 
 ### Apartados
 
@@ -110,7 +110,7 @@ Hay un **mundo virtual** (el pueblo) con un esquema de división por **malla de 
 Hay un **ciclo de día y noche** con el que se van contando los días que lleva vivo el personaje. El sol irá saliendo y poniéndose según la hora del día, y por la noche aparecerán **enemigos** cada cierto tiempo a las afueras del pueblo.
 
 #### Apartado C (Pedro)
-El personaje cuenta con una **barra de vida**, que disminuirá si los enemigos entran en contacto con él. Por otro lado, también cuenta con **poder mágico**, que le permitirá **dispararle** a los enemigos que se acerquen a él a cierta distancia. El **poder mágico** restante estará indicado por el número restante de proyectiles que puede disparar. Además, se recargará usando un ***smart object***.
+El personaje cuenta con una **barra de vida**, que disminuirá si los enemigos entran en contacto con él. Por otro lado, también cuenta con **poder mágico**, que le permitirá **dispararle** a los enemigos que se acerquen a él a cierta distancia. El **poder mágico** restante estará indicado por el número restante de proyectiles que puede disparar. Se activa y se recarga usando un ***smart object***.
 
 #### Apartado D (Pedro)
 El personaje cuenta con unas **necesidades**, indicando qué tan satisfechas están mediante unas barras. Estas barras se van vaciando con el tiempo, por lo que tendrá que usar los ***smart objects*** correspondientes para satisfacerlas. Si es de noche, la barra de energía se vaciará más rápidamente, y el personaje no podrá dormir si hay demasiados enemigos cerca de la torre.
@@ -271,28 +271,39 @@ El objetivo de esta prueba es testear los cambios en el mundo y cómo estos afec
 | B1 | Comprobar que el ciclo de día y noche funciona correctamente y que los enemigos spawnean durante la noche | - Velocidad x2 <br> - Personaje desactivado <br> - Esperar a que pasen 10 días | Se espera que los 10 días sucedan con normalidad, alternándose el ciclo día-noche perfectamente. Además, como los enemigos merodean, terminarán llegando al pueblo y no se impedirá el avance de los nuevos enemigos que spawneeen por llenar los puntos de spawn | El comportamiento es el esperado y los enemigos se mueven por todo el mapa | 300 |
 
 ### Prueba C
-<ins>Especificaciones de la máquina</ins>
-- Sistema operativo:
-- Procesador:
-- RAM:
-- Tarjeta gráfica:
-- VRAM:
+El objetivo de está prueba está divido en dos partes:
+- Probar el *smart object* del libro: primero se usa para activar el poder mágico del personaje y luego, para recargarlo.
+- Interacciones personaje: se prueba tanto que puede usar el poder mágico para dañar a los enemigos como que puede sufrir daño.
+
+<ins>Especificaciones de la máquina:</ins>
+- Sistema operativo: Windows 11 Home 64 bits (10.0, compilación 22631)
+- Procesador: Intel Core i7-11800H 2.30 GHz (16 CPUs)
+- RAM: 16GB
+- Tarjeta gráfica: Nvidia Geforce RTX 3050
+- VRAM: 4GB
 
 | Prueba | Descripción | Atributos | Resultados esperados | Resultados | FPS |
 |:-:|:-:|:-:|:-:|:-:|:-:|
-| C1 |  |  |  |  |  |
+| C1 | Iniciar la simulación y observar como el personaje inicialmente abre todos los libros para activar su poder mágico y luego, los vuelve a utilizar para recarlo. Después, spawnear enemigos y hacer que el personaje los dispare por proximidad y los elimine. También se debe probar como los enemigos hacen daño al personaje al chochar con él. | - Se desactivan todos los *smart objects* menos los libros | Se espera que el personaje sea capaz de realizar de forma secuencial las tareas para activar y cargar su poder mágico y que luego pueda utilizarlo para eliminar a los enemigos. También se espera que sea capaz de sufrir daño y que todos estos cambios se reflejen en la UI | El comportamiento es el esperado. El personaje se dirige a los libros y una vez abiertos se muestra en la UI el texto del poder mágico del personaje a modo de feedback. Entonces, el personaje utiliza ambos libros para recargar su poder. En la segunda parte del vídeo se puede observar como el personaje mata a dos enemigos lanzándoles una bola de poder y además, como sufre cierto daño de un enemigo que lo persigue y lo golpea, viéndose modificada su barra de vida | 150, a excepción de cuando había enemigos que funcionaba a 70 |
 
 ### Prueba D
-<ins>Especificaciones de la máquina</ins>
-- Sistema operativo:
-- Procesador:
-- RAM:
-- Tarjeta gráfica:
-- VRAM:
+El objetivo de esta prueba es probar el comportamiento de los tres *smart object* que afectan a las necesidades:
+- Torre: aumenta la energía y si hay muchos enemigos alrededor, el personaje deja de dormir.
+- Víveres: disminuye el hambre del personaje.
+- Barriles: disminuye la sed del personaje.
+
+<ins>Especificaciones de la máquina:</ins>
+- Sistema operativo: Windows 11 Home 64 bits (10.0, compilación 22631)
+- Procesador: Intel Core i7-11800H 2.30 GHz (16 CPUs)
+- RAM: 16GB
+- Tarjeta gráfica: Nvidia Geforce RTX 3050
+- VRAM: 4GB
 
 | Prueba | Descripción | Atributos | Resultados esperados | Resultados | FPS |
 |:-:|:-:|:-:|:-:|:-:|:-:|
-| D1 |  |  |  |  |  |
+| D1 | Iniciar la simulación y observar como el personaje debido a la falta de energía se dirige a la torre a dormir, interacción que dura cierto tiempo. Durante este tiempo, el contorno de la torre se torna de color rojo para indica que se está usando. Luego, spawnear enemigos y esperar que se acerquen a la torre para que debido al ruido que producen interrumpan la interacción de dormir del personaje | - Se desactivan todos los *smart objects* a excepción de la torre <br> - Bajar la barra de vida de energía del personaje a 0.5  | El personaje es capaz de dirigirse a la torre y dormir en ella. Una vez durmiendo, si hay muchos enemigos cerca, se despierta | El resultado es el esperado. Nada más comenzar la simulación el personaje debido a la falta de energía se dirige a la torre a descansar, cuyo borde se pone de color rojo. Después, se observa como el personaje ve interrumpida su interacción de dormir debido a que hay muchos enemigos alrededor. Esta información también se puede apreciar en el texto del flujo de interacciones, situado abajo a la izquierda | 170, a excepción de cuando había enemigos que funcionaba a 70 |
+| D2 | Iniciar la simulación y observar como el personaje debido al hambre se dirige a uno de los víveres a comer. Esta interacción tarda un tiempo en realizarse | - Se desactivan todos los *smart objects* menos las víveres <br> - Bajar la barra de vida de hambre del personaje a 0.5  | El personaje se dirige a uno de los víveres, el cual elige en función del hambre faltante y la cantidad que le aporta el objeto. Una vez allí, lo utiliza para comer y reducir su hambre. | El resultado es el esperado. El personaje debido al hambre que tiene se dirige al objeto situada en la parte inferior derecha del mapa y lo utiliza para alimentarse. En el vídeo también se explica como este víver está configurado para tener diferentes elementos (comida buena, comida mala y comida promedio), que multiplican la reducción de hambre que otorga y crean una memoria que afecta en las necesidades del personaje | 150 |
+| D3 | Iniciar la simulación y observar como el personaje debido a la sed que tiene se dirige a uno de los barriles para rellenar en base al método explicado en el apartado anterior | - Se desactivan todos los *smart objects* a excepción de los barriles <br> - Bajar la barra de sed del personaje a 0.5  | El personaje es capaz de dirigirse a uno de los barriles existentes en el mapa para rellenar su sed. La interacción de beber dura un tiempo y mientras la está realizando el contorno del objeto se torna de color rojo para indicar que se está usando. | El resultado es el esperado. Como el jugador tiene sed se dirige a uno de los barriles y la rellena parcialmente. Luego, al seguir teniendo más sed se dirige a otro de los barriles para terminar de llenarla. | 170, a excepción de cuando había enemigos que funcionaba a 70 |
 
 ### Prueba E
 
@@ -307,7 +318,7 @@ El objetivo de esta prueba es comprobar el correcto funcionamiento de los árbol
 
 | Prueba | Descripción | Atributos | Resultados esperados | Resultados | FPS |
 |:-:|:-:|:-:|:-:|:-:|:-:|
-| E1 | Acercar y alejar al jugador de los enemigos para que lo vean y lo persigan | - ÁRbol de comportamiento del personaje desactivado <br> - Nodo del merodeo desactivado <br> - Nodo del merodeo activado | Con el merodeo desactivado, los enemigos no se moverán hasta que vean al personaje, volviendo a quedarse quietos si lo pierden de vista. <br> Con el merodeo activado, se moverán alrededor del mapa de manera aleatoria hasta encontrarse con el personaje, volviendo a merodear si lo pierden de vista. | El comportamiento es el esperado en ambos casos. Además, como la persecución se hace con predicción de movimiento, el más difícil que pierdan al personaje de vista | 300 |
+| E1 | Acercar y alejar al personaje de los enemigos para que lo vean y lo persigan | - Árbol de comportamiento del personaje desactivado <br> - Nodo del merodeo desactivado <br> - Nodo del merodeo activado | Con el merodeo desactivado, los enemigos no se moverán hasta que vean al personaje, volviendo a quedarse quietos si lo pierden de vista. <br> Con el merodeo activado, se moverán alrededor del mapa de manera aleatoria hasta encontrarse con el personaje, volviendo a merodear si lo pierden de vista. | El comportamiento es el esperado en ambos casos. Además, como la persecución se hace con predicción de movimiento, el más difícil que pierdan al personaje de vista | 300 |
 | E2 | Dejar que el personaje se mueva libremente por el mapa | - Evasión de enemigos desactivada <br> - Necesidades desactivadas <br> - Merodeo desactivado | Con la evasión de enemigos desactivada, el personaje se moverá merodeando alrededor del mapa, evitando obstáculos si se los encuentra, o yendo hacia los *smart objects* si necesita rellenar alguna necesidad, pero sin evitar a los enemigos que vayan acercándose <br> Desactivando las necesidades, el personaje merodeará todo el rato, evitando obstáculos y enemigos si los detecta <br> Con el merodeo desactivado, el personaje estará quieto hasta que necesite ir hacia un *smart object* para rellenar sus necesidades o evitar enemigos, volviendo a quedarse quieto una vez termine de realizar cualquiera de esas tareas | El comportamiento es el esperado en todos los casos, aunque con las necesidades desactivadas, el personaje tenderá a moverse más por una parte del mapa, ya que al haber tantos obstáculos alrededor del pueblo, al salir de él le costará volver a entrar al estar evitando obstáculos constantemente. Por otro lado, desactivar el merodeo apenas se aprecia, ya que el personaje estará tratando de satisfacer sus necesidades o evitando enemigos la mayoría de las veces | 300 |
 
 <br>
