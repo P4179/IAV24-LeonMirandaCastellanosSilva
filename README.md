@@ -29,7 +29,7 @@
     - [Prueba C](#prueba-c)
     - [Prueba D](#prueba-d)
     - [Prueba E](#prueba-e)
-- [Ampliaciones](#ampliaciones)
+- [Ampliaciones realizadas](#ampliaciones-realizadas)
 - [Producción](#producción)
 - [Licencia](#licencia)
 - [Referencias](#referencias)
@@ -324,7 +324,7 @@ El objetivo de esta prueba es comprobar el correcto funcionamiento de los árbol
 
 <br>
 
-## Ampliaciones
+## Ampliaciones realizadas
 Se han realizado las siguientes ampliaciones:
 - Movimiento manual del personaje con clic derecho usando la malla de navegación. Se ha lanzado un raycast con la posición del mouse para saber a que punto tiene que dirigirse.
 - Se pueden asignar "objetos" a las diferentes interacciones que puede tener un *smart objet*. Estos objetos funcionan como multiplicadores en base a una probabilidad asignada, que indica cual es más probable que aparezca o puede incluso darse el caso de que no salga ninguno. El multiplicador afecta a la estadística asignada del objeto, es decir, si el objeto modifica el hambre del jugador, se puede asignar un multiplicador que afecte a este característica.
