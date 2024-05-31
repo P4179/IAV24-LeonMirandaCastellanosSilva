@@ -1,3 +1,4 @@
+using BehaviorDesigner.Runtime.Tasks.Unity.Math;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -18,6 +19,31 @@ namespace IAV24.Final
     {
         public StatType targetStat; // estadistica a la que va a afectar
         public float value;     // cantidad que aumenta la estadistica
+    }
+
+    [System.Serializable]
+    public class Outcome
+    {
+        public string displayName;  // nombre
+        [Range(0f, 1f)]
+        public float probability;   // probabilidad de que salga
+        public bool stopInteraction = false;    // si sale para la accion
+        public ChangedStat[] statsMultipliers;  // multiplicadores que aplicar a las diferentes necesidades
+        public float normalisedProbability { get; set; }
+        public Dictionary<StatType, List<float>> statsMultipliersAux = new Dictionary<StatType, List<float>>();
+
+        public void init()
+        {
+            foreach(ChangedStat stat in statsMultipliers)
+            {
+                StatType changedStatType = stat.targetStat;
+                if (!statsMultipliersAux.ContainsKey(changedStatType))
+                {
+                    statsMultipliersAux[changedStatType] = new List<float>();
+                }
+                statsMultipliersAux[changedStatType].Add(stat.value);
+            }
+        }
     }
 
     // Clase abstracta sobre las interacciones de un smart object
@@ -47,9 +73,17 @@ namespace IAV24.Final
         private ChangedStat[] _changedStats;
         public ChangedStat[] changedStats => _changedStats;
 
+        [SerializeField]
+        private Outcome[] outcomes;
+
+
         protected virtual void Start()
         {
             smartObject = GetComponent<SmartObject>();
+            foreach (Outcome outcome in outcomes)
+            {
+                outcome.init();
+            }
         }
 
         public abstract bool isSomeonePerforming();
@@ -68,14 +102,65 @@ namespace IAV24.Final
         // indicar que hay un usuario que ha dejado de realizar la interaccion 
         public abstract void unlockInteraction(Performer performer);
 
+        public Outcome pickOutcome()
+        {
+            if (outcomes.Length > 0)
+            {
+                // se normalizan las probabiliadd de todos los elementos
+                // en funcion a la suma total de las probabilidades
+                Outcome selectedOutcome = null;
+                float probabilitySum = 0.0f;
+                foreach (Outcome outcome in outcomes)
+                {
+                    probabilitySum += outcome.probability;
+                }
+
+                foreach (Outcome outcome in outcomes)
+                {
+                    outcome.normalisedProbability = outcome.probability / probabilitySum;
+                }
+
+                // se selecciona un elemento de forma aleatoria en base a su probabilidad
+                float randProbability = Random.value;
+                bool found = false;
+                for (int i = 0; i < outcomes.Length && !found; ++i)
+                {
+                    Outcome outcome = outcomes[i];
+                    if (randProbability <= outcome.normalisedProbability)
+                    {
+                        found = true;
+                        selectedOutcome = outcome;
+                    }
+                }
+
+                if (found)
+                {
+                    // se comprueba si el elemento detiene la interaccion
+                    return selectedOutcome;
+                }
+            }
+            return null;
+        }
+
         // se va a utilizar cuando el usuario ejecute esta interaccion
         // entonces se aplica cada una de las estadisticas en la proporcion adecuada
         // (por si la accion tarda un tiempo en realizarse)
-        public void applyStats(Performer performer, float proportion)
+        public void applyStats(Performer performer, Outcome outcome, float proportion)
         {
-            foreach (ChangedStat appliedStat in changedStats)
+            foreach (ChangedStat changedStat in changedStats)
             {
-                performer.updateIndividualStat(appliedStat.targetStat, appliedStat.value * proportion);
+                StatType changedStatType = changedStat.targetStat;
+
+                float outcomeMultiplier = 1.0f;
+                if (outcome != null && outcome.statsMultipliersAux.ContainsKey(changedStatType))
+                {
+                    foreach(float multiplier in outcome.statsMultipliersAux[changedStatType])
+                    {
+                        outcomeMultiplier *= multiplier;
+                    }
+                }
+
+                performer.updateIndividualStat(changedStat.targetStat, changedStat.value * proportion * outcomeMultiplier);
             }
         }
     }

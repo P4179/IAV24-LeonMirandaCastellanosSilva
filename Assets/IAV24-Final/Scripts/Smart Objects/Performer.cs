@@ -20,7 +20,7 @@ namespace IAV24.Final
             public void reset()
             {
                 target = null;
-                interaction = null; 
+                interaction = null;
             }
 
         }
@@ -201,10 +201,7 @@ namespace IAV24.Final
             foreach (var statInfo in statsInfo)
             {
                 Stat stat = statInfo.Value;
-                if (!stat.enabled)
-                {
-                    return true;
-                }
+                if (!stat.enabled) return true;
                 else
                 {
                     if (stat.getCurrentValue01() < startFilling) return true;
@@ -213,5 +210,13 @@ namespace IAV24.Final
 
             return false;
         }
+
+        /*
+        private void Update()
+        {
+            pickBestInteraction();
+            executeCurrentInteractionOnce();
+        }
+        */
     }
 }

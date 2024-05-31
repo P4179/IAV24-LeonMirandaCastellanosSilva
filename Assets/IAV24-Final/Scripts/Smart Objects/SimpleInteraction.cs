@@ -16,6 +16,7 @@ namespace IAV24.Final
             public float elapsedTime;   // cuanto tiempo ha pasado realizando la interaccion
             public UnityAction<BaseInteraction> onCompleted;
             public UnityAction<BaseInteraction> onStopped;
+            public Outcome outcome = null;
         }
 
         private List<Performer> performersToCleanup = new List<Performer>();
@@ -64,21 +65,32 @@ namespace IAV24.Final
 
                 smartObject.enableFeedback();
 
-                switch (interactionType)
+                // se selecciona un elemento
+                performerInfo.outcome = pickOutcome();
+                // si indica que se tiene que detener la accion, se para
+                if (performerInfo.outcome != null && performerInfo.outcome.stopInteraction)
                 {
-                    case InteractionType.Instantaneous:
-                        // la proporcion va dese 0-1
-                        // como se realiza de inmediato, la proporcion es la maxima
-                        applyStats(performer, 1.0f);
-                        onInteractionCompleted(performer, onCompleted);
-                        break;
+                    onInteractionStopped(performer, onStopped);
+                }
+                // en caso contrario se ejecuta con ese elemento (en el caso de que haya)
+                else
+                {
+                    switch (interactionType)
+                    {
+                        case InteractionType.Instantaneous:
+                            // la proporcion va dese 0-1
+                            // como se realiza de inmediato, la proporcion es la maxima
+                            applyStats(performer, performerInfo.outcome, 1.0f);
+                            onInteractionCompleted(performer, onCompleted);
+                            break;
 
-                    case InteractionType.OverTime:
-                    case InteractionType.AfterTime:
-                        performerInfo.elapsedTime = 0.0f;
-                        performerInfo.onCompleted = onCompleted;
-                        performerInfo.onStopped = onStopped;
-                        break;
+                        case InteractionType.OverTime:
+                        case InteractionType.AfterTime:
+                            performerInfo.elapsedTime = 0.0f;
+                            performerInfo.onCompleted = onCompleted;
+                            performerInfo.onStopped = onStopped;
+                            break;
+                    }
                 }
             }
         }
@@ -145,18 +157,19 @@ namespace IAV24.Final
                         // y se va a sumar de mas porque la duracion es como maximo 2.0. La diferencia real tendria que ser 0.1
                         performerInfo.elapsedTime = Mathf.Min(performerInfo.elapsedTime + Time.deltaTime, duration);
 
+                        bool lastTick = performerInfo.elapsedTime >= duration;
                         if (interactionType == InteractionType.OverTime)
                         {
-                            applyStats(performer, (performerInfo.elapsedTime - previousElapsedTime) / duration);
+                            applyStats(performer, performerInfo.outcome, (performerInfo.elapsedTime - previousElapsedTime) / duration);
                         }
 
                         onInteractionInProgress(performer, performerInfo.elapsedTime);
 
-                        if (performerInfo.elapsedTime >= duration)
+                        if (lastTick)
                         {
                             if (interactionType == InteractionType.AfterTime)
                             {
-                                applyStats(performer, 1.0f);
+                                applyStats(performer, performerInfo.outcome, 1.0f);
                             }
                             onInteractionCompleted(performer, performerInfo.onCompleted);
                         }

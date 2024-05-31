@@ -20766,8 +20766,76 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7927577080565630155, guid: 713c06253a52f5341907b8677ba74734, type: 3}
+      propertyPath: interactionType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927577080565630155, guid: 713c06253a52f5341907b8677ba74734, type: 3}
+      propertyPath: outcomes.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927577080565630155, guid: 713c06253a52f5341907b8677ba74734, type: 3}
       propertyPath: _changedStats.Array.data[0].value
       value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927577080565630155, guid: 713c06253a52f5341907b8677ba74734, type: 3}
+      propertyPath: outcomes.Array.data[0].displayName
+      value: Good food
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927577080565630155, guid: 713c06253a52f5341907b8677ba74734, type: 3}
+      propertyPath: outcomes.Array.data[0].probability
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927577080565630155, guid: 713c06253a52f5341907b8677ba74734, type: 3}
+      propertyPath: outcomes.Array.data[1].displayName
+      value: Average food
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927577080565630155, guid: 713c06253a52f5341907b8677ba74734, type: 3}
+      propertyPath: outcomes.Array.data[1].probability
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927577080565630155, guid: 713c06253a52f5341907b8677ba74734, type: 3}
+      propertyPath: outcomes.Array.data[2].displayName
+      value: Bad food
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927577080565630155, guid: 713c06253a52f5341907b8677ba74734, type: 3}
+      propertyPath: outcomes.Array.data[2].probability
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927577080565630155, guid: 713c06253a52f5341907b8677ba74734, type: 3}
+      propertyPath: outcomes.Array.data[0].statsMultipliers.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927577080565630155, guid: 713c06253a52f5341907b8677ba74734, type: 3}
+      propertyPath: outcomes.Array.data[1].statsMultipliers.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927577080565630155, guid: 713c06253a52f5341907b8677ba74734, type: 3}
+      propertyPath: outcomes.Array.data[2].statsMultipliers.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927577080565630155, guid: 713c06253a52f5341907b8677ba74734, type: 3}
+      propertyPath: outcomes.Array.data[0].statsMultipliers.Array.data[0].value
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927577080565630155, guid: 713c06253a52f5341907b8677ba74734, type: 3}
+      propertyPath: outcomes.Array.data[1].statsMultipliers.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927577080565630155, guid: 713c06253a52f5341907b8677ba74734, type: 3}
+      propertyPath: outcomes.Array.data[2].statsMultipliers.Array.data[0].value
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927577080565630155, guid: 713c06253a52f5341907b8677ba74734, type: 3}
+      propertyPath: outcomes.Array.data[0].statsMultipliers.Array.data[0].targetStat
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927577080565630155, guid: 713c06253a52f5341907b8677ba74734, type: 3}
+      propertyPath: outcomes.Array.data[1].statsMultipliers.Array.data[0].targetStat
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927577080565630155, guid: 713c06253a52f5341907b8677ba74734, type: 3}
+      propertyPath: outcomes.Array.data[2].statsMultipliers.Array.data[0].targetStat
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -29854,6 +29922,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4865607714759045251, guid: d2ba8bdd2e0529e4b8d508b965a418ec, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4865607714759045251, guid: d2ba8bdd2e0529e4b8d508b965a418ec, type: 3}
       propertyPath: magicPowerInfo
       value: 
       objectReference: {fileID: 1372508070}
@@ -30533,6 +30605,10 @@ PrefabInstance:
     - target: {fileID: 6785106781419228022, guid: 8749a9ec6219ac7458352e12bfb20304, type: 3}
       propertyPath: m_Name
       value: tower
+      objectReference: {fileID: 0}
+    - target: {fileID: 6785106781419228022, guid: 8749a9ec6219ac7458352e12bfb20304, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
