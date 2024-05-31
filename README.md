@@ -48,7 +48,7 @@ Este proyecto forma parte de la asignatura de Inteligencia Artificial para Video
 
 El proyecto consiste en un ***life simulator***, en el que el protagonista deberá ir satisfaciendo sus necesidades a través de la interacción con distintos objetos. El ambiente está basado en un pueblo medieval, en el que nuestro protagonista, un mago, debe hacer su día a día, ya sea alimentándose y durmiendo, o tratando de sobrevivir a hordas de enemigos que invadirán el pueblo. 
 
-En este contexto se pretende implementar el uso de **árboles de comportamiento**, con los que el personaje decide qué hacer y adónde ir en cada momento, y de ***smart objects***, que son los que indican al personaje qué es lo que tiene que hacer con ellos.
+En este contexto se pretende implementar el uso de **árboles de comportamiento**, con los que el personaje decide qué hacer y adónde ir en cada momento, y de ***smart objects***, que indican al personaje qué es lo que tiene que hacer con ellos.
 
 El objetivo principal es sobrevivir el mayor números de días posibles. Para ello, el protagonista tiene que atender a sus necesidades y evitar el daño de los enemigos. De lo contrario, irá perdiendo vida y si llega a 0, perderá.
 
@@ -64,7 +64,7 @@ Además, como se ha indicado, el juego está dividido en días. Cada día dispon
 #### Personaje
 El personaje se desplaza alrededor del mapa usando la navegación automática programada con un árbol de comportamiento. En su movimiento trata de realizar sus tareas diarias (mantener sus necesidades altas) y elimina a los enemigos que amenazan el pueblo. Dispone de un área de percepción que le permite conocer los enemigos que tiene a su alrededor y actuar en consecuencia.
 
-Para enfrentarse a los enemigos, utiliza su poder mágico. Cada punto de poder mágico equivale a un proyectil y cuando un enemigo entra en su radio de acción de lucha y tiene poder disponible, lo dispara y lo elimina. Sin embargo, los enemigos también pueden contraatacar y si entran en contacto con él, le inflingen daño. Otra forma de que pierda vida es si no atiende sus necesidades y llegan a cero. No hay una forma de curarse la vida directamente, sino que, si el hambre y la sed están altas, aumenta de forma pasiva.
+Para enfrentarse a los enemigos, utiliza su poder mágico. Cada punto de poder mágico equivale a un proyectil y cuando un enemigo entra en su radio de acción de lucha y tiene poder disponible, lo dispara y lo elimina. Sin embargo, los enemigos también pueden contraatacar y si entran en contacto con él, le inflingen daño. Otra forma de que pierda vida es si no atiende sus necesidades y llegan a cero.
 
 Las necesidades que tiene son las siguientes:
 - Hambre: baja de forma pasiva.
@@ -72,11 +72,13 @@ Las necesidades que tiene son las siguientes:
 - Energía: baja de forma pasiva. Durante la noche esta bajada es mucho mayor.
 
 #### Objetos
-Existen diferentes objetos interactuables del entorno, que le permiten al personaje aumentar alguno de sus parámetros. Están programados como *smart objects* y ninguno de ellos es consumibles. Además, para utilizar se requiere de un tiempo. Los elementos disponibles son los siguientes:
-- Víveres: reducen el hambre del personaje. A pesar de que todos los objetos de este tipo tienen la misma apariencia visual, cada uno ofrece un número diferentes de puntos.
+Existen diferentes objetos interactuables del entorno, que le permiten al personaje aumentar alguno de sus parámetros. Están programados como *smart objects* y ninguno de ellos es consumible. Además, para utilizarlos se requiere de un tiempo. Los elementos disponibles son los siguientes:
+- Víveres: reducen el hambre del personaje. A pesar de que todos los objetos de este tipo tienen la misma apariencia visual, cada uno ofrece un número diferente de puntos.
 - Barriles: reducen la sed del personaje. A pesar de que todos objetos de este tipo tienen la misma apariencia visual, cada uno ofrece un número diferente de puntos.
 - Torre del personaje: aumenta la energía del personaje completamente. El personaje se mete dentro de la torre a descansar y no puede sufrir daño. Sin embargo, si hay muchos enemigos alrededor del edificio, no puede seguir durmiendo por el ruido y sale de la torre.
-- Libro del mago: aumenta el poder mágico del personaje.
+- Libro del mago
+    - Inicialmente todos los libros están cerrado y debe abrirlos para activar su poder mágico
+    - Una vez abiertos, puede utilizarlos para recargar su poder. Cada uno ofrece un número diferente de puntos.
 
 #### Enemigos
 Los enemigos aparecen en los límites del poblado durante la noche. Su movimiento sencillo está programa a través de un árbol de comportamiento. Consiste en merodear por todo el mapa hasta encontrarse con el personaje. Entonces, lo persiguen. Sin embargo, si este sale de su área de detección, dejan de perseguirlo y vuelven a merodear.
@@ -89,12 +91,13 @@ Los enemigos mueren de una bola de poder y realizan cierto daño al personaje al
 - Vida del personaje: arriba a la izquierda. Está representado con una barra.
 - Poder mágico: arriba a la izquierda debajo de la vida. Está representado con un número, que indica el número de bolas de poder que todavía puede lanzar el personaje.
 - Necesidades: se muestran en la parte inferior de la pantalla en forma de barras: hambre, sed y energía.
-- Flujo de interacciones: Encima de la barra de energía. Indica qué interacción se está realizando y con qué *smart object*
+- Flujo de interacciones: Encima de la barra de energía. Indica qué interacción de que *smart object* se está realizando.
 
 #### Opcionales
 - Existen grupos de enemigos que realizan su movimiento correspondiente, pero en vez de ir en solitario, van en grupo, en bandada.
-- *Smart object* que el personaje puede utilizar para esconderse de los enemigos durante cierto tiempo.
 - Movimiento manual con el clic derecho usando la malla de navegación.
+- Se puede asignar “objetos” a los *smart objects*, de modo que cuando el jugador los utiliza, selecciona uno y sirven como multiplicadores para la estadística base del *smart object*.
+- A partir de los objetos cogidos (descritos en el punto anterior), el jugador crea una memoria de corto plazo y una permanente.
 
 ### Apartados
 
