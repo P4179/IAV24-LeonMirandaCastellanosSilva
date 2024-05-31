@@ -144,8 +144,31 @@ El `LevelManager` es el gestor encargado de:
 - Spawn de los enemigos &rarr; existen varios puntos en los que que a partir de una horas establecidas en el día aparecen los tipos de enemigos asignados. Además, se lleva un conteo de los enemigos que hay en el mapa para que no se generen más si ya hay demasiados.
 
 ### Solución C
+Este apartado está dividido en varias partes:
+- Vida: toda su lógica se encuentra en la clase `PlayerHealth`. El personaje puede ver su vida reducida tanto porque las necesidades están bajas como porque sufre daño del enemigo, el cual funciona por proximidad a través de un collider. Además, para que no pueda sufrir daño de un mismo enemigo en el mismo frame tiene un tiempo de gracia.
+- Poder mágico: el poder mágico representa el número de balas que tiene el personaje. Para saber su funcionamiento hay que hablar de dos características:
+- Disparo: el personaje dispara por proximidad. Cuando tiene balas y hay un enemigo a su alrededor, lanza un raycast hacia él para saber que no hay ningún obstáculos y en el caso de que no lo haya, le dispara un proyectil mágico.
+- Libro del mago: funciona como un *smart object*, cuyo estructura se explica más abajo. Tiene dos interacciones:
+- Abrirlo: inicialmente el personaje comienza sin su poder mágico y para conseguirlo debe abrir todos los libros. Existe un *BookManager*, que registra los personaje que han abierto algún libro y una vez abierto todos, activa el poder mágico de cada uno. Aunque nuestro juego tenga un único personaje, se ha decidido hacer de esta manera porque queda muy bien con la estructura generalista de los *smart object* que permite añadir más de un jugador al juego fácilmente.
+- Cargar poder: se trata de una interacción cuyo resultado se consigue una vez ha completado e incrementa el poder mágico en un cierto número de puntos
 
 ### Solución D
+Antes de explicar la resolución que se ha propuesto en cada uno de los *smart objects* en particular, conviene explicar su estructura:
+
+Los *smart objects* es un patrón de diseño que surgió en *SimAnt* y posteriormente se trasladó a la saga de *The Sims* debido a un problema que tenían que resolver, permitir que un usuario pueda interactuar con una gran cantidad de objetos sin que su código crezca demasiado y sea fácilmente escalable. Es así como surgen este tipo de objetos que contienen gran parte de la información sobre como el personaje debe realizar una tarea (interacción) o que cambios producen en él, como el tipo que tarda en realizarla, que estadísticas cambian, que habilidades se activan, que acción una vez realizada ya no puede volver a ejecutar...
+
+La estructura de un *smart object* se asemeja en parte a la estructura objetos-componentes, pues, aunque se puede modificar para añadir atributos común a todas las interacciones, el *smart object* no es más que un contenedor de interacciones, cada una de las cuales contiene información sobre que personaje están realizandola, cuánto tarda (instántanea, durante el tiempo o después de un tiempo) y que cambios son los que realiza sobre el personaje.
+
+Es imposible hablar de los *smart objects* sin hablar de las estadísticas (en el juego existen cuatro: poder mágico, energía, hambre y sed) de un personaje, pues es uno de los elementos fundamentales a los que afecta. Estas parten todas de una clase padre *Stat*. Además, existe una clase `Performer`, que es la intermediaria entre los *smart objects* y sus interacciones y los cambios que realiza sobre el personaje. Por ejemplo, aunque cada estadística se encuentra en un script independiente pues realiza ciertas modificaciones apartes, como ir reduciéndose con el tiepo, el script `Performer` tiene una referencia a ellas para que la interacción del *smart object* pueda indicar que se deben modificar y en que porcentaje.
+
+La elección de la interacción que el usuario quiere utilizar tampoco recae plenamente en él, sino que existe una clase `SmartObjectManager` que registra cualquier *smart object* existente y desde el script `Performer`, cuando el personaje tiene que decidir que interacción que *smart object* utilizar, el `SmartObjectManager` le indica cuales son las interacciones que existen en total y cada una de ellas se puntua en base al valor que aportan y al estado en el que se encuentra la necesidad que modifican y a una memoria (explicado más abajo). Entonces, se forma una lista con puntuaciones para cada interacción y el usuario elige una de las interacciones con la puntuación más alta.
+
+En resumen, esta estructura permite crear nuevos objetos y añadir interacciones de forma muy sencilla puesto que no hay que modificar apenas la lógica del personaje, sino solo crear un nuevo objeto y sus interacciones. Además, su estructura es muy génerica y sirve para más de un personaje pues se puede indicar el número de usuarios que pueden realizar una interacción a la vez, de modo que cuando uno decide usar una una interacción se bloquea y el resto ya no pueden utilizarla hasta que haya terminado.
+
+Una vez explicada la estructura, el juego está formado por tres necesidades y tres *smart objects* que las satisfacen:
+- Torre: cubre la necesidad de energía. Tiene una única interacción que es la de dormir. Su funcionamiento reside en la clase `TowerSmartObject`, que hereda de `SmartObject`. Contine un collider para contar los enemigos que hay alrededor y parar la interacción de dormir en el caso de que haya muchos.
+- Víveres: cubre la necesidad de hambre. Tiene una única interacción que es la de comer.
+- Barriles: cubre la necesidad de sed. Tiene una única interacción que es la de beber.
 
 ### Solución E
 El movimiento del enemigo responde al siguiente diagrama:
