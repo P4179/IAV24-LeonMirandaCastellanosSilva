@@ -22,9 +22,9 @@ namespace IAV24.Final
 
         private Animator anim;
 
-        private void updateHealthBar()
+        private void updateBar()
         {
-            if(healthBar != null)
+            if (healthBar != null)
             {
                 healthBar.fillAmount = currentHealth;
             }
@@ -36,27 +36,36 @@ namespace IAV24.Final
             anim = GetComponent<Animator>();
 
             currentHealth = initialhealth;
-            updateHealthBar();
+            updateBar();
         }
 
-        public void makeDamage(float damageAmount)
+        public void heal(float amount)
+        {
+            currentHealth = Mathf.Clamp01(currentHealth + amount);
+            updateBar();
+        }
+
+        public void decreaseHealth(float amount)
+        {
+            currentHealth = Mathf.Clamp01(currentHealth - amount);
+            updateBar();
+            if (currentHealth <= 0.0f)
+            {
+                // Reproduce la animacion de muerte y llama a
+                // reiniciar el nivel una vez termina la animacion
+                anim.Play("Death");
+                StartCoroutine(resetLevel(anim.GetCurrentAnimatorClipInfo(0)[0].clip.length));
+            }
+        }
+
+        public void getHit(float amount)
         {
             if (!gracePeriodEnabled)
             {
-                currentHealth = Mathf.Clamp01(currentHealth - damageAmount);
-                updateHealthBar();
-                //Debug.Log(currentHealth);
-                gracePeriodEnabled = true;
                 // Reproduce la animacion de ataque, reiniciandola cada vez que la reproduce
                 anim.Play("GetHit", 0, 0.0f);
-
-                if (currentHealth <= 0.0f)
-                {
-                    // Reproduce la animacion de muerte y llama a
-                    // reiniciar el nivel una vez termina la animacion
-                    anim.Play("Death");
-                    StartCoroutine(resetLevel(anim.GetCurrentAnimatorClipInfo(0)[0].clip.length));
-                }
+                gracePeriodEnabled = true;
+                decreaseHealth(amount);
             }
         }
 
@@ -73,12 +82,17 @@ namespace IAV24.Final
             if (gracePeriodEnabled)
             {
                 elapsedTime += Time.deltaTime;
-                if(elapsedTime > gracePeriod)
+                if (elapsedTime > gracePeriod)
                 {
                     elapsedTime = 0.0f;
                     gracePeriodEnabled = false;
                 }
             }
+
+            if (Input.GetKeyDown(KeyCode.I))
+                decreaseHealth(0.01f);
+            else if (Input.GetKeyDown(KeyCode.O))
+                heal(0.01f);
         }
     }
 }

@@ -9,13 +9,21 @@ namespace IAV24.Final
         [SerializeField]
         [Range(0f, 1f)]
         private float initialValue = 0.5f;
-
         [SerializeField]
         [Range(0f, 1f)]
         protected float decayRate = 0.005f;   // aprox 100 segundos en caer por completo
 
         [SerializeField]
+        [Range(0f, 1f)]
+        private float healthLimit = 0.01f;
+        [SerializeField]
+        [Range(0f, 1f)]
+        private float healthDecayRate = 0.003f;
+
+        [SerializeField]
         private UnityEngine.UI.Image necessityBar;
+
+        private PlayerHealth health;
 
         protected override void updateUI()
         {
@@ -30,11 +38,17 @@ namespace IAV24.Final
         {
             currentValue = initialValue;
             updateUI();
+            health = GetComponent<PlayerHealth>();
         }
 
         protected override void decreaseStat()
         {
             currentValue = Mathf.Clamp01(currentValue - decayRate * Time.deltaTime);
+
+            if (currentValue <= healthLimit)
+            {
+                health?.decreaseHealth(healthDecayRate * Time.deltaTime);
+            }
         }
 
         public override void updateIndividualStat(float amount)

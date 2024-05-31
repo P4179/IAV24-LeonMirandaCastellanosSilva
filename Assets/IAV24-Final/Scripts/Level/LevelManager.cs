@@ -60,6 +60,14 @@ namespace IAV24.Final
         [SerializeField]
         private float spawnOffset = 1.0f;
 
+        [SerializeField]
+        private TextMeshProUGUI _interactionInfo;
+        public string interactionInfoText
+        {
+            private get { return _interactionInfo.text; }
+            set { _interactionInfo.text = value; }
+        }
+
         // Calcular FPS
         private TextMeshProUGUI fpsInfoText;
         // numero de frames que han pasado

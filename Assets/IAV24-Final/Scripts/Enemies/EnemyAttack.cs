@@ -37,7 +37,7 @@ namespace IAV24.Final
         private IEnumerator makeDamage(float delay, PlayerHealth playerHealth, float damage)
         {
             yield return new WaitForSecondsRealtime(delay);
-            playerHealth.makeDamage(damage);
+            playerHealth.getHit(damage);
         }
     }
 }

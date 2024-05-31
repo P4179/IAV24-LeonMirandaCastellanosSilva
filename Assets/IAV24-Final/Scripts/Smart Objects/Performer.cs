@@ -40,14 +40,16 @@ namespace IAV24.Final
         {
             interaction.unlockInteraction(this);
             currInteraction.reset();
-            Debug.Log("Interaccion " + interaction.displayName + " terminada");
+            LevelManager.Instance.interactionInfoText = interaction.displayName + " ended";
+            Debug.Log(interaction.displayName + " terminada");
         }
 
         private void onInteractionStopped(BaseInteraction interaction)
         {
             interaction.unlockInteraction(this);
             currInteraction.reset();
-            Debug.Log("Interaccion " + interaction.displayName + " parada abruptamente");
+            LevelManager.Instance.interactionInfoText = interaction.displayName + " aborted";
+            Debug.Log(interaction.displayName + " parada abruptamente");
         }
 
         // Start is called before the first frame update
@@ -68,7 +70,8 @@ namespace IAV24.Final
             if (currInteraction.interaction != null && !startedPerforming)
             {
                 startedPerforming = true;
-                Debug.Log("Interaccion " + currInteraction.interaction.displayName + " comenzada");
+                LevelManager.Instance.interactionInfoText = currInteraction.interaction.displayName + " started";
+                Debug.Log(currInteraction.interaction.displayName + " comenzada");
                 currInteraction.interaction.perform(this, onInteractionFinished, onInteractionStopped);
             }
         }
@@ -82,9 +85,9 @@ namespace IAV24.Final
             {
                 currInteraction.interaction.unlockInteraction(this);
                 currInteraction.reset();
-                return true;    // abortada con exito
+                return true;
             }
-            return false;   // abortada sin exito (porque no habia interaccion actual)
+            return false;
         }
 
         // determinar si la interaccion actual se ha dejado de hacer ya puede ser

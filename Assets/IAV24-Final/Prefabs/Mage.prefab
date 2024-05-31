@@ -1217,7 +1217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startFilling: 0.7
-  maxInteractionPickSize: 3
+  maxInteractionPickSize: 2
 --- !u!114 &8926639861591653299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1234,6 +1234,8 @@ MonoBehaviour:
   _type: 2
   initialValue: 1
   decayRate: 0.005
+  healthLimit: 0.01
+  healthDecayRate: 0.004
   necessityBar: {fileID: 0}
 --- !u!114 &1873061033559254434
 MonoBehaviour:
@@ -1251,6 +1253,8 @@ MonoBehaviour:
   _type: 3
   initialValue: 1
   decayRate: 0.008
+  healthLimit: 0.01
+  healthDecayRate: 0.004
   necessityBar: {fileID: 0}
 --- !u!114 &9089904505478619432
 MonoBehaviour:
@@ -1268,6 +1272,8 @@ MonoBehaviour:
   _type: 1
   initialValue: 1
   decayRate: 0.005
+  healthLimit: 0.01
+  healthDecayRate: 0.004
   necessityBar: {fileID: 0}
   nightMultiplier: 2
 --- !u!1 &3013597855032689855

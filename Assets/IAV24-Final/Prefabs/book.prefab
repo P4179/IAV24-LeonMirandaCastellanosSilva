@@ -278,7 +278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _noStatsInteractionScore: 0.579
-  _displayName: GetPower
+  _displayName: Get power
   interactionType: 2
   _duration: 2
   _changedStats:

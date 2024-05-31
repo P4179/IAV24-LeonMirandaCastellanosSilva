@@ -47,6 +47,8 @@ namespace IAV24.Final
         {
             if (!currentPerformers.ContainsKey(performer))
             {
+                LevelManager.Instance.interactionInfoText = displayName + " locked";
+                Debug.Log(displayName + " bloqueada");
                 PerformerInfo performerInfo = new PerformerInfo();
                 performerInfo.isPerforming = false;
                 currentPerformers.Add(performer, performerInfo);
@@ -55,13 +57,13 @@ namespace IAV24.Final
 
         public override void perform(Performer performer, UnityAction<BaseInteraction> onCompleted, UnityAction<BaseInteraction> onStopped)
         {
-            PerformerInfo performerInfo = currentPerformers[performer];
-            performerInfo.isPerforming = true;
-
-            smartObject.enableFeedback();
-
             if (currentPerformers.ContainsKey(performer))
             {
+                PerformerInfo performerInfo = currentPerformers[performer];
+                performerInfo.isPerforming = true;
+
+                smartObject.enableFeedback();
+
                 switch (interactionType)
                 {
                     case InteractionType.Instantaneous:
@@ -85,37 +87,36 @@ namespace IAV24.Final
         {
             if (currentPerformers.ContainsKey(performer))
             {
+                LevelManager.Instance.interactionInfoText = displayName + " unlocked";
+                Debug.Log(displayName + " desbloqueada");
+                currentPerformers[performer].isPerforming = false;
+                smartObject.disableFeedback();
+
                 performersToCleanup.Add(performer);
             }
         }
 
         protected virtual void onInteractionCompleted(Performer performer, UnityAction<BaseInteraction> onCompleted)
         {
-            currentPerformers[performer].isPerforming = false;
-
-            smartObject.disableFeedback();
             onCompleted.Invoke(this);
 
             // no tendria porque hacer falta si se gestiona todo bien
             if (!performersToCleanup.Contains(performer))
             {
                 performersToCleanup.Add(performer);
-                Debug.Log(performer.name + " no desbloque la interaccion " + displayName + " en su onCompleted");
+                Debug.Log(performer.name + " no desbloqueo la interaccion " + displayName + " en su onCompleted");
             }
         }
 
         protected virtual void onInteractionStopped(Performer performer, UnityAction<BaseInteraction> onStopped)
         {
-            currentPerformers[performer].isPerforming = false;
-
-            smartObject.disableFeedback();
             onStopped.Invoke(this);
 
             // no tendria porque hacer falta si se gestiona todo bien
             if (!performersToCleanup.Contains(performer))
             {
                 performersToCleanup.Add(performer);
-                Debug.Log(performer.name + " no desbloque la interaccion " + displayName + " en su onStopped");
+                Debug.Log(performer.name + " no desbloqueo la interaccion " + displayName + " en su onStopped");
             }
         }
 
@@ -168,7 +169,7 @@ namespace IAV24.Final
             }
 
             // refresh de los usuarios que han terminado la interaccion
-            foreach(Performer performer in performersToCleanup)
+            foreach (Performer performer in performersToCleanup)
             {
                 currentPerformers.Remove(performer);
             }
