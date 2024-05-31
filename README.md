@@ -84,11 +84,12 @@ Los enemigos aparecen en los límites del poblado durante la noche. Su movimient
 Los enemigos mueren de una bola de poder y realizan cierto daño al personaje al entrar en contacto con él.
 
 #### Interfaz de usuario
-- FPS: arriba a la derecha. Se usa para testear el juego más adelante.
+- FPS y controles: arriba a la derecha. Se usa para testear el juego más adelante.
 - Día actual: arriba en el centro.
 - Vida del personaje: arriba a la izquierda. Está representado con una barra.
 - Poder mágico: arriba a la izquierda debajo de la vida. Está representado con un número, que indica el número de bolas de poder que todavía puede lanzar el personaje.
-- Necesidades: se muestran abajo a la derecha en forma de barras: hambre, sed y energía.
+- Necesidades: se muestran en la parte inferior de la pantalla en forma de barras: hambre, sed y energía.
+- Flujo de interacciones: Encima de la barra de energía. Indica qué interacción se está realizando y con qué *smart object*
 
 #### Opcionales
 - Existen grupos de enemigos que realizan su movimiento correspondiente, pero en vez de ir en solitario, van en grupo, en bandada.
@@ -109,7 +110,7 @@ Hay un **ciclo de día y noche** con el que se van contando los días que lleva 
 El personaje cuenta con una **barra de vida**, que disminuirá si los enemigos entran en contacto con él. Por otro lado, también cuenta con **poder mágico**, que le permitirá **dispararle** a los enemigos que se acerquen a él a cierta distancia. El **poder mágico** restante estará indicado por el número restante de proyectiles que puede disparar. Además, se recargará usando un ***smart object***.
 
 #### Apartado D (Pedro)
-El personaje cuenta con unas **necesidades**, indicando qué tan satisfechas están mediante unas barras. Estas barras se van vaciando con el tiempo, por lo que tendrá que usar los ***smart objects*** correspondientes para satisfacerlas. Si es de noche, la barra de energía se vaciará más rápidamente, y el personaje no podrá dormir si hay demasiados enemigos cerca de él. Si la barra de vida no está al completo, esta se irá rellenando poco a poco si sus necesidades están satisfechas.
+El personaje cuenta con unas **necesidades**, indicando qué tan satisfechas están mediante unas barras. Estas barras se van vaciando con el tiempo, por lo que tendrá que usar los ***smart objects*** correspondientes para satisfacerlas. Si es de noche, la barra de energía se vaciará más rápidamente, y el personaje no podrá dormir si hay demasiados enemigos cerca de la torre.
 
 #### Apartado E (Matt)
 Tanto los enemigos como los personajes están controlados por **árboles de comportamiento** complejos, programados mediante ***Behavior Designer***. El personaje se acercará a los distintos ***smart objects*** según sus necesidades para posteriormente usarlos, y tratará de huir de los enemigos que se acerquen a él, evadiéndolos tanto a ellos como a los obstáculos del mapa. Por otro lado, los enemigos merodearán por el mapa hasta que encuentren con la vista al personaje, comenzando a perseguirlo una vez lo detecten y volviendo a merodear si lo pierde.
@@ -117,7 +118,7 @@ Tanto los enemigos como los personajes están controlados por **árboles de comp
 <br>
 
 ## Punto de partida
-Se parte de un proyecto de Unity 2022.3.5.f1 proporcionado por el profesor que contiene la herramienta ***Behavior Designer***, que sirve para crear árboles de comportamiento.
+Se parte de un proyecto de Unity 2022.3.5.f1 proporcionado por el profesor que contiene la herramienta ***[Behavior Designer](https://assetstore.unity.com/packages/tools/visual-scripting/behavior-designer-behavior-trees-for-everyone-15277)***, que sirve para crear árboles de comportamiento.
 Los árboles de comportamiento surgen como una mejora de las máquinas finitas de estados. Representan la ejecución de un plan (secuencia de acciones) y consiste en un árbol binario dirigido con un nodo raíz, nodos de control de flujo y nodos de ejecución (tareas). Los nodos principales de flujo son:
 - Nodo selector: tiene éxito cuando uno de los hijos tiene éxito. Prueba de izquierda derecha.
 - Nodo secuencia: tiene éxito cuando todos los hijos tienen éxito. Se ejecutan de izquierda a derecha.
@@ -234,6 +235,8 @@ Se ha creado un plan de pruebas para comprobar el correcto funcionamiento del pr
 
 A la hora de la medición se especifica el número de FPS a los que se ejecutaba el programa, para comprobar que el prototipo creado no se ha basado en ninguna práctica de programación errónea que empeora el rendimiento, y cuales han sido los resultados esperados.
 
+[Vídeo con la batería de pruebas](enlace)
+
 ### Prueba A
 Este apartado está enfocado en probar el correcto funcionamiento de la cámara y del mundo, sobre todo que la malla de navegación está bien creada y se pueden llegar todos los lugares.
 
@@ -246,7 +249,7 @@ Este apartado está enfocado en probar el correcto funcionamiento de la cámara 
 
 | Prueba | Descripción | Atributos | Resultados esperados | Resultados | FPS |
 |:-:|:-:|:-:|:-:|:-:|:-:|
-| A1 | Hacer que el personaje se dirija a cada uno de los extremos del mapa desde el centro del pueblo pulsando `click izquierdo` sobre ellos | - Spawn de enemigos desactivado <br> - Árbol de comportamiento del personaje desactivado | Se espera que el personaje pueda llegar a cada uno de los extremos y no se quede atascado en ningún sitio usando el movimiento manual | El comportamiento es el esperado y el personaje se mueve hacia los lugares sobre los que se ha hecho click. | 300 |
+| A1 | Hacer que el personaje se dirija a cada uno de los extremos del mapa desde el centro del pueblo pulsando `click izquierdo` sobre ellos | - Árbol de comportamiento del personaje desactivado | Se espera que el personaje pueda llegar a cada uno de los extremos y no se quede atascado en ningún sitio usando el movimiento manual | El comportamiento es el esperado y el personaje se mueve hacia los lugares sobre los que se ha hecho click. | 300 |
 | A2 | Hacer zoom con la `rueda del ratón` y mover la cámara con `click izquierdo` |  | Mover la rueda hacia arriba hace zoom in y hacia abajo zoom out. Arrastrar el ratón por la pantalla con un zoom distinto del original hace que la cámara se mueva, sin superar unos límites | El comportamiento es el esperado. Al coincidir el botón para el movimiento con el de arrastrar la cámara, si el movimiento manual está activado, mover la cámara también hará que se mueva el personaje | 300 |
 | A3 | Reiniciar la cámara con `click derecho` después de modificar su posición y zoom |  | La cámara vuelve a su posición y zoom originales | El comportamiento es el esperado | 300 |
 
