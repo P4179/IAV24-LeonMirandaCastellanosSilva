@@ -34,7 +34,7 @@ namespace IAV24.Final
 
         // Enemigos
         private Transform[] spawnpoints = null;
-        
+
         [SerializeField]
         private GameObject[] enemies = null;
 
@@ -102,7 +102,7 @@ namespace IAV24.Final
 
         private void Awake()
         {
-            if(Instance == null)
+            if (Instance == null)
             {
                 Instance = this;
             }
@@ -191,6 +191,9 @@ namespace IAV24.Final
         {
             calculateFPS();
             updateDayTime();
+
+            if (Input.GetKeyDown(KeyCode.L)) spawnEnemy();
+            else if (Input.GetKeyDown(KeyCode.K)) removeEnemy();
         }
 
         // Cambia el color de la luz dependiendo de la hora del dia.
@@ -214,6 +217,11 @@ namespace IAV24.Final
             GameObject enemy = Instantiate(prefab, tr);
             enemy.transform.position += new Vector3(Random.Range(-spawnOffset, spawnOffset), 0, Random.Range(-spawnOffset, spawnOffset));
             enemy.transform.parent = enemiesGroup;
+        }
+
+        private void removeEnemy()
+        {
+            if (enemiesGroup.childCount > 0) Destroy(enemiesGroup.GetChild(0).gameObject);
         }
 
         public int getDays() { return days; }
