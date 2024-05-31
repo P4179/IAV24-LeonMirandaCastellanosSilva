@@ -9,13 +9,13 @@
         - [Objetos](#objetos)
         - [Enemigos](#enemigos)
         - [Interfaz](#interfaz-de-usuario)
-        - [Opcionales](#opcionales)
     - [Apartados](#apartados)
         - [Apartado A](#apartado-a-matt)
         - [Apartado B](#apartado-b-matt)
         - [Apartado C](#apartado-c-pedro)
         - [Apartado D](#apartado-d-pedro)
         - [Apartado E](#apartado-e-matt)
+        - [Ampliaciones](#ampliaciones)
 - [Punto de partida](#punto-de-partida)
 - [Diseño de la solución](#diseño-de-la-solución)
     - [Solución A](#solución-a)
@@ -93,11 +93,6 @@ Los enemigos mueren de una bola de poder y realizan cierto daño al personaje al
 - Necesidades: se muestran en la parte inferior de la pantalla en forma de barras: hambre, sed y energía.
 - Flujo de interacciones: Encima de la barra de energía. Indica qué interacción de que *smart object* se está realizando.
 
-#### Opcionales
-- Existen grupos de enemigos que realizan su movimiento correspondiente, pero en vez de ir en solitario, van en grupo, en bandada.
-- Movimiento manual con el clic derecho usando la malla de navegación.
-- Se puede asignar “objetos” a los *smart objects*, de modo que cuando el personaje los utiliza, selecciona uno y sirven como multiplicadores para la estadística base del *smart object*.
-- A partir de los objetos cogidos (descritos en el punto anterior), el personaje crea una memoria de corto plazo y una permanente.
 
 ### Apartados
 
@@ -116,7 +111,13 @@ El personaje cuenta con una **barra de vida**, que disminuirá si los enemigos e
 El personaje cuenta con unas **necesidades**, indicando qué tan satisfechas están mediante unas barras. Estas barras se van vaciando con el tiempo, por lo que tendrá que usar los ***smart objects*** correspondientes para satisfacerlas. Si es de noche, la barra de energía se vaciará más rápidamente, y el personaje no podrá dormir si hay demasiados enemigos cerca de la torre.
 
 #### Apartado E (Matt)
-Tanto los enemigos como los personajes están controlados por **árboles de comportamiento** complejos, programados mediante ***Behavior Designer***. El personaje se acercará a los distintos ***smart objects*** según sus necesidades para posteriormente usarlos, y tratará de huir de los enemigos que se acerquen a él, evadiéndolos tanto a ellos como a los obstáculos del mapa. Por otro lado, los enemigos merodearán por el mapa hasta que encuentren con la vista al personaje, comenzando a perseguirlo una vez lo detecten y volviendo a merodear si lo pierde.
+Tanto los enemigos como los personajes están controlados por **árboles de comportamiento** complejos, programados mediante ***Behavior Designer***. El personaje tratará de huir de los enemigos que se acerquen a él, evadiéndolos tanto a ellos como a los obstáculos del mapa. Por otro lado, los enemigos merodearán por el mapa hasta que encuentren con la vista al personaje, comenzando a perseguirlo una vez lo detecten y volviendo a merodear si lo pierde. Además, el **árbol de comportamiento** del personaje **se comunicará con sus necesidades**, que le harán saber qué ***smart objects*** debe utilizar para satisfacerlas para posteriormente acercarse a ellos y usarlos.
+
+#### Ampliaciones
+- Existen grupos de enemigos que realizan su movimiento correspondiente, pero en vez de ir en solitario, van en grupo, en bandada.
+- Movimiento manual con el clic derecho usando la malla de navegación.
+- Se puede asignar “objetos” a los *smart objects*, de modo que cuando el personaje los utiliza, selecciona uno y sirven como multiplicadores para la estadística base del *smart object*.
+- A partir de los objetos cogidos (descritos en el punto anterior), el personaje crea una memoria de corto plazo y una permanente.
 
 <br>
 
@@ -335,7 +336,7 @@ Las tareas se han realizado y el esfuerzo ha sido repartido entre los autores. L
 | Estado  |  Objetivo  |  Fecha  |  
 |:-:|:-:|:-:|
 | ✔ | Presentación y resolución de dudas | 07-05-2024 | 
-| ✔ | Documentación final | Semana del 13-05-2024 |
+| ✔ | Documentación final | 16-05-2024 |
 | ✔ | Presentación | 28-05-2024 |
 | :x: | Entrega final | 31-05-2024 |
 
