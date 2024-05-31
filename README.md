@@ -166,6 +166,170 @@ La elección de la interacción que el usuario quiere utilizar tampoco recae ple
 
 En resumen, esta estructura permite crear nuevos objetos y añadir interacciones de forma muy sencilla puesto que no hay que modificar apenas la lógica del personaje, sino solo crear un nuevo objeto y sus interacciones. Además, su estructura es muy génerica y sirve para más de un personaje pues se puede indicar el número de usuarios que pueden realizar una interacción a la vez, de modo que cuando uno decide usar una una interacción se bloquea y el resto ya no pueden utilizarla hasta que haya terminado.
 
+El pseudocódigo del `SmartObjectManager` es el siguiente:
+```
+class SmartObjectManager:
+    # Singleton pattern
+    Instance : SmartObjectManager
+    # It keeps track of every smart object in the world
+    registeredObjects : SmartObject[]
+
+    function Awake() -> void:
+        # Singleton pattern
+        if Instance == null:
+            Instance = this
+        else:
+            Destroy(this)
+
+    # Keep track of a new object
+    function registerSmartObject(smartObject : SmartObject) -> void
+        if !registeredObjects.Contains(smartObject):
+            registeredObjects.Add(smartObject)
+
+    # Remove one existing object
+    function deregisterSmartObject(smartObject : SmartObject) -> void
+        if registeredObjects.Contains(smartObject):
+            registeredObjects.Add(smartObject)
+```
+
+El pseudocódigo de un smart object básico (`SmartObject`) es el siguiente:
+```
+class SmartObject:
+    # Color which will be used for the outline when someone is using this object
+    feedbackColor : Color = Color.red
+    # Color used for the outline when none is using this object
+    normalColor : Color
+    meshRenderer : MeshRenderer
+    # Object's name
+    displayName : string
+    # Point where the user should head to use this object
+    interPointTransform: Transform
+    interactions: BaseInteraction[]
+
+    function Start() -> void:
+        # Get every interactions that belongs to this object
+        interactions = GetComponents<BaseInteraction>()
+        SmartObjectManager.Instance.registerSmartObject(this)
+        meshRenderer = GetComponent<MeshRenderer>()
+        # The color used for the outline when none is using it is the one that is already set
+        normalColor = meshRenderer.materials[1].color
+
+    function OnDestroy() -> void
+        SmartObjectManager.Instance.deregisterSmartObject(this)
+
+    # Change color used for outlining to the feedback color
+    function enableFeedback() -> void
+        meshRenderer.materials[1].color = feedbackColor
+
+    # Change color used for outlining to the normal color
+    function disableFeedback() -> void
+        interactionExecuting : bool = false
+        # We check if there is any user still using this object
+        while i in 0...interactions.Count && !interactionExecuting:
+            if interactions[i].isSomeonePerforming:
+                interactionExecuting = true
+            i++
+        if !interactionExecuting
+            meshRenderer.materials[1].color = normalColor
+```
+
+El pseudocódigo de una interacción básica (`BaseInteraction`) es el siguiente:
+```
+# It's an abstract class
+class BaseInteraction:
+    # Object to which belongs this interaction
+    smartObject : SmartObject
+    # Default score in case it doesn't have stats so it's not possible to calculate a score to rank this interaction
+    noStatsInteractionScore : float
+    # Name that identifies this interaction
+    displayName : string
+    # Type of interaction (instataneous, over time or after time)
+    interactionType : InteractionType = InteractionType.Instantaneous
+    # How long this interaction takes to complete in case it's either over time or after time
+    duration : float
+    # Stats that this interactions modifies
+    # Each modification is defined by its stat type (magic power, energy, hunger, thirst) and how much it provides
+    changedStats : ChangedStat[]
+    # Elements that it can be get from this interactions and it multiplies one stat
+    # Each outcome is defined by its probability, if it stops the interaction and its multipliers
+    outcomes : Outcome[]
+
+    function Start -> void:
+        smartobject = GetComponent<SmartObject>()
+        # Init every outcome that this interaction has
+        for outcome in outcomes:
+            outcome.init()
+
+    # Abstract function
+    # It indicates if there is anyone left performing or not
+    function isSomeonePerforming() -> bool
+
+    # Abstract function
+    # It indicates where the user can use this interaction or not
+    # For example, here is gonna be included to check if there are less that the maximum allowed users executing this interaction
+    function canPerform() -> bool
+
+    # Virtual function
+    # It indicates whether the user can still perform this interaction or it must be aborted
+    # For example, for the tower here is gonna be checked if there are many enemies in the sorroundings or not
+    function canStillPerform() -> bool:
+        return true
+
+    # Abstract function
+    # It's primarily used to indicate if there is someone that has decided to use this interaction, so it's attached to it
+    function lockInteraction(performer : Performer) -> void
+
+    # Abstract function
+    # Execute interaction
+    function perform(performer : Performer, UnityAction<BaseInteraction> onCompleted, UnityAction<BaseInteraction> onStopped) -> void
+
+    # Abstract function
+    # It's primarily used to indicate if someone has finished to use this interaction, so it's not anymore attached to it
+    function unlockInteraction(performer : Performer) -> void
+
+    # Choose one random element based on its probability
+    function pickOutcome(performer : Performer) -> Outcome:
+        if outcomes.Length > 0:
+            probabilitySum : float = 0
+            # Normalize outcomes' probabilities
+            for outcome in outcomes:
+                probabilitySum += outcome.probability
+            for outcome in outcomes:
+                outcome.normalisedProbability = outcome.probability / probabilitySum
+
+            # Choose one outcome based on its probabilty
+            randProbability : float = Random.Value
+            posibledSelectedOutcomes : Outcome[]
+            for outcome in outcomes:
+                # Each outcome that overcomes the boundary can be a possible selected outcome
+                if randProbability <= outcome.normalisedProbability
+                    posibledSelectedOutcomes.Add(outcome)
+            if posibledSelectedOutcomes.Count > 0
+                # It's selected one random outcome that has exceeds the boundary
+                Outcome selectedOutcome = posibledSelectedOutcomes[Random.Range(0, possibledSelectedOutcomes.Count)]
+                # If the outcome has linked memories, they are applied to the user
+                performer.addMemories(selectedOutcome.memoryFragments)
+                return selectedOutcome
+        return null
+
+    # Apply changed stats to the user
+    function applyStats(performer : Performer, outcome : Outcome, proportion : float) -> void:
+        # It performs for every stat
+        for changedStat in changedStats
+            changedStatType : StatType = changedStat.targetStat
+            outcomeMultiplier : float = 1
+            if outcome != null:
+                # It's checked if there are outcomes which their multipliers should be applied to this specific stat
+                if outcome.stats.MultipliersAux.ContainsKey(changedStatTye):
+                    for multiplier in outcome.statsMultiplierAux[changedStatType]
+                        outcome *= multiplier
+
+            # Update performer's stats
+            # Proportion is taken into consider due it can be a interaction whose effects are applied at once or over time
+            performer.updateIndividualtStat(changedStat.targetStat, changedStat.value * proportion * outcomeMutliplier)
+
+```
+
 Una vez explicada la estructura, el juego está formado por tres necesidades y tres *smart objects* que las satisfacen:
 - Torre: cubre la necesidad de energía. Tiene una única interacción que es la de dormir. Su funcionamiento reside en la clase `TowerSmartObject`, que hereda de `SmartObject`. Contine un collider para contar los enemigos que hay alrededor y parar la interacción de dormir en el caso de que haya muchos.
 - Víveres: cubre la necesidad de hambre. Tiene una única interacción que es la de comer.
@@ -362,7 +526,7 @@ Las tareas se han realizado y el esfuerzo ha sido repartido entre los autores. L
 | ✔ | Presentación y resolución de dudas | 07-05-2024 | 
 | ✔ | Documentación final | 16-05-2024 |
 | ✔ | Presentación | 28-05-2024 |
-| :x: | Entrega final | 31-05-2024 |
+| ✔ | Entrega final | 31-05-2024 |
 
 <br>
 
