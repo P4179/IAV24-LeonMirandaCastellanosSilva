@@ -1,4 +1,5 @@
 # IAV24 Proyecto final (Enchanted town) (¡¡CORREGIR DE NUEVO!!)
+[Gameplay del proyecto](https://youtu.be/7Y0oKYcR5YA)
 
 ## Índice
 - [Autores](#autores)
@@ -262,7 +263,7 @@ Se ha creado un plan de pruebas para comprobar el correcto funcionamiento del pr
 
 A la hora de la medición se especifica el número de FPS a los que se ejecutaba el programa, para comprobar que el prototipo creado no se ha basado en ninguna práctica de programación errónea que empeora el rendimiento, y cuales han sido los resultados esperados.
 
-[Vídeo con la batería de pruebas](enlace)
+[Vídeo con la batería de pruebas](https://youtu.be/rvIF7x7tvwg)
 
 ### Prueba A
 Este apartado está enfocado en probar el correcto funcionamiento de la cámara y del mundo, sobre todo que la malla de navegación está bien creada y se pueden llegar todos los lugares.
