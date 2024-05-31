@@ -238,31 +238,31 @@ A la hora de la medición se especifica el número de FPS a los que se ejecutaba
 Este apartado está enfocado en probar el correcto funcionamiento de la cámara y del mundo, sobre todo que la malla de navegación está bien creada y se pueden llegar todos los lugares.
 
 <ins>Especificaciones de la máquina</ins>
-- Sistema operativo:
-- Procesador:
-- RAM:
-- Tarjeta gráfica:
-- VRAM:
+- Sistema operativo: Window 10 64 bits (compilación 19045)
+- Procesador: Intel Core i5-11600k 3.90GHz (12CPUs)
+- RAM: 16GB
+- Tarjeta gráfica: NVIDIA GeForce RTX 3060
+- VRAM: 12GB
 
 | Prueba | Descripción | Atributos | Resultados esperados | Resultados | FPS |
 |:-:|:-:|:-:|:-:|:-:|:-:|
-| A1 | Hacer que el personaje se dirija a cada uno de los extremos del mapa desde el centro del pueblo | - Spawn de enemigos desactivado | Se espera que el personaje pueda llegar a cada uno de los extremos y no se quede atascado en ningún sitio usando el movimiento manual |  |
-| A2 | Hacer zoom con la `rueda del ratón` y mover la cámara con `click izquierdo` |  | Mover la rueda hacia arriba hace zoom in y hacia abajo zoom out. Arrastrar el ratón por la pantalla con un zoom distinto del original hace que la cámara se mueva, sin superar unos límites |  |
-| A3 | Reiniciar la cámara con `click derecho` después de modificar su posición y zoom |  | La cámara vuelve a su posición y zoom originales |  |
+| A1 | Hacer que el personaje se dirija a cada uno de los extremos del mapa desde el centro del pueblo pulsando `click izquierdo` sobre ellos | - Spawn de enemigos desactivado <br> - Árbol de comportamiento del personaje desactivado | Se espera que el personaje pueda llegar a cada uno de los extremos y no se quede atascado en ningún sitio usando el movimiento manual | El comportamiento es el esperado y el personaje se mueve hacia los lugares sobre los que se ha hecho click. | 300 |
+| A2 | Hacer zoom con la `rueda del ratón` y mover la cámara con `click izquierdo` |  | Mover la rueda hacia arriba hace zoom in y hacia abajo zoom out. Arrastrar el ratón por la pantalla con un zoom distinto del original hace que la cámara se mueva, sin superar unos límites | El comportamiento es el esperado. Al coincidir el botón para el movimiento con el de arrastrar la cámara, si el movimiento manual está activado, mover la cámara también hará que se mueva el personaje | 300 |
+| A3 | Reiniciar la cámara con `click derecho` después de modificar su posición y zoom |  | La cámara vuelve a su posición y zoom originales | El comportamiento es el esperado | 300 |
 
 ### Prueba B
 El objetivo de esta prueba es testear los cambios en el mundo y cómo estos afectan al spawn de enemigos, de modo que se puedan generar enemigos a lo largo de todos los días sin que afecte en ningún momento al flujo del juego.
 
 <ins>Especificaciones de la máquina</ins>
-- Sistema operativo:
-- Procesador:
-- RAM:
-- Tarjeta gráfica:
-- VRAM:
+- Sistema operativo: Window 10 64 bits (compilación 19045)
+- Procesador: Intel Core i5-11600k 3.90GHz (12CPUs)
+- RAM: 16GB
+- Tarjeta gráfica: NVIDIA GeForce RTX 3060
+- VRAM: 12GB
 
 | Prueba | Descripción | Atributos | Resultados esperados | Resultados | FPS |
 |:-:|:-:|:-:|:-:|:-:|:-:|
-| B1 | Comprobar que el ciclo de día y noche funciona correctamente y que los enemigos spawnean durante la noche | - Velocidad x2 <br> - Personaje desactivado <br> - Esperar a que pasen 10 días | Se espera que los 10 días sucedan con normalidad, alternándose el ciclo día-noche perfectamente. Además, como los enemigos merodean, terminarán llegando al pueblo y no se impedirá el avance de los nuevos enemigos que spawneeen por llenar los puntos de spawn |  |  |
+| B1 | Comprobar que el ciclo de día y noche funciona correctamente y que los enemigos spawnean durante la noche | - Velocidad x2 <br> - Personaje desactivado <br> - Esperar a que pasen 10 días | Se espera que los 10 días sucedan con normalidad, alternándose el ciclo día-noche perfectamente. Además, como los enemigos merodean, terminarán llegando al pueblo y no se impedirá el avance de los nuevos enemigos que spawneeen por llenar los puntos de spawn | El comportamiento es el esperado y los enemigos se mueven por todo el mapa | 300 |
 
 ### Prueba C
 <ins>Especificaciones de la máquina</ins>
@@ -293,16 +293,16 @@ El objetivo de esta prueba es testear los cambios en el mundo y cómo estos afec
 El objetivo de esta prueba es comprobar el correcto funcionamiento de los árboles de comportamiento, tanto del personaje como de los enemigos.
 
 <ins>Especificaciones de la máquina</ins>
-- Sistema operativo:
-- Procesador:
-- RAM:
-- Tarjeta gráfica:
-- VRAM:
+- Sistema operativo: Window 10 64 bits (compilación 19045)
+- Procesador: Intel Core i5-11600k 3.90GHz (12CPUs)
+- RAM: 16GB
+- Tarjeta gráfica: NVIDIA GeForce RTX 3060
+- VRAM: 12GB
 
 | Prueba | Descripción | Atributos | Resultados esperados | Resultados | FPS |
 |:-:|:-:|:-:|:-:|:-:|:-:|
-| E1 | Acercar y alejar al jugador de los enemigos para que lo vean y lo persigan | - Movimiento del personaje desactivado <br> - Nodo del merodeo desactivado <br> - Nodo del merodeo activado | Con el merodeo desactivado, los enemigos no se moverán hasta que vean al personaje, volviendo a quedarse quietos si lo pierden de vista. <br> Con el merodeo activado, se moverán alrededor del mapa de manera aleatoria hasta encontrarse con el personaje, volviendo a merodear si lo pierden de vista. |  |  |
-| E2 | Dejar que el personaje se mueva libremente por el mapa | - Evasión de enemigos desactivada <br> - Rellenar necesidades desactivada <br> - Merodeo desactivado | Con la evasión de enemigos desactivada, el personaje se moverá merodeando alrededor del mapa, evitando obstáculos si se los encuentra, o yendo hacia los *smart objects* si necesita rellenar alguna necesidad, pero sin evitar a los enemigos que vayan acercándose <br> Desactivando la satisfacción de necesidades, el personaje merodeará todo el rato, evitando obstáculos y enemigos si los detecta <br> Con el merodeo desactivado, el personaje estará quieto hasta que necesite ir hacia un *smart object* para rellenar sus necesidades o evitar enemigos, volviendo a quedarse quieto una vez termine de realizar cualquiera de esas tareas |  |  |
+| E1 | Acercar y alejar al jugador de los enemigos para que lo vean y lo persigan | - ÁRbol de comportamiento del personaje desactivado <br> - Nodo del merodeo desactivado <br> - Nodo del merodeo activado | Con el merodeo desactivado, los enemigos no se moverán hasta que vean al personaje, volviendo a quedarse quietos si lo pierden de vista. <br> Con el merodeo activado, se moverán alrededor del mapa de manera aleatoria hasta encontrarse con el personaje, volviendo a merodear si lo pierden de vista. | El comportamiento es el esperado en ambos casos. Además, como la persecución se hace con predicción de movimiento, el más difícil que pierdan al personaje de vista | 300 |
+| E2 | Dejar que el personaje se mueva libremente por el mapa | - Evasión de enemigos desactivada <br> - Necesidades desactivadas <br> - Merodeo desactivado | Con la evasión de enemigos desactivada, el personaje se moverá merodeando alrededor del mapa, evitando obstáculos si se los encuentra, o yendo hacia los *smart objects* si necesita rellenar alguna necesidad, pero sin evitar a los enemigos que vayan acercándose <br> Desactivando las necesidades, el personaje merodeará todo el rato, evitando obstáculos y enemigos si los detecta <br> Con el merodeo desactivado, el personaje estará quieto hasta que necesite ir hacia un *smart object* para rellenar sus necesidades o evitar enemigos, volviendo a quedarse quieto una vez termine de realizar cualquiera de esas tareas | El comportamiento es el esperado en todos los casos, aunque con las necesidades desactivadas, el personaje tenderá a moverse más por una parte del mapa, ya que al haber tantos obstáculos alrededor del pueblo, al salir de él le costará volver a entrar al estar evitando obstáculos constantemente. Por otro lado, desactivar el merodeo apenas se aprecia, ya que el personaje estará tratando de satisfacer sus necesidades o evitando enemigos la mayoría de las veces | 300 |
 
 <br>
 
