@@ -46,11 +46,11 @@
 
 Este proyecto forma parte de la asignatura de Inteligencia Artificial para Videojuegos del Grado en Desarrollo de Videojuegos de la UCM.
 
-El proyecto consiste en un ***Life Simulator***, en el que el protagonista deberá ir satisfaciendo sus necesidades a través de la interacción con distintos objetos. El ambiente está basado en un pueblo medieval, en el que nuestro protagonista, un mago, debe hacer su día a día, ya sea alimentándose y durmiendo, o tratando de sobrevivir a hordas de enemigos que invadirán el pueblo. 
+El proyecto consiste en un ***life simulator***, en el que el protagonista deberá ir satisfaciendo sus necesidades a través de la interacción con distintos objetos. El ambiente está basado en un pueblo medieval, en el que nuestro protagonista, un mago, debe hacer su día a día, ya sea alimentándose y durmiendo, o tratando de sobrevivir a hordas de enemigos que invadirán el pueblo. 
 
 En este contexto se pretende implementar el uso de **árboles de comportamiento**, con los que el personaje decide qué hacer y adónde ir en cada momento, y de ***smart objects***, que son los que indican al personaje qué es lo que tiene que hacer con ellos.
 
-El objetivo principal es sobrevivir el mayor números de días posibles. Para ello, el protagoinsta tiene que atender a sus necesidades y evitar el daño de los enemigos. De lo contrario, irá perdiendo vida y si llega a 0, perderá.
+El objetivo principal es sobrevivir el mayor números de días posibles. Para ello, el protagonista tiene que atender a sus necesidades y evitar el daño de los enemigos. De lo contrario, irá perdiendo vida y si llega a 0, perderá.
 
 ### Elementos
 
@@ -76,7 +76,7 @@ Existen diferentes objetos interactuables del entorno, que le permiten al person
 - Víveres: reducen el hambre del personaje. A pesar de que todos los objetos de este tipo tienen la misma apariencia visual, cada uno ofrece un número diferentes de puntos.
 - Barriles: reducen la sed del personaje. A pesar de que todos objetos de este tipo tienen la misma apariencia visual, cada uno ofrece un número diferente de puntos.
 - Torre del personaje: aumenta la energía del personaje completamente. El personaje se mete dentro de la torre a descansar y no puede sufrir daño. Sin embargo, si hay muchos enemigos alrededor del edificio, no puede seguir durmiendo por el ruido y sale de la torre.
-- Libro del mago: aumenta el poder mágico del personaje completamente.
+- Libro del mago: aumenta el poder mágico del personaje.
 
 #### Enemigos
 Los enemigos aparecen en los límites del poblado durante la noche. Su movimiento sencillo está programa a través de un árbol de comportamiento. Consiste en merodear por todo el mapa hasta encontrarse con el personaje. Entonces, lo persiguen. Sin embargo, si este sale de su área de detección, dejan de perseguirlo y vuelven a merodear.
@@ -100,7 +100,7 @@ Los enemigos mueren de una bola de poder y realizan cierto daño al personaje al
 Una vez explicados todos los elementos del juego, siguiendo el [guión del proyecto](https://narratech.com/es/docencia/prueba/), se estructura de la siguiente manera:
 
 #### Apartado A (Matt)
-Hay un **mundo virtual** (el pueblo) con un esquema de división por **malla de navegación** generado con la herramienta ***AI Navigation*** de Unity, en el que se encuentran todos los elementos descritos anteriormente. La cámara es fija, y enfocará en todo momento a todo el escenario, desde un ángulo en el que se puede ver prácticamente todo lo que hace el personaje en todo momento. 
+Hay un **mundo virtual** (el pueblo) con un esquema de división por **malla de navegación** generado con la herramienta ***AI Navigation*** de Unity, en el que se encuentran todos los elementos descritos anteriormente. La cámara se puede acercar y alejar usando la rueda del ratón, mover dentro de ciertos límites arrastrando mientras se presiona `click izquierdo`, y reiniciar la posición y zoom haciendo `click derecho`. 
 
 #### Apartado B (Matt)
 Hay un **ciclo de día y noche** con el que se van contando los días que lleva vivo el personaje. El sol irá saliendo y poniéndose según la hora del día, y por la noche aparecerán **enemigos** cada cierto tiempo a las afueras del pueblo.
@@ -144,7 +144,6 @@ El `LevelManager` es el gestor encargado de:
 
 ### Solución E
 El movimiento del enemigo responde al siguiente diagrama:
-
 ```mermaid
 stateDiagram-v2
     [*] --> Aparece
@@ -156,7 +155,7 @@ stateDiagram-v2
     Merodeo --> Pierde_vida : Disparado por el personaje
     Pierde_vida --> Merodeo
     Persecucion --> Ataque : El personaje entra en su area de ataque
-    Ataque --> Persecuciona : El personaje sale de su area de ataque
+    Ataque --> Persecucion : El personaje sale de su area de ataque
     Pierde_vida --> [*] : Vida llega a 0
 ```
 
@@ -204,8 +203,28 @@ class Arrival:
 
 
 El movimiento del personaje responde al siguiente diagrama:
+```mermaid
+stateDiagram-v2
+    [*] --> Aparece
+    Aparece --> Merodeo
+    
+    Merodeo --> Ir_hacia_smart_object : Necesidad que rellenar
+    Ir_hacia_smart_object --> Merodeo : Termina de usar el smart object o hay enemigo bloqueando el paso
+    
+    Merodeo --> Evasion : Se encuentra con algun obstaculo o enemigo
+    Evasion --> Merodeo : Deja de haber obstaculos o enemigos en medio
 
-```
+    Evasion --> Ataque : Enemigo entra en su area de ataque
+    Ataque --> Evasion 
+
+    Merodeo --> Pierde_vida : Golpeado por enemigo
+    Evasion --> Pierde_vida : Golpeado por enemigo
+    Ir_hacia_smart_object --> Pierde_vida : Golpeado por enemigo
+    Pierde_vida --> Merodeo
+    Pierde_vida --> Evasion
+    Pierde_vida --> Ir_hacia_smart_object
+
+    Pierde_vida --> [*] : Vida llega a 0
 ```
 
 <br>
@@ -216,7 +235,7 @@ Se ha creado un plan de pruebas para comprobar el correcto funcionamiento del pr
 A la hora de la medición se especifica el número de FPS a los que se ejecutaba el programa, para comprobar que el prototipo creado no se ha basado en ninguna práctica de programación errónea que empeora el rendimiento, y cuales han sido los resultados esperados.
 
 ### Prueba A
-Este apartado está enfocado en probar el correcto funcionamiento del mundo, sobre todo que la malla de navegación está bien creada y se pueden llegar todos los lugares.
+Este apartado está enfocado en probar el correcto funcionamiento de la cámara y del mundo, sobre todo que la malla de navegación está bien creada y se pueden llegar todos los lugares.
 
 <ins>Especificaciones de la máquina</ins>
 - Sistema operativo:
@@ -227,7 +246,9 @@ Este apartado está enfocado en probar el correcto funcionamiento del mundo, sob
 
 | Prueba | Descripción | Atributos | Resultados esperados | Resultados | FPS |
 |:-:|:-:|:-:|:-:|:-:|:-:|
-| A1 | Hacer que el personaje se dirija a cada uno de los extremos del mapa desde el centro del pueblo. | Spawn de enemigos desactivado | Se espera que el personaje pueda llegar a cada uno de los extremos y no se quede atascado en ningún sitio usando el movimiento manual. |  |
+| A1 | Hacer que el personaje se dirija a cada uno de los extremos del mapa desde el centro del pueblo | - Spawn de enemigos desactivado | Se espera que el personaje pueda llegar a cada uno de los extremos y no se quede atascado en ningún sitio usando el movimiento manual |  |
+| A2 | Hacer zoom con la `rueda del ratón` y mover la cámara con `click izquierdo` |  | Mover la rueda hacia arriba hace zoom in y hacia abajo zoom out. Arrastrar el ratón por la pantalla con un zoom distinto del original hace que la cámara se mueva, sin superar unos límites |  |
+| A3 | Reiniciar la cámara con `click derecho` después de modificar su posición y zoom |  | La cámara vuelve a su posición y zoom originales |  |
 
 ### Prueba B
 El objetivo de esta prueba es testear los cambios en el mundo y cómo estos afectan al spawn de enemigos, de modo que se puedan generar enemigos a lo largo de todos los días sin que afecte en ningún momento al flujo del juego.
@@ -241,7 +262,7 @@ El objetivo de esta prueba es testear los cambios en el mundo y cómo estos afec
 
 | Prueba | Descripción | Atributos | Resultados esperados | Resultados | FPS |
 |:-:|:-:|:-:|:-:|:-:|:-:|
-| B1 | Comprobar que el ciclo de día y noche funciona correctamente y que los enemigos spawnean durante la noche | Velocidad x2 <br> Personaje desactivado <br> Esperar a que pasen 10 días | Se espera que los 10 días sucedan con normalidad, alternándose el ciclo día-noche perfectamente. Además, como los enemigos merodean, terminarán llegando al pueblo y no se impedirá el avance de los nuevos enemigos que spawneeen por llenar los puntos de spawn |  |  |
+| B1 | Comprobar que el ciclo de día y noche funciona correctamente y que los enemigos spawnean durante la noche | - Velocidad x2 <br> - Personaje desactivado <br> - Esperar a que pasen 10 días | Se espera que los 10 días sucedan con normalidad, alternándose el ciclo día-noche perfectamente. Además, como los enemigos merodean, terminarán llegando al pueblo y no se impedirá el avance de los nuevos enemigos que spawneeen por llenar los puntos de spawn |  |  |
 
 ### Prueba C
 <ins>Especificaciones de la máquina</ins>
@@ -268,6 +289,9 @@ El objetivo de esta prueba es testear los cambios en el mundo y cómo estos afec
 | D1 |  |  |  |  |  |
 
 ### Prueba E
+
+El objetivo de esta prueba es comprobar el correcto funcionamiento de los árboles de comportamiento, tanto del personaje como de los enemigos.
+
 <ins>Especificaciones de la máquina</ins>
 - Sistema operativo:
 - Procesador:
@@ -277,7 +301,8 @@ El objetivo de esta prueba es testear los cambios en el mundo y cómo estos afec
 
 | Prueba | Descripción | Atributos | Resultados esperados | Resultados | FPS |
 |:-:|:-:|:-:|:-:|:-:|:-:|
-| E1 |  |  |  |  |  |
+| E1 | Acercar y alejar al jugador de los enemigos para que lo vean y lo persigan | - Movimiento del personaje desactivado <br> - Nodo del merodeo desactivado <br> - Nodo del merodeo activado | Con el merodeo desactivado, los enemigos no se moverán hasta que vean al personaje, volviendo a quedarse quietos si lo pierden de vista. <br> Con el merodeo activado, se moverán alrededor del mapa de manera aleatoria hasta encontrarse con el personaje, volviendo a merodear si lo pierden de vista. |  |  |
+| E2 | Dejar que el personaje se mueva libremente por el mapa | - Evasión de enemigos desactivada <br> - Rellenar necesidades desactivada <br> - Merodeo desactivado | Con la evasión de enemigos desactivada, el personaje se moverá merodeando alrededor del mapa, evitando obstáculos si se los encuentra, o yendo hacia los *smart objects* si necesita rellenar alguna necesidad, pero sin evitar a los enemigos que vayan acercándose <br> Desactivando la satisfacción de necesidades, el personaje merodeará todo el rato, evitando obstáculos y enemigos si los detecta <br> Con el merodeo desactivado, el personaje estará quieto hasta que necesite ir hacia un *smart object* para rellenar sus necesidades o evitar enemigos, volviendo a quedarse quieto una vez termine de realizar cualquiera de esas tareas |  |  |
 
 <br>
 
@@ -333,6 +358,7 @@ Los recursos de terceros utilizados son de uso público.
 - [Shader outline](https://www.youtube.com/watch?v=d89qqVGUHtA)
 - [Shader always on top](https://forum.unity.com/threads/shader-drawing-over-everything.1041850/)
 - [Day & Night Cycle](https://www.youtube.com/watch?v=m9hj9PdO328)
+- [Camera Movement](https://www.youtube.com/watch?v=pJQndtJ2rk0&t=835s)
 - Unity AI Tutorial: Sims-Style Videos (Iain McManus)
     - [Part 1 - Smart Objects](https://www.youtube.com/watch?v=gh5PNt6sD_M&list=PLkBiJgxNbuOXBAN5aJnMVkQ9yRSB1UYrG&index=15)
     - [Part 2 - Satisfying Needs](https://www.youtube.com/watch?v=zGCe8vOHRqg&list=PLkBiJgxNbuOXBAN5aJnMVkQ9yRSB1UYrG&index=16)
