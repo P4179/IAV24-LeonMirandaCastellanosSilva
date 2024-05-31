@@ -29918,6 +29918,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1873061033559254434, guid: d2ba8bdd2e0529e4b8d508b965a418ec, type: 3}
+      propertyPath: healthLimit
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 1873061033559254434, guid: d2ba8bdd2e0529e4b8d508b965a418ec, type: 3}
       propertyPath: necessityBar
       value: 
       objectReference: {fileID: 929916166}
@@ -29994,12 +29998,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8926639861591653299, guid: d2ba8bdd2e0529e4b8d508b965a418ec, type: 3}
+      propertyPath: healthLimit
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 8926639861591653299, guid: d2ba8bdd2e0529e4b8d508b965a418ec, type: 3}
       propertyPath: necessityBar
       value: 
       objectReference: {fileID: 1877443039}
     - target: {fileID: 9089904505478619432, guid: d2ba8bdd2e0529e4b8d508b965a418ec, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9089904505478619432, guid: d2ba8bdd2e0529e4b8d508b965a418ec, type: 3}
+      propertyPath: healthLimit
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 9089904505478619432, guid: d2ba8bdd2e0529e4b8d508b965a418ec, type: 3}
       propertyPath: necessityBar
