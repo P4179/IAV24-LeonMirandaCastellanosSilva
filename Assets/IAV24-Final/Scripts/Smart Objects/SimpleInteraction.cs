@@ -66,7 +66,7 @@ namespace IAV24.Final
                 smartObject.enableFeedback();
 
                 // se selecciona un elemento
-                performerInfo.outcome = pickOutcome();
+                performerInfo.outcome = pickOutcome(performer);
                 // si indica que se tiene que detener la accion, se para
                 if (performerInfo.outcome != null && performerInfo.outcome.stopInteraction)
                 {

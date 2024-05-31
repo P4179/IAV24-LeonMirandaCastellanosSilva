@@ -1,3 +1,4 @@
+using BehaviorDesigner.Runtime.Tasks;
 using BehaviorDesigner.Runtime.Tasks.Unity.Math;
 using System.Collections;
 using System.Collections.Generic;
@@ -31,6 +32,7 @@ namespace IAV24.Final
         public ChangedStat[] statsMultipliers;  // multiplicadores que aplicar a las diferentes necesidades
         public float normalisedProbability { get; set; }
         public Dictionary<StatType, List<float>> statsMultipliersAux = new Dictionary<StatType, List<float>>();
+        public MemoryFragment[] memoryFragments;
 
         public void init()
         {
@@ -102,13 +104,12 @@ namespace IAV24.Final
         // indicar que hay un usuario que ha dejado de realizar la interaccion 
         public abstract void unlockInteraction(Performer performer);
 
-        public Outcome pickOutcome()
+        public Outcome pickOutcome(Performer performer)
         {
             if (outcomes.Length > 0)
             {
                 // se normalizan las probabiliadd de todos los elementos
                 // en funcion a la suma total de las probabilidades
-                Outcome selectedOutcome = null;
                 float probabilitySum = 0.0f;
                 foreach (Outcome outcome in outcomes)
                 {
@@ -122,19 +123,19 @@ namespace IAV24.Final
 
                 // se selecciona un elemento de forma aleatoria en base a su probabilidad
                 float randProbability = Random.value;
-                bool found = false;
-                for (int i = 0; i < outcomes.Length && !found; ++i)
+                List<Outcome> posibledSelectedOutcomes = new List<Outcome>();
+                foreach (Outcome outcome in outcomes)
                 {
-                    Outcome outcome = outcomes[i];
                     if (randProbability <= outcome.normalisedProbability)
                     {
-                        found = true;
-                        selectedOutcome = outcome;
+                        posibledSelectedOutcomes.Add(outcome);
                     }
                 }
 
-                if (found)
+                if (posibledSelectedOutcomes.Count > 0)
                 {
+                    Outcome selectedOutcome = posibledSelectedOutcomes[Random.Range(0, posibledSelectedOutcomes.Count)];
+                    performer.addMemories(selectedOutcome.memoryFragments);
                     // se comprueba si el elemento detiene la interaccion
                     return selectedOutcome;
                 }

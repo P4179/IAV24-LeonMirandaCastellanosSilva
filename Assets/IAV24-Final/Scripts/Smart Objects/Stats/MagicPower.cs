@@ -157,7 +157,7 @@ namespace IAV24.Final
             return currentValue / maxPowerAmount;
         }
 
-        public override float getValue01(float amount)
+        public override float normalizeValue(float amount)
         {
             return amount / maxPowerAmount;
         }

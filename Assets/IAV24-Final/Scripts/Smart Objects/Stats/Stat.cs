@@ -33,6 +33,6 @@ namespace IAV24.Final
 
         public abstract float getCurrentValue01();
 
-        public abstract float getValue01(float amount);
+        public abstract float normalizeValue(float value);
     }
 }

@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEditor.ShaderKeywordFilter;
 using UnityEngine;
 using UnityEngine.Timeline;
@@ -9,9 +11,6 @@ namespace IAV24.Final
 {
     public class Performer : MonoBehaviour
     {
-        [SerializeField]
-        float startFilling = 0.7f;
-
         public class CurrentInteraction
         {
             public GameObject target = null;
@@ -29,7 +28,16 @@ namespace IAV24.Final
         // asegurar que cada interaccion solo se ejecuta una vez
         private bool startedPerforming = false;
 
+        private List<MemoryFragment> permanentMemory = new List<MemoryFragment>();
+        private List<MemoryFragment> shortTermMemory = new List<MemoryFragment>();
+
         private Dictionary<StatType, Stat> statsInfo = new Dictionary<StatType, Stat>();
+
+        [SerializeField]
+        private int permanentMemoryThreshold = 2;
+
+        [SerializeField]
+        private float startFilling = 0.7f;
 
         [SerializeField]
         // numero maximo de interacciones entre las que elegir en la lista de
@@ -60,6 +68,18 @@ namespace IAV24.Final
             foreach (Stat stat in stats)
             {
                 statsInfo[stat.type] = stat;
+            }
+        }
+
+        private void Update()
+        {
+            // actualizar memoria de corto plazo
+            for (int index = shortTermMemory.Count - 1; index >= 0; index--)
+            {
+                if (shortTermMemory[index].updateTime())
+                {
+                    shortTermMemory.RemoveAt(index);
+                }
             }
         }
 
@@ -105,14 +125,19 @@ namespace IAV24.Final
             statsInfo[targetStat].updateIndividualStat(amount);
         }
 
+        // amount es la cantidad de estadistica que la interaccion aporta
         float scoreInteractionStat(StatType targetStat, float amount)
         {
             // se obtiene el valor actual de ese stat del usuario
             float currentValue = statsInfo[targetStat].getCurrentValue01();
+
+            memoryModifiesScore(currentValue, targetStat, shortTermMemory);
+            memoryModifiesScore(currentValue, targetStat, permanentMemory);
+
             // usando esta formula se consigue que si el valor del stat del usuario
             // es muy peque, el score sea mayor y si es muy grande, sea menor
             // tambien funciona para numero negativos
-            float aux = statsInfo[targetStat].getValue01(amount);
+            float aux = statsInfo[targetStat].normalizeValue(amount);
             return (1.0f - currentValue) * aux;
         }
 
@@ -133,8 +158,22 @@ namespace IAV24.Final
                 // targetStat es el stat que cambia y value el valor de cambio
                 score += scoreInteractionStat(stat.targetStat, stat.value);
             }
-
             return score;
+        }
+
+        float memoryModifiesScore(float currentValue, StatType targetStat, List<MemoryFragment> memories)
+        {
+            foreach (MemoryFragment memory in memories)
+            {
+                foreach (ChangedStat statMultiplier in memory.changedStats)
+                {
+                    if (statMultiplier.targetStat == targetStat)
+                    {
+                        currentValue = Mathf.Clamp01(currentValue + statMultiplier.value);
+                    }
+                }
+            }
+            return currentValue;
         }
 
         // dar valores a las interacciones y ver cual es mas conveniente
@@ -177,7 +216,7 @@ namespace IAV24.Final
 
                 // se selecciona una interaccion
                 int maxIndex = Mathf.Min(maxInteractionPickSize, sortedInteractions.Count());
-                int selectedIndex = Random.Range(0, maxIndex);
+                int selectedIndex = UnityEngine.Random.Range(0, maxIndex);
 
                 SmartObject selectedObject = sortedInteractions[selectedIndex].targetObject;
                 BaseInteraction selectedInteraction = sortedInteractions[selectedIndex].interaction;
@@ -211,12 +250,82 @@ namespace IAV24.Final
             return false;
         }
 
-        /*
-        private void Update()
+        public void addMemories(MemoryFragment[] newMemories)
         {
-            pickBestInteraction();
-            executeCurrentInteractionOnce();
+            foreach (MemoryFragment memory in newMemories)
+            {
+                addMemory(memory);
+            }
         }
-        */
+
+
+        protected void addMemory(MemoryFragment newMemory)
+        {
+            MemoryFragment cancelledMemory = null;
+
+            // MEMORIA PERMANENTE
+            bool duplicatedPermanentMemory = false;
+            foreach (MemoryFragment memory in permanentMemory)
+            {
+                // si se encuentra en la memoria permanente
+                // se descarta por completo
+                if (newMemory.isTheSameAs(memory))
+                {
+                    duplicatedPermanentMemory = true;
+                }
+                // cancela a una fragmento ya existente
+                if (memory.isCancelledBy(newMemory))
+                {
+                    cancelledMemory = memory;
+                }
+            }
+            // se hace despues para que no se rompa el iterador
+            if (cancelledMemory != null)
+            {
+                permanentMemory.Remove(cancelledMemory);
+            }
+
+            if (!duplicatedPermanentMemory)
+            {
+                // MEMORIA DE CORTO PLAZO
+                cancelledMemory = null;
+                MemoryFragment existingMemory = null;
+                foreach (var memory in shortTermMemory)
+                {
+                    // se guarda porque se va a aumentar el numero de ocurrencias
+                    if (newMemory.isTheSameAs(memory))
+                    {
+                        existingMemory = memory;
+                    }
+                    // cancela a un fragmento ya existente
+                    if (memory.isCancelledBy(newMemory))
+                    {
+                        cancelledMemory = memory;
+                    }
+                }
+                // eliminar el fragmento cancelado
+                if (cancelledMemory != null)
+                {
+                    shortTermMemory.Remove(cancelledMemory);
+                }
+                // insertar el nuevo fragmento
+                if (existingMemory == null)
+                {
+                    shortTermMemory.Add(newMemory.duplicate());
+                }
+                // aumentar el numero de ocurrencias en el caso de que ya existiera
+                else
+                {
+                    existingMemory.newOcurrence(newMemory);
+                    // se supera el umbral, por lo tanto, se convierte
+                    // de un fragmento reciente a uno permanente
+                    if (existingMemory.ocurrences >= permanentMemoryThreshold)
+                    {
+                        permanentMemory.Add(existingMemory);
+                        shortTermMemory.Remove(existingMemory);
+                    }
+                }
+            }
+        }
     }
 }

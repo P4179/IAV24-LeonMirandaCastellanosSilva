@@ -63,7 +63,7 @@ namespace IAV24.Final
             return Mathf.Clamp01(currentValue);
         }
 
-        public override float getValue01(float value)
+        public override float normalizeValue(float value)
         {
             // por si acaso, aunque no hace falta
             return Mathf.Clamp01(value);

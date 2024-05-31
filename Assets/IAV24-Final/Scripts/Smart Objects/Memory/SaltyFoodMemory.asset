@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3582aa4439657014fa646edbc7b7cfa4, type: 3}
+  m_Name: SaltyFoodMemory
+  m_EditorClassIdentifier: 
+  displayName: Salty food
+  duration: 5
+  changedStats:
+  - targetStat: 3
+    value: 0.9
+  memoryFragmentsThatCancelIt:
+  - {fileID: 11400000, guid: 32b48c1273831384c909b9c0623526f2, type: 2}
